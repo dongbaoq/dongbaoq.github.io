@@ -1,5 +1,6 @@
 ---
 title: 'Book Review : Topology from the Differentiable Viewpoint'
+collection: books
 date: 2025-03-13
 permalink: /posts/2025/03/TopfromDiffVeiwpoint/
 tags:
