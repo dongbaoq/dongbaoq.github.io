@@ -8,4 +8,4 @@ tags:
 	- Topology
 ---
 
-Topology from the Differentiable Viewpoint by John W. Milnor analyzes.
+Topology from the Differentiable Viewpoint by John W. Milnor analyzes topological aspects driven from purly differentiable objects of manifolds.
