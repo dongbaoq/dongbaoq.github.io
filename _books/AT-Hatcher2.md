@@ -9,9 +9,6 @@ tags:
 - Topology
 ---
 
-
-#Concept of Homology
-
 ## Relative Homology
 
-$H_n(X)$
+$$H_n(X)$$
