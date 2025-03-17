@@ -9,6 +9,13 @@ tags:
 - Topology
 ---
 
-## Relative Homology
+Homology : definition and technique
+========
+Relative Homology
+----------
 
-$$H_n(X)$$
+Relative homology defined as $`H_n (X,A)`$ is interpreted as following:
+
+It is represented by relative cycle $`\varphi` \in C_n (X)$ that $`\partial \varphi \in C_n (A)`$.
+
+This relative cycle is trivial if $`\varphi = \partial \psi + \varphi '`$ where $`\psi \in C_{n+1} (X)`$, $`\varphi ' \in C_{n} (A)`$.
