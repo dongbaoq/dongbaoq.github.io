@@ -14,7 +14,6 @@ Homology : definition and technique
 
 Relative Homology
 ----------------
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 Relative homology defined as $`H_n (X,A)`$ is interpreted as following:
 
