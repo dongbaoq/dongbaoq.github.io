@@ -32,3 +32,15 @@ Calculation of homology depends on some techniques. Major one is 'Mayer Vietoris
 Mayer Vietoris argument is useful because **We know all maps in exact sequence**
 
 $$ \cdots H_n (A \cap B) \xrightarrow{(i_{1*}, i_{2*})} H_n (A) \oplus H_n (B) \xrightarrow{j_{1*} - j_{2*}} H_n (X) \xrightarrow{\partial_{*}} H_n (A \cap B) \cdots $$
+
+Note that third map is quite clear. Cycle of $X$ can be decomposed into sum of chain in $A$ and chain in $B$ by barycentric subdivision. These two chain cancels, $\varphi = \varphi_A + \varphi_B$ then $0 = \partial \varphi_A + \partial \varphi_B$. So third map sends $\varphi$ into $\partial \varphi_A = -\partial \varphi_B$.
+
+### Excision
+
+Excision is an isomorphism but its fundamental is from **inclusion map**.
+$i : (X-Z, A-Z) \hookrightarrow (X,A)$ induces $H_n (X-Z, A-Z) \xrightarrow{i_*} H_n (X, A)$.
+
+This fact may be important if excision relates to naturality. Excision isomorphism is from the inclusion.
+
+## Naturality
+
