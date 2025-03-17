@@ -10,3 +10,8 @@ tags:
 ---
 
 
+#Concept of Homology
+
+## Relative Homology
+
+$H_n(X)$
