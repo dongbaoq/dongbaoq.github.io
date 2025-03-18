@@ -46,9 +46,9 @@ This fact may be important if excision relates to naturality.
 
 Naturality states if $f : (X,A) \rightarrow (Y,B)$ then
 
-$\require{AMScd}
-\begin{CD}
-\cdots \rightarrow H_n(A) @>{i_*}>> H_n(X) @>{j_*}>> H_n(X,A) @>{\partial}>> H_{n-1}(A) \rightarrow \cdots;\\
-@VV{f_*}V {\circlearrowleft} @VV{f_*}V {\circlearrowleft} @VV{f_*}V {\circlearrowleft} @VV{f_*}V\\
-\cdots \rightarrow H_n(B) @>{i_*}>> H_n(Y) @>{j_*}>> H_n(Y,B) @>{\partial}>> H_{n-1}(B) \rightarrow \cdots;
-\end{CD}$
+$\require{\AMScd}$
+$$\begin{CD}
+\cdots @>>> H_n(A) @>{i_*}>> H_n(X) @>{j_*}>> H_n(X,A) @>{\partial}>> H_{n-1}(A) @>>> \cdots;\\ 
+@. @VV{f_*}V {\circlearrowleft} @VV{f_*}V {\circlearrowleft} @VV{f_*}V {\circlearrowleft} @VV{f_*}V\\
+\cdots @>>> H_n(B) @>{i_*}>> H_n(Y) @>{j_*}>> H_n(Y,B) @>{\partial}>> H_{n-1}(B) @>>> \cdots;
+\end{CD}$$
