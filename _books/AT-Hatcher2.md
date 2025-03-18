@@ -42,6 +42,11 @@ $i : (X-Z, A-Z) \hookrightarrow (X,A)$ induces $H_n (X-Z, A-Z) \xrightarrow{i_*}
 
 This fact may be important if excision relates to naturality. 
 
+Another thing to note is the proof technique. Constructing chain homotopy yields the same induced map is crucial component in chain argument.
+
+$ \partial P + P \partial = f_* - g_*$
+then $f, g$ generates the same induced map.
+
 ## Naturality
 
 Naturality states if $f : (X,A) \rightarrow (Y,B)$ then
@@ -52,3 +57,37 @@ $$\begin{CD}
 @. @VV{f_*}V {\circlearrowleft} @VV{f_*}V {\circlearrowleft} @VV{f_*}V {\circlearrowleft} @VV{f_*}V\\
 \cdots @>>> H_n(B) @>{i_*}>> H_n(Y) @>{j_*}>> H_n(Y,B) @>{\partial}>> H_{n-1}(B) @>>> \cdots
 \end{CD}$$
+
+Third commutative diagram is important. Induced map commutes with boundary map is key of naturality.
+
+## Cellular Homology
+
+### Mapping Telescope Argument
+
+Hatcher Lemma 2.34 uses mapping telescope argument for infinite dimensional CW complex. I haven't seen this type of argument applied to other situation but following proof was interesting.
+
+### Cellular Boundary Map
+
+Strength of cellular homology is that it is able to compute explicitly the boundary map. Understanding following diagram is important.
+
+$\require{\AMScd}$
+$$\begin{CD}
+H_n (D_{\alpha}^n, \partial D_{\alpha}^n) @>{\partial}>{\approx}> \tilde{H}_{n-1} (\partial D_{\alpha}^n) @>{\Delta}_{\alpha\beta *}>> \tilde{H}_{n-1} (S_{\beta}^{n-1}) \\
+@VV{\Phi_{\alpha *}}V @VV{\varphi_{\alpha *}}V @AA{q_{\beta *}}A\\
+H_n (X^n, X^{n-1}) @>{\partial_n}>> \tilde{H}_{n-1} (X^{n-1}) @>{q_*}>> \tilde{H}_{n-1} (X^{n-1}/X^{n-2}) \\
+@. @VV{j_{n-1}}V @VV{\approx}V\\
+@. H_{n-1}(X^{n-1}, X^{n-2}) @>{\approx}>> H_{n-1}(X^{n-1}/X^{n-2}, X^{n-2}/X^{n-2})
+\end{CD}$$
+
+Cellular boundary map sends $H_n (X^n, X^{n-1}) \rightarrow H_{n-1}(X^{n-1}, X^{n-2})$. We need to see how actually each class send to others.
+
+$\require{\AMScd}$
+$$\begin{CD}
+[D_{\alpha}^n] @>{\partial}>{\approx}> [\partial D_{\alpha}^n] @>{\Delta}_{\alpha\beta *}>> [d_{\alpha\beta} e_{\beta}^{n-1}] \\
+@VV{\Phi_{\alpha *}}V @VV{\varphi_{\alpha *}}V @AA{q_{\beta *}}A\\
+[e_{\alpha}^n] @>{\partial_n}>> [*] @>{q_*}>> [\sum_{\beta} d_{\alpha\beta} e_{\beta}^{n-1}] \\
+@. @VV{j_{n-1}}V @|\\
+@. [\sum_{\beta} d_{\alpha\beta} e_{\beta}^{n-1}] @= [\sum_{\beta} d_{\alpha\beta} e_{\beta}^{n-1}]
+\end{CD}$$
+
+Therefore, the formula holds.
