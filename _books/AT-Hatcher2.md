@@ -10,8 +10,7 @@ tags:
 - Topology
 ---
 
-Homology : definition and technique
-========
+# Homology : definition and technique
 
 ## Relative Homology
 
