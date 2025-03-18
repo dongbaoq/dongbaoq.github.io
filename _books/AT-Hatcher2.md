@@ -25,7 +25,7 @@ Homology is hard to imagine what it states for. It's because homology is the for
 
 ## Techniques for Calculating Homology
 
-Calculation of homology depends on some techniques. Major one is 'Mayer Vietoris'
+Calculation of homology depends on some techniques. Long exact sequence is the main one. Mayer Vietoris argument is another.
 
 ### Mayer Vietoris
 
@@ -40,7 +40,15 @@ Note that third map is quite clear. Cycle of $X$ can be decomposed into sum of c
 Excision is an isomorphism but its fundamental is from **inclusion map**.
 $i : (X-Z, A-Z) \hookrightarrow (X,A)$ induces $H_n (X-Z, A-Z) \xrightarrow{i_*} H_n (X, A)$.
 
-This fact may be important if excision relates to naturality. Excision isomorphism is from the inclusion.
+This fact may be important if excision relates to naturality. 
 
 ## Naturality
 
+Naturality states if $f : (X,A) \rightarrow (Y,B)$ then
+
+$$\require{AMScd}
+\begin{CD}
+\cdots \rightarrow H_n(A) @>{i_*}>> H_n(X) @>{j_*}>> H_n(X,A) @>{\partial}>> H_{n-1}(A) \rightarrow \cdots;\\
+@VV{f_*}V {\circlearrowleft} @VV{f_*}V {\circlearrowleft} @VV{f_*}V {\circlearrowleft} @VV{f_*}V\\
+\cdots \rightarrow H_n(B) @>{i_*}>> H_n(Y) @>{j_*}>> H_n(Y,B) @>{\partial}>> H_{n-1}(B) \rightarrow \cdots;
+\end{CD}$$
