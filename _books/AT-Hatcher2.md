@@ -72,18 +72,18 @@ Strength of cellular homology is that it is able to compute explicitly the bound
 
 $\require{\AMScd}$
 $$\begin{CD}
-H_n (D_{\alpha}^n, \partial D_{\alpha}^n) @>{\partial}>{\approx}> \tilde{H}_{n-1} (\partial D_{\alpha}^n) @>{\Delta}_{\alpha\beta *}>> \tilde{H}_{n-1} (S_{\beta}^{n-1}) \\
+H_n (D_{\alpha}^n, \partial D_{\alpha}^n) @>{\partial}>> \tilde{H}_{n-1} (\partial D_{\alpha}^n) @>{\Delta}_{\alpha\beta *}>> \tilde{H}_{n-1} (S_{\beta}^{n-1}) \\
 @VV{\Phi_{\alpha *}}V @VV{\varphi_{\alpha *}}V @AA{q_{\beta *}}A\\
 H_n (X^n, X^{n-1}) @>{\partial_n}>> \tilde{H}_{n-1} (X^{n-1}) @>{q_*}>> \tilde{H}_{n-1} (X^{n-1}/X^{n-2}) \\
 @. @VV{j_{n-1}}V @VV{\approx}V\\
 @. H_{n-1}(X^{n-1}, X^{n-2}) @>{\approx}>> H_{n-1}(X^{n-1}/X^{n-2}, X^{n-2}/X^{n-2})
 \end{CD}$$
 
-Cellular boundary map sends $H_n (X^n, X^{n-1}) \rightarrow H_{n-1}(X^{n-1}, X^{n-2})$. We need to see how actually each class send to others.
+Cellular boundary map sends $H_n (X^n, X^{n-1})$ to $H_{n-1}(X^{n-1}, X^{n-2})$. We need to see how actually each class send to others.
 
 $\require{\AMScd}$
 $$\begin{CD}
-[D_{\alpha}^n] @>{\partial}>{\approx}> [\partial D_{\alpha}^n] @>{\Delta}_{\alpha\beta *}>> [d_{\alpha\beta} e_{\beta}^{n-1}] \\
+[D_{\alpha}^n] @>{\partial}>> [\partial D_{\alpha}^n] @>{\Delta}_{\alpha\beta *}>> [d_{\alpha\beta} e_{\beta}^{n-1}] \\
 @VV{\Phi_{\alpha *}}V @VV{\varphi_{\alpha *}}V @AA{q_{\beta *}}A\\
 [e_{\alpha}^n] @>{\partial_n}>> [*] @>{q_*}>> [\sum_{\beta} d_{\alpha\beta} e_{\beta}^{n-1}] \\
 @. @VV{j_{n-1}}V @|\\
@@ -91,3 +91,7 @@ $$\begin{CD}
 \end{CD}$$
 
 Therefore, the formula holds.
+
+### Application
+
+Applying cellular homology to various CW complexes are remarkable. Len's space, Real and Complex Projective space... and exercises of chapter 2.2
