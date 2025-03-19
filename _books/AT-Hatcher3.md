@@ -61,6 +61,24 @@ $f : X \rightarrow Y$,
 
 $$f^{*} (\alpha \smile \beta) = f^* (\alpha) \smile f^{*} (\beta)$$
 
+This might be viewed not that powerful, but actually by this property, we can check following diagram is commutative. (This is also a solution for Hatcher exercise 2). Suppose $f : X \rightarrow Y$ that $f(A) \subset C$, $f(B) \subset D$.
+
+$\require{\AMScd}$
+$$\begin{CD}
+H^{k}(X, A) \times H^{l}(X, B) @>{\smile}>> H^{k+l} (X, A\cup B)\\
+@A{f^* \times f^*}AA @A{f^*}AA\\
+H^{k}(Y, C) \times H^{l}(Y, D) @>{\smile}>> H^{k+l} (Y, C\cup D)
+\end{CD}$$
+
+This is by diagram chasing
+
+$\require{\AMScd}$
+$$\begin{CD}
+[f^* \phi] \times [f^* \psi] @>{\smile}>> [f^* \phi] \smile [f^* \psi] = [f^* (\phi \smile \psi)]\\
+@A{f^* \times f^*}AA @A{f^*}AA\\
+[\phi] \times [\psi] @>{\smile}>> [\phi \smile \psi]
+\end{CD}$$
+
 ### Cup product is skew commutative
 
 $$\alpha \smile \beta = (-1)^{kl} \beta \smile \alpha$$
@@ -85,10 +103,44 @@ We can think in this way, why Mobius band is not orientable. Following to the ci
 
 More elegant way to understand this is thinking about covering space $M_R$, topologized by above 'continuity'
 
-$$M_R = \{\mu_x | x \in M, \mu_x \in H_n(X\|x;R) \}$$
+$$M_R = \{\mu_x | x \in M, \mu_x \in H_n(X|x;R) \}$$
 
 If $M$ is $R$ orientable then each section will correspond to element of $R$. Identity of $R$ corresponds to $R$-orientation. However, if $M$ is not $R$-orientable, then element in $H_n(X\|x;R)$ need to equal to its minus. Thus $2r = 0$ condition is needed. This fact is illustrated in Theorem 3.26 and Lemma 3.27 of Hatcher's book. Lemma 3.27 is itself useful in many situations.
 
+### Orientation of manifold with boundary
 
+If $M$ is compact manifold with boundary, orientation is defined by orientation of $M - \partial M$.
 
+Existence of collar neighborhood of $\partial M$ gives isomorphism
 
+$$ H_n (M, \partial M ; R) \approx H_n (M-\partial M, \partial M \times (0, \epsilon);R)$$
+
+Since $H_n (M-\partial M, \partial M \times (0, \epsilon);R) = H_n (M-\partial M \| K ; R)$, it can be viewed as orientation of $M$. It means $H_n (M, \partial M ; R)$ represents orientation of $M$.
+
+Crucial fact is that connecting homomorphism maps fundamental class of $M$ into fundamental class of $\partial M$
+
+$$\partial : H_n(M, \partial M) \xrightarrow{\approx} H_{n-1} (\partial M)$$
+
+We can prove this by following method : 
+
+First we prove that $H_n (M) = 0$. There are two maps
+
+$$ i : M - \partial M \times [0, \epsilon] \hookrightarrow M$$
+
+$$ h : M \rightarrow M - \partial M \times [0, \epsilon]$$
+
+Where $h$ follows by proof of existence of collar neighborhood. $M$ is homeomorphic to $M - \partial M \times [0, 3 \epsilon)$. $h$ sends $M - \partial M \times [0,2 \epsilon]$ into itself and $\partial M \times [0, 2\epsilon]$ into projection $\partial M \times {2\epsilon}$.
+
+Then $h \circ i$ and $i \circ h$ is homotopic to identity map. Thus $M$ and $M - \partial M \times [0, \epsilon]$ are homotopy equivalent and later one is noncompact manifold without boundary. Which implies $H_n (M) = 0$.
+
+Now, for the long exact sequence
+
+$$ 0 \rightarrow H_n (M, \partial M) \xrightarrow{\partial} H_{n-1} (\partial M) \rightarrow H_{n-1}(M) $$
+
+We know $M$ is homotopic equivalent to orientable noncompact manifold without boundary so $H_{n-1} (M)$ is free. Thus $\partial$ map must be surjective. That means, $\partial$ map is an isomorphism.
+
+As a corollary we can prove Hatcher Ex. 33. If compact manifold retracts onto its boundary, then $r : M \rightarrow \partial M$ and $i : \partial M \rightarrow M$ satisfies $i \circ r = id$. However for the long exact sequence
+
+$$ H_{n} (M, \partial M) \xrightarrow{\approx} H_{n-1} (\partial M) \xrightarrow{0} H_{n-1}(M)$$
+
+So inclusion map induces zero map in homology. There cannot exist a retraction.
