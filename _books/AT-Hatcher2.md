@@ -122,7 +122,7 @@ The main bottleneck is that ordinary mapping cone does not apply to simplicial o
 - To prove CW complex $X$, there is a simplicial complex $Y$ that is homotopy equivalence, we'll construct CW complexes. $Z_n$ contains $X^n$ as a deformation retract and contains $Y_n$ as 'subcomplex' and 'simplicial complex' which is also deformation retract. (Note that $X^n$ means $n$-skeleton of $X$ while $Y_n$ and $Z_n$ are just indices)
 
 - Given attaching map $\varphi_{\alpha} : S^n \rightarrow X^n$, it is homotopic to $f_{\alpha} : S^n \rightarrow Y_n$ which is simplicial map. Define $W_n = Z_n \cup_{\alpha} M(f_{\alpha})$. Then
-  $$ S_{\alpha}^n \xhookrightarrow{i} M(f_{\alpha}) \rightarrow Y_n \hookrightarrow{i} Z_n \rightarrow X^n$$
+  $$ S_{\alpha}^n \hookrightarrow M(f_{\alpha}) \rightarrow Y_n \hookrightarrow Z_n \rightarrow X^n$$
 Map exists, $S_{\alpha}^n \rightarrow Y_n$ is $f_{\alpha}$ and $Z_n \rightarrow X^n$ is deformation retract. This map is homotopic to $\varphi_{\alpha}$
 
 - $Z_{n+1}$ defined as $D_{\alpha}^{n+1} \times I$ attached to $X^n$ and $W_n$. Attaching $D_{\alpha}^{n+1} \times 0$ to $X^n$ is by $\varphi_{\alpha}$ and attaching $D_{\alpha}^{n+1} \times 1$ to $W_n$ is by inclusion to mapping cylinder $M(f_{\alpha})$ in $W_n$. $D_{\alpha}^{n+1} \times (0,1)$ is by homotopy of $\varphi_{\alpha}$ and $f_{\alpha}$.
