@@ -127,10 +127,10 @@ Map exists, $S_{\alpha}^n \rightarrow Y_n$ is $f_{\alpha}$ and $Z_n \rightarrow 
 
 - $Z_{n+1}$ defined as $D_{\alpha}^{n+1} \times I$ attached to $X^n$ and $W_n$. Attaching $D_{\alpha}^{n+1} \times 0$ to $X^n$ is by $\varphi_{\alpha}$ and attaching $D_{\alpha}^{n+1} \times 1$ to $W_n$ is by inclusion to mapping cylinder $M(f_{\alpha})$ in $W_n$. $D_{\alpha}^{n+1} \times (0,1)$ is by homotopy of $\varphi_{\alpha}$ and $f_{\alpha}$.
 
-- One side of $Z_{n+1}$ which consists of $D_{\alpha}^{n+1} \times 0$ becomes $X^{n+1}
+- One side of $Z_{n+1}$ which consists of $D_{\alpha}^{n+1} \times 0$ becomes $X^{n+1}$
 
 - The other side, for each mapping cylinder $M(f_{\alpha})$ the one added is a disk attached to $S_{\alpha}^n$. So mapping cone became mapping cone, thus become $Y_n \cup_{\alpha} C(f_{\alpha})$ which is a simplicial complex. This will be $Y_{n+1}$
 
-- Projecting $D_{\alpha}^{n+1} \times I$ from $0 \times 0$ (hence $D^{n+1}\times I$ deform retract onto $\partial D^{n+1} \times I \cup D^{n+1} \times 1$) gives $Z_{n+1}$ deformation retract to $Z_n \cup Y_{n+1}$ so $Y_{n+1}$. The other side gives deformation retract to $W_n cup X^{n+1}$ so $X^n$.
+- Projecting $D_{\alpha}^{n+1} \times I$ from $0 \times 0$ (or saying $D^{n+1}\times I$ deform retract onto $\partial D^{n+1} \times I \cup D^{n+1} \times 1$) gives $Z_{n+1}$ deformation retract to $Z_n \cup Y_{n+1}$ so $Y_{n+1}$. The other side gives deformation retract to $W_n \cup X^{n+1}$ so $X^n$.
 
 - $Y$, $Z$ defined as union of $Y_n$ and $Z_n$ 's satisfy the condition.
