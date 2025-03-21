@@ -111,10 +111,26 @@ The main bottleneck is that ordinary mapping cone does not apply to simplicial o
 
 - First construct $M(f\|K^0)$. $K^0$ maps into $L^0$ by $f$ so connect those points by $\Delta^1$.
 
-  $$M(f\large|K^0) = L \cup \cup_{K^0} \Delta^1$$
+  $$M(f\large| K^0) = L \cup \large(\cup_{K^0} \Delta^1 \large)$$
 
 - Existing $M(f\|K^{n-1})$, $n$-simplex $\sigma$ of $K$ and $\tau = f(\sigma)$. Then within the barycentric subdivision of $\sigma$, $M(f:\sigma \rightarrow \tau)$ can be think of cone whose vertex is barycenter and underlying space $M(f:\partial \sigma \rightarrow \tau)$. Note that $f$ extended to barycenter of $\sigma$ sends barycenter to one of the 0 simplex of $L$. Thus, cone is perfectly defined.
 
 - Attach $M(f:\sigma \rightarrow \tau)$ to $M(f\|K^{n-1})$. Then we obtain $M(f\|K^n)$ that deformation retracts to $M(f\|K^{n-1})$. Here, deformation retract is defined for the 'realization' of mapping cylinders.
 
 - Thus there can occur the problem that deformation retract does not equal $f$. However, this can be corrected by linear homotopy.
+
+- To prove CW complex $X$, there is a simplicial complex $Y$ that is homotopy equivalence, we'll construct CW complexes. $Z_n$ contains $X^n$ as a deformation retract and contains $Y_n$ as 'subcomplex' and 'simplicial complex' which is also deformation retract. (Note that $X^n$ means $n$-skeleton of $X$ while $Y_n$ and $Z_n$ are just indices)
+
+- Given attaching map $\varphi_{\alpha} : S^n \rightarrow X^n$, it is homotopic to $f_{\alpha} : S^n \rightarrow Y_n$ which is simplicial map. Define $W_n = Z_n \cup_{\alpha} M(f_{\alpha})$. Then
+  $$ S_{\alpha}^n \xhookrightarrow{i} M(f_{\alpha}) \rightarrow Y_n \hookrightarrow{i} Z_n \rightarrow X^n$$
+Map exists, $S_{\alpha}^n \rightarrow Y_n$ is $f_{\alpha}$ and $Z_n \rightarrow X^n$ is deformation retract. This map is homotopic to $\varphi_{\alpha}$
+
+- $Z_{n+1}$ defined as $D_{\alpha}^{n+1} \times I$ attached to $X^n$ and $W_n$. Attaching $D_{\alpha}^{n+1} \times 0$ to $X^n$ is by $\varphi_{\alpha}$ and attaching $D_{\alpha}^{n+1} \times 1$ to $W_n$ is by inclusion to mapping cylinder $M(f_{\alpha})$ in $W_n$. $D_{\alpha}^{n+1} \times (0,1)$ is by homotopy of $\varphi_{\alpha}$ and $f_{\alpha}$.
+
+- One side of $Z_{n+1}$ which consists of $D_{\alpha}^{n+1} \times 0$ becomes $X^{n+1}
+
+- The other side, for each mapping cylinder $M(f_{\alpha})$ the one added is a disk attached to $S_{\alpha}^n$. So mapping cone became mapping cone, thus become $Y_n \cup_{\alpha} C(f_{\alpha})$ which is a simplicial complex. This will be $Y_{n+1}$
+
+- Projecting $D_{\alpha}^{n+1} \times I$ from $0 \times 0$ (hence $D^{n+1}\times I$ deform retract onto $\partial D^{n+1} \times I \cup D^{n+1} \times 1$) gives $Z_{n+1}$ deformation retract to $Z_n \cup Y_{n+1}$ so $Y_{n+1}$. The other side gives deformation retract to $W_n cup X^{n+1}$ so $X^n$.
+
+- $Y$, $Z$ defined as union of $Y_n$ and $Z_n$ 's satisfy the condition.
