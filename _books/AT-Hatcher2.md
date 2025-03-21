@@ -109,12 +109,12 @@ The main bottleneck is that ordinary mapping cone does not apply to simplicial o
 
 - First remark that $f:K \rightarrow L$ simplicial map can be extended to $f:K' \rightarrow L$ where $K'$ is barycentric subdivision of $K$. This is by choosing 'lowest index' for each barycentric division. In the proof, we want to make $M(f)$ that has retraction onto $L$ with $r_1 \| K' =f$. Right hand side $f$ mean $f$ applyed to $K'$.
 
-- First construct $M(f|K^0)$. $K^0$ maps into $L^0$ by $f$ so connect those points by $\Delta^1$.
+- First construct $M(f\|K^0)$. $K^0$ maps into $L^0$ by $f$ so connect those points by $\Delta^1$.
 
-  $$M(f\|K^0) = L \cup \cup_{K^0} \Delta^1$$
+  $$M(f\large|K^0) = L \cup \cup_{K^0} \Delta^1$$
 
 - Existing $M(f\|K^{n-1})$, $n$-simplex $\sigma$ of $K$ and $\tau = f(\sigma)$. Then within the barycentric subdivision of $\sigma$, $M(f:\sigma \rightarrow \tau)$ can be think of cone whose vertex is barycenter and underlying space $M(f:\partial \sigma \rightarrow \tau)$. Note that $f$ extended to barycenter of $\sigma$ sends barycenter to one of the 0 simplex of $L$. Thus, cone is perfectly defined.
 
-- Attach $M(f:\sigma \rightarrow \tau)$ to $M(f|K^{n-1})$. Then we obtain $M(f\|K^n)$ that deformation retracts to $M(f\|K^{n-1})$. Here, deformation retract is defined for the 'realization' of mapping cylinders.
+- Attach $M(f:\sigma \rightarrow \tau)$ to $M(f\|K^{n-1})$. Then we obtain $M(f\|K^n)$ that deformation retracts to $M(f\|K^{n-1})$. Here, deformation retract is defined for the 'realization' of mapping cylinders.
 
 - Thus there can occur the problem that deformation retract does not equal $f$. However, this can be corrected by linear homotopy.
