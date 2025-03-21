@@ -57,10 +57,10 @@ $$\begin{CD}
 \cdots @>>> H_n(B) @>{i_*}>> H_n(Y) @>{j_*}>> H_n(Y,B) @>{\partial}>> H_{n-1}(B) @>>> \cdots
 \end{CD}$$
 
-\begin{tikzcd}
+\[\begin{tikzcd}
 H_n(A) \arrow[r, "i_*"] \arrow[d, "f_*"] & H_n(X) \arrow[r, "j_*"] \arrow[d, "f_*"] & {H_n(X,A)} \arrow[r, "\partial_*"] \arrow[d, "f_*"] & H_{n-1}(A) \arrow[d, "f_*"] \\
 H_n(B) \arrow[r, "i_*"]                  & H_n(Y) \arrow[r, "j_*"]                  & {H_n(Y,B)} \arrow[r, "\partial_*"]                  & H_{n-1}(B)                 
-\end{tikzcd}
+\end{tikzcd}\]
 
 Third commutative diagram is important. Induced map commutes with boundary map is key of naturality.
 
