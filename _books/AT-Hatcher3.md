@@ -144,3 +144,42 @@ As a corollary we can prove Hatcher Ex. 33. If compact manifold retracts onto it
 $$ H_{n} (M, \partial M) \xrightarrow{\approx} H_{n-1} (\partial M) \xrightarrow{0} H_{n-1}(M)$$
 
 So inclusion map induces zero map in homology. There cannot exist a retraction.
+
+## Diagram chasing within cohomology with compact support
+
+I want to describe diagram chasing that contains cohomology with compact support. 
+
+### Lemma 3.36 from Hatcher
+
+$\require{AMScd}$
+$$\begin{CD}
+\cdots @>>> H_{c}^{k}(U \cap V) @>>> H_{c}^{k}(U) \oplus H_{c}^{k}(V) @>>> H_{c}^{k} (M) @>>> H_{c}^{k+1} (U \cap V) @>>> \cdots\\
+@. @VV{D_{U \cap V}}V @VV{D_U \oplus -D_V}V @VV{D_M}V @VV{D_{U \cap V}}V @.\\
+\cdots @>>> H_{n-k}(U\cap V) @>>> H_{n-k}(U) \oplus H_{n-k}(V) @>>> H_{n-k}(M) @>>> H_{n-k-1}(U\cap V) @>>> \cdots\\
+\end{CD}$$
+
+First Square: for $K \subset U$ and $L \subset V$ compact,
+
+$\require{AMScd}$
+$$\begin{CD}
+H^{k} (M | K\cap L) @>>> H^{k} (M|K) \oplus H^{k}(M|L)\\
+@VVV @VVV\\
+H^{k} (U\cap V |K\cap L) @. H^{k} (U|K) \oplus H^{k}(V|L)\\
+@VVV @VVV\\
+H_{n-k} (U \cap V) @>>> H_{n-k}(U) \oplus H_{n-k}(V)
+\end{CD}$$
+
+for representative cochain $\varphi$
+
+$\require{AMScd}$
+$$\begin{CD}
+[\varphi] @>>> [(\varphi, -\varphi)]\\
+@VVV @VVV\\
+[\varphi|_{U\cap V}] @. [(\varphi|_{U}, -\varphi|_{V})]\\
+@VVV @VVV\\
+[\mu_{K\cap L} \frown \varphi|_{U\cap V}] @>>> 
+\end{CD}$$
+
+$$(\mu_K \frown \varphi\big|_{U}, -\mu_{L} \frown \varphi\big|_{V}) = (\mu_{K\cap L} \frown \varphi\big|_{U\cap V}, -\mu_{K\cap L} \frown \varphi\big|_{U\cap V})$$
+
+is what we have to show and it holds because of cap product commutes with induced map.
