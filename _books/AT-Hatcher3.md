@@ -10,6 +10,9 @@ tags:
 - Topology
 ---
 
+
+This post illustrates important points in my view of the Allen Hatcher's Algebraic Topology chapter 3.
+
 # Cohomology and Homology
 
 ## Intuitive understanding of Cohomology
