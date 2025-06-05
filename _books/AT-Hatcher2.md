@@ -10,6 +10,8 @@ tags:
 - Topology
 ---
 
+This post illustrates important points in my view of the Allen Hatcher's Algebraic Topology chapter 2.
+
 # Homology : definition and technique
 
 ## Relative Homology
