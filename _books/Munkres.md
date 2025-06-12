@@ -15,3 +15,5 @@ This post illustrates diverse topological space's properties
 # Point set topology 
 
 ![Point set topology](../Point_Set_Topology.jpeg)
+
+![Point set topology2](../Point_Set_Topology2.jpeg)
