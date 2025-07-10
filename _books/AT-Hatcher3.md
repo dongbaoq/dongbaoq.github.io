@@ -186,3 +186,55 @@ $$\begin{CD}
 $$(\mu_K \frown \varphi\big|_{U}, -\mu_{L} \frown \varphi\big|_{V}) = (\mu_{K\cap L} \frown \varphi\big|_{U\cap V}, -\mu_{K\cap L} \frown \varphi\big|_{U\cap V})$$
 
 is what we have to show and it holds because of cap product commutes with induced map.
+
+## Appendix A : Universal Coefficient Theorem
+
+We have two universal coefficient theorems : Universal coefficient theorem for cohomology and Universal coefficient theorem for homology.
+
+Universal coefficient theorem for cohomology states
+
+$$ 0 \rightarrow Ext(H_{n-1}(C), G) \rightarrow H^n(C;G) \rightarrow Hom(H_n(C), G) \rightarrow 0$$
+
+and is split exact, natural.
+
+Universal coefficient theorem for homology states
+
+$$ 0 \rightarrow H_n(C) \otimes G \rightarrow H_n(C;G) \rightarrow Tor(H_{n-1}(C), G) \rightarrow 0$$
+
+and is split exact, natural.
+
+## Appendix B : General Kunneth formula
+
+### Homology as cell of CW complex
+
+In the Appendix B, it introduces how to 'interpret' homology in CW structure. Then, we will be able to define 'product' of cycles. For cohomology, we defined cup product which $\varphi \smile \psi$ applied separately on $\Delta$ - complexes.
+
+The cellular cross product is defined to satisfy $d(e^i \times e^j) = de^i \times e^j + (-1)^i e^i \times de^j$. Which $e^i$, $e^j$ corresponds to $i$ cell and $j$ cell of $X$ and $Y$ respectively. More precisely, these $e^i$ are the generator of $H_i (X^i, X^{i-1})$. However, we need an attention to determine orientation of $e^i$. This orientation is equivalent to linear algebraic orientation. $H_i (I^i, \partial I^i)$ can be determined by orientation of basis elements, which is -1 or 1 according to determinant.
+
+Then, product map of homology is well-defined and cellular maps also satisfies 'good' property. See Lemma 3B.2.
+
+Now we can think of homology for CW complexes that corresponds to one $i$ cells. This gives an easy explanation why $H_n(X\times S^k; \mathbb{Z}) \approx H_n(X;\mathbb{Z}) \oplus H_{n-k} (X; \mathbb{Z})$
+
+### Algebraic Kunneth formula
+
+Algebraic Kunneth formula is formula that determines homology of tensor product of two chains. This applied to homology of CW complexes induce topological Kunneth formula.
+
+### Cohomology as cell of CW complex
+
+Cohomology could be also defined within 'cell' in CW complex. It assigns each $i$ cell a $R$ value. Then as homology does, we can define product of cohomology.
+
+$$(\varphi \times_2 \psi) (e_{\alpha}^k \times e_{\beta}^l) = \varphi(e_{\alpha}^k) \psi(e_{\beta}^l)$$
+
+and assigns 0 to other $k+l$ cells which are not the product of $k$-cell and $l$-cell of $X$ and $Y$.
+
+Important fact of this definition is, this definition of product coincides with product defined by cup product of cohomology.
+
+$$ \varphi \times_1 \psi = p_1^* (\varphi) \smile p_2^* (\psi)$$
+
+## Appendix C : Hopf Algebras
+
+We have looked at interesting algebraic structure on cohomology ring. Within the 'cup product' cohomology ring became graded algebra. If given topological space satisfies additional structure : H-space, then more structure could be induced on cohomology and homology.
+
+### Cohomology : Hopf algebra structure
+
+### Homology : Pontryagin product (Sometimes, Pontryagin ring)
