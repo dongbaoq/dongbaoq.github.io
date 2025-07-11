@@ -237,4 +237,24 @@ We have looked at interesting algebraic structure on cohomology ring. Within the
 
 ### Cohomology : Hopf algebra structure
 
+Hopf algebra is a graded algebra over a commutative ring $R$ with special operation : coproduct.
+
+(1) There is an identity element $1 \in A^0$
+(2) Coproduct map $\Delta : A \rightarrow A \otimes A$ is homomorphism of graded algebras and $\Delta (\alpha) = \alpha \otimes 1 + 1 \otimes \alpha + \sum_{i} \alpha_i' \otimes \alpha_i''$
+
+Since H-space have continuous multiplication map $\mu$, this induces cohomology graded ring $H^* (X;R)$ a Hopf algebra structure.
+
 ### Homology : Pontryagin product (Sometimes, Pontryagin ring)
+
+With the multiplication map, it induces
+
+$$ H_* (X;R) \otimes H_* (X;R) \xrightarrow{\times} H_* (X\times X ;R) \xrightarrow{\mu_*} H_* (X;R)$$
+
+This Pontryagin product is not necessarily associative but it holds for most of the situations.
+
+### Hopf algebra and dual Hopf algebra
+
+Proposition 3C.10 states the dual of hopf algebra is hopf algebra.
+
+$A$ be a Hopf algebra over $R$ and is f.g. free $R$-module. Then the product $\pi : A \otimes A \rightarrow A$ and coproduct $\Delta : A \rightarrow A \otimes A$ which is in cohomology ring, the cup product map and coproduct map, have duals $\pi^{*}$ and $\Delta^{*}$ over $A^{*}$ and this induces hopf algebra.
+
