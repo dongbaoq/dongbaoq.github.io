@@ -67,7 +67,7 @@ Minimal Polynomial admits __Induction__ on matrix size.
 
 # Primary Decomposition Theorem
 
-__Theorem__. (__Primary Decomposition Theorem__) If $T$ is linear operator (or matrix) then for $\phi_T(t) = p_1(t)^{e_1} p_2(t)^{e_2} \cdots p_k (t)^{e_k}$ and $m_T(t) = p_1(t)^{f_1} p_2(t)^{f_2} \cdots p_k(t)^{f_k}$,
+__Theorem__. (__Primary Decomposition Theorem__) If $T$ is linear operator (or matrix) then for $\phi_T(t) = p_1(t)^{e_1} p_2(t)^{e_2} \cdots p_k (t)^{e_k}$ and $m_T(t) = p_1(t)^{f_1} p_2(t)^{f_2} \cdots p_k(t)^{f_k}$ ($p_i(t)$ are monic irreducible polynomial)
 
 $$
 \begin{aligned}
@@ -89,6 +89,19 @@ $$
 0 & 0 & \cdots & [T_k]_{\mathcal{B}_k}^{\mathcal{B}_k}
 \end{pmatrix}
 $$
+
+This is the consequence of following lemma which is immediate by $d(t) = g_1(t)f_1(t) + \cdots + g_k(t)f_k(t)$ holds for $d(t)$ the greatest common divisor.
+
+__Lemma__. If $f_1(t), \cdots , f_k(t) \in F[t]$ are monic, mutally relative prime and $\xi(t) = f_1(t) f_2(t) \cdots f_k(t) \in \mathcal{I}_T$ then
+
+$$V = ker(f_1(T)) \oplus ker(f_2(T)) \oplus \cdots \oplus ker(f_k(T))$$
+
+# Diagonalizability
+
+__Corollary__. $T$ is diagonalizable if and only if the minimal polynomial $m_T(t)$ can be decomposed into 1st order monic polynomial and does not have multiple root. 
+
+(__Thus, diagonalizability is fully determined by 'Minimal Polynomial'__)
+
 
 
 # Diagonalization Theorem
