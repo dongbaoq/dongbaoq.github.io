@@ -39,16 +39,13 @@ __Theorem__. Every linear map $L : F^n \rightarrow F^m$ is form of $L_A$. Furthe
 
 __Theorem__. Row rank (defined by the dimension of row vector space) and Column rank (defined by the dimension of column vector space) are equal.
 
-Proof 1. Suppose $A$ is $m \times n$ matrix. Then if we prove $m = \mathrm{dim} (ker A) + (\mathrm{row rank})$ then since $\mathrm{dim} (im A) = (\mathrm{col rank})$, proof is over. $m = \mathrm{dim} (ker A) + (\mathrm{row rank})$ can be shown by row-reduced echelon form.
+Proof 1. Suppose $A$ is $m \times n$ matrix. Then if we prove $m = \mathrm{dim} (ker A) + (\mathrm{row \, rank})$ then since $\mathrm{dim} (im A) = (\mathrm{col \, rank})$, proof is over. $m = \mathrm{dim} (ker A) + (\mathrm{row \, rank})$ can be shown by row-reduced echelon form.
 
 Proof 2. If $A$ can be transformed to row-reduced echelon form $R$, then its row rank is invariant. Also, in the row-reduced echelon form $R$, row rank is clearly identical to column rank. Thus, one should prove that column space of $A$ and $R$ have the same rank. Since $EA = R$, $L_A = L_{E}^{-1}\circ L_R$ so $im (L_A) = im(L_E^{-1} \circ L_R) = L_E^{-1} (im (L_R))$. So as the vector space, isomorphism $L_A \approx L_R$ holds. They have the same rank.
 
 ## Rank is invariant value of similar matrices
 
-__Theorem__ Define $A \asymp B$ for 
-
-$A,B \in \mathcal{M}_{m,n}(F) $
- by $B = PAQ$ for some invertible $P \in \mathcal{M}_{m,m}(F)$, $Q \in \mathcal{M}_{n,n}(F)$ . Then $A \asymp B$ if and only if $rank(A) = rank(B)$. Representative form of these equivalence classes is 
+__Theorem__ Define $A \asymp B$ for $$A,B \in \mathcal{M}_{m,n}(F)$$ by $B = PAQ$ for some invertible $$P \in \mathcal{M}_{m,m}(F)$$, $$Q \in \mathcal{M}_{n,n}(F)$$. Then $A \asymp B$ if and only if $rank(A) = rank(B)$. Representative form of these equivalence classes is 
 
 $$\begin{pmatrix}
 I_r & 0 \\
@@ -89,7 +86,7 @@ V &= ker (p_1(T)^{e_1}) \oplus ker(p_2 (T)^{e_2}) \oplus \cdots \oplus ker(p_k (
 \end{aligned}    
 $$
 
-Moreover, if we let $W_i = ker(p_i(T))^{e_i}$ and $T_i = T \|_{W_i}$, then $\phi_{T_i} (t) = p_i (t)^{e_i}$ and $m_{T_i}(t) = p_i (t)^{f_i}$
+Moreover, if we let $W_i = ker(p_i(T))^{e_i}$ and $$T_i = T \vert_{W_i}$$, then $\phi_{T_i} (t) = p_i (t)^{e_i}$ and $m_{T_i}(t) = p_i (t)^{f_i}$
 
 If we admit this theorem, for basis $\mathcal{B_i}$ of $W_i$, we have
 
@@ -115,13 +112,103 @@ __Corollary__. $T$ is diagonalizable if and only if the minimal polynomial $m_T(
 
 __Thus, diagonalizability is fully determined by 'Minimal Polynomial'__
 
+Also, simiulataneously diagonalizability can be deduced by induction.
+
+__Theorem__ For $$\{T_i\}_{i \in I}$$, If $T_i T_j = T_j T_i$ and $T_i$ are all diagonalizable, then $$\{T_i \}_{i \in I}$$ is simultaneously diagonalizable.
+
+Proof uses induction on dimension of $V$. Fix $$T \in \{T_i\}_{i \in I}$$ and decompose $V = E_{\lambda_1}^T \oplus \cdots \oplus E_{\lambda_k}^T$. Then $E_{\lambda_j}^T$ is $T_i$ invariant space for all $i \in I$. So by induction hypothesis, ${T_i \big\vert_{E_{\lambda_j}^T}}$ are simultaneously diagonalizable with basis $$\{\mathfrak{B}_j \}$$. Now consider $$\mathfrak{B} = \cup_{j=1}^{k} \mathfrak{B}_j$$.
+
+This can be used on finding center of groups, for example $O(n), U(n), SU(n)$.
+
 ## $T$-Cyclic Subspace
 
+Furthermore decomposition on linear operator uses $T$-Cyclic subspace terminology.
 
+$$V = F[t] v = \{f(T) v \in V \vert f(t) \in F[t] \}$$
+
+$T$-Cyclic space satisfies $deg (m_T) = dim V$ and $\phi_T (t) = m_T (t)$ (__I think this property, minimal polynomial equals to characteristic polynomial, is very important feature of Cyclic space__) because basis of $F[t] v$ is just $$\mathfrak{B} = \{v, Tv, \cdots , T^{deg(m_T) - 1} v\}$$. For each $T$-Cyclic space, its companion matrix is defined, if $m_T (t) = t^n + a_{n-1} t^{n-1} + \cdots + a_1 t + a_0$ or $T^n + a_{n-1} T^{n-1} + \cdots + a_1 T + a_0 = 0$, companion matrix is
+
+$$\begin{pmatrix}
+0 & 0 & 0 & \cdots & 0 & -a_0\\
+1 & 0 & 0 & \cdots & 0 & -a_1\\
+0 & 1 & 0 & \cdots & 0 & -a_2\\
+\vdots & \vdots & \vdots & \ddots & \vdots & \vdots\\
+0 & 0 & 0 & \cdots & 0 & -a_{n-2}\\
+0 & 0 & 0 & \cdots & 1 & -a_{n-1}
+\end{pmatrix}$$
+
+which is just a $[T]_{\mathfrak{B}}^{\mathfrak{B}}$.
+
+For any $T$-invariant space $V$, we can define $T$-cyclic subspace $W$, which is cyclic via $T \vert_W$. If $W = F[t] w$, we notate $m_w(t) = m_{T\vert_W}(t)$. 
+
+## Cyclic Decomposition Theorem
+
+__Theorem__ (__Cyclic Decomposition Theorem__) If $T$ is linear transform and $m_T (t) = p(t)^f$ where $p(t)$ is monic irreducible polynomial. Then
+
+$$V = U_1 \oplus U_2 \oplus \cdots \oplus U_h$$
+
+$U_1, \cdots U_h$ are $T$-Cyclic subspace and for 
+
+$$\phi_{T\vert_{U_j}}(t) = m_{T\vert_{U_j}}(t) = p(t)^{r_j}$$
+
+$$f = r_1 \ge r_2 \ge \cdots \ge r_h \ge 1$$
+
+$h$ and $r_1, \cdots , r_h$ are uniquely determined.
+
+__Thus, $T$-invariant space can be decomposed into direct sum of $T$-cyclic spaces and $h, r_1, \cdots, r_h$ are invariant on decomposition__
+
+## Primary Decomposition Theorem $\oplus$ Cyclic Decomposition Theorem
+
+For $T$, by __Primary Decomposition Theorem__
+
+$$V = W_1 \oplus \cdots \oplus W_k$$
+
+Where $W_i = ker (p_i(T)^{f_i})$. Next, $T_i = T \vert_{W_i}$ can be applied __Cyclic Decomposition theorem__ so
+
+$$W_i = U_{i1} \oplus \cdots \oplus U_{ih_i}$$
+
+Where $f_i = r_{i1} \ge \cdots \ge r_{ih_{i}} \ge 1$ with
+
+$$\phi_{T\vert_{U_{ij}}} (t) = m_{T \vert_{U_{ij}}}(t) = p_i(t)^{r_{ij}}$$
+
+This is the __Best Answer to Decompose arbitrary $$\mathcal{M}_{n,n}(F)$$ Matrix__. Equivalence relation $\sim$ is totally determined by $p_i (t), h_i, r_{ij}$.
+
+## Jordan Canonical Form
+
+__Jordan Canonical Form is Representative Form of $\mathcal{M}_{n,n}(F)$__
+
+After applying Primary Decomposition Theorem, $V = W_1 \oplus \cdots \oplus W_k$ and if we suppose $\phi_T(t)$ is multiple of linear polynomials then $\phi_{T_i} (t) = p_i(t)^{e_i}$ and $m_{T_i} (t) = p_i (t)^{f_i}$.
+
+If we apply Cyclic Decomposition Theorem to $N = T - \lambda I$, $W = U_1 \oplus U_2 \oplus \cdots \oplus U_h$ and each $\phi_{N\vert_{U_j}}(t) = m_{N\vert_{U_j}}(t) = t^{r_j}$ so companion matrices last column is zero. 
+
+$$
+\begin{aligned}
+T\vert_{W_i} &\sim J_{(r_{i1}, r_{i2}, \cdots , r_{i h_i})} \\
+&=
+\begin{pmatrix}
+\lambda_i & 1 & 0 &\cdots & 0 & & & & & &&&&&&\\
+0 & \lambda_i & 1 & \cdots & 0 & & & & & &&&&&&\\
+0 & 0 & \lambda_i & \cdots & 0 & & & & & &&&&&&\\
+\vdots & \vdots & \vdots & \ddots & \vdots & & & & & &&&&&&\\
+0 & 0 & 0 & \cdots & \lambda_i & & & & & &&&&&&\\
+& & & & & \lambda_i & 1 & 0 &\cdots & 0 &&&&&&\\
+& & & & & 0 & \lambda_i & 1 & \cdots & 0 &&&&&&\\
+& & & & & 0 & 0 & \lambda_i & \cdots & 0 &&&&&&\\
+& & & & & \vdots & \vdots & \vdots & \ddots & \vdots &&&&&&\\
+& & & & & 0 & 0 & 0 & \cdots & \lambda_i & &&&&& \\
+&&&&&&&&&& \ddots &&&&& \\
+&&&&&&&&&&&\lambda_i & 1 & 0 &\cdots & 0\\
+&&&&&&&&&&&0 & \lambda_i & 1 & \cdots & 0 \\
+&&&&&&&&&&&0 & 0 & \lambda_i & \cdots & 0\\
+&&&&&&&&&&&\vdots & \vdots & \vdots & \ddots & \vdots \\
+&&&&&&&&&&&0 & 0 & 0 & \cdots & \lambda_i
+\end{pmatrix}
+\end{aligned}
+$$
+
+Each block size is $r_{ij} \times r_{ij}$.
 
 # Normed Space
-
-# Diagonalization Theorem
 
 For linear operator $T : V \rightarrow W$, there exists adjoint linear operator $T^* : W \rightarrow V$ satisfying $<T(x), y>_W = <x, T^* (y)>_V$. Assurance that $V, W$ being __finite dimensional inner product space__ is essential.
 
