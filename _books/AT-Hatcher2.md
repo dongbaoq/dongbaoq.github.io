@@ -52,7 +52,6 @@ then $f, g$ generates the same induced map.
 
 Naturality states if $f : (X,A) \rightarrow (Y,B)$ then
 
-$\require{\AMScd}$
 $$\begin{CD}
 \cdots @>>> H_n(A) @>{i_*}>> H_n(X) @>{j_*}>> H_n(X,A) @>{\partial}>> H_{n-1}(A) @>>> \cdots\\ 
 @. @VV{f_*}V {\circlearrowleft} @VV{f_*}V {\circlearrowleft} @VV{f_*}V {\circlearrowleft} @VV{f_*}V\\
@@ -71,7 +70,6 @@ Hatcher Lemma 2.34 uses mapping telescope argument for infinite dimensional CW c
 
 Strength of cellular homology is that it is able to compute explicitly the boundary map. Understanding following diagram is important.
 
-$\require{\AMScd}$
 $$\begin{CD}
 H_n (D_{\alpha}^n, \partial D_{\alpha}^n) @>{\partial}>> \tilde{H}_{n-1} (\partial D_{\alpha}^n) @>{\Delta}_{\alpha\beta *}>> \tilde{H}_{n-1} (S_{\beta}^{n-1}) \\
 @VV{\Phi_{\alpha *}}V @VV{\varphi_{\alpha *}}V @AA{q_{\beta *}}A\\
@@ -82,7 +80,6 @@ H_n (X^n, X^{n-1}) @>{\partial_n}>> \tilde{H}_{n-1} (X^{n-1}) @>{q_*}>> \tilde{H
 
 Cellular boundary map sends $H_n (X^n, X^{n-1})$ to $H_{n-1}(X^{n-1}, X^{n-2})$. We need to see how actually each class send to others.
 
-$\require{\AMScd}$
 $$\begin{CD}
 [D_{\alpha}^n] @>{\partial}>> [\partial D_{\alpha}^n] @>{\Delta}_{\alpha\beta *}>> [d_{\alpha\beta} e_{\beta}^{n-1}] \\
 @VV{\Phi_{\alpha *}}V @VV{\varphi_{\alpha *}}V @AA{q_{\beta *}}A\\
@@ -109,15 +106,15 @@ Proof of simplicial approximation theorem is quite hard. I want to describe deta
 
 The main bottleneck is that ordinary mapping cone does not apply to simplicial objects. Building mapping cylinder for simplicial map is as following:
 
-- First remark that $f:K \rightarrow L$ simplicial map can be extended to $f:K' \rightarrow L$ where $K'$ is barycentric subdivision of $K$. This is by choosing 'lowest index' for each barycentric division. In the proof, we want to make $M(f)$ that has retraction onto $L$ with $r_1 \| K' =f$. Right hand side $f$ mean $f$ applyed to $K'$.
+- First remark that $f:K \rightarrow L$ simplicial map can be extended to $f:K' \rightarrow L$ where $K'$ is barycentric subdivision of $K$. This is by choosing 'lowest index' for each barycentric division. In the proof, we want to make $M(f)$ that has retraction onto $L$ with $r_1 \vert_{K'} =f$. Right hand side $f$ mean $f$ applyed to $K'$.
 
-- First construct $M(f\|K^0)$. $K^0$ maps into $L^0$ by $f$ so connect those points by $\Delta^1$.
+- First construct $M(f\vert_{K^0})$. $K^0$ maps into $L^0$ by $f$ so connect those points by $\Delta^1$.
 
-  $$M(f\large| K^0) = L \cup \large(\cup_{K^0} \Delta^1 \large)$$
+  $$M(f\vert_{K^0}) = L \cup \large(\cup_{K^0} \Delta^1 \large)$$
 
-- Existing $M(f\|K^{n-1})$, $n$-simplex $\sigma$ of $K$ and $\tau = f(\sigma)$. Then within the barycentric subdivision of $\sigma$, $M(f:\sigma \rightarrow \tau)$ can be think of cone whose vertex is barycenter and underlying space $M(f:\partial \sigma \rightarrow \tau)$. Note that $f$ extended to barycenter of $\sigma$ sends barycenter to one of the 0 simplex of $L$. Thus, cone is perfectly defined.
+- Existing $M(f\vert_{K^{n-1}})$, $n$-simplex $\sigma$ of $K$ and $\tau = f(\sigma)$. Then within the barycentric subdivision of $\sigma$, $M(f:\sigma \rightarrow \tau)$ can be think of cone whose vertex is barycenter and underlying space $M(f:\partial \sigma \rightarrow \tau)$. Note that $f$ extended to barycenter of $\sigma$ sends barycenter to one of the 0 simplex of $L$. Thus, cone is perfectly defined.
 
-- Attach $M(f:\sigma \rightarrow \tau)$ to $M(f\|K^{n-1})$. Then we obtain $M(f\|K^n)$ that deformation retracts to $M(f\|K^{n-1})$. Here, deformation retract is defined for the 'realization' of mapping cylinders.
+- Attach $M(f:\sigma \rightarrow \tau)$ to $M(f\vert_{K^{n-1}})$. Then we obtain $M(f\vert_{K^n})$ that deformation retracts to $M(f\vert_{K^{n-1}})$. Here, deformation retract is defined for the 'realization' of mapping cylinders.
 
 - Thus there can occur the problem that deformation retract does not equal $f$. However, this can be corrected by linear homotopy.
 

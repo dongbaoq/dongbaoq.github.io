@@ -43,7 +43,6 @@ Mayer Vietoris, Excision... also holds for cohomology. Two things are remarkable
 
 This is nontrivial that following diagram is commutative.
 
-$\require{\AMScd}$
 $$\begin{CD}
 H^n (A;G) @>{\delta}>> H^{n+1}(X,A;G)\\
 @VV{h}V @VV{h}V\\
@@ -66,7 +65,6 @@ $$f^{*} (\alpha \smile \beta) = f^* (\alpha) \smile f^{*} (\beta)$$
 
 This might be viewed not that powerful, but actually by this property, we can check following diagram is commutative. (This is also a solution for Hatcher exercise 2). Suppose $f : X \rightarrow Y$ that $f(A) \subset C$, $f(B) \subset D$.
 
-$\require{\AMScd}$
 $$\begin{CD}
 H^{k}(X, A) \times H^{l}(X, B) @>{\smile}>> H^{k+l} (X, A\cup B)\\
 @A{f^* \times f^*}AA @A{f^*}AA\\
@@ -75,7 +73,6 @@ H^{k}(Y, C) \times H^{l}(Y, D) @>{\smile}>> H^{k+l} (Y, C\cup D)
 
 This is by diagram chasing
 
-$\require{\AMScd}$
 $$\begin{CD}
 [f^* \phi] \times [f^* \psi] @>{\smile}>> [f^* \phi] \smile [f^* \psi] = [f^* (\phi \smile \psi)]\\
 @A{f^* \times f^*}AA @A{f^*}AA\\
@@ -154,7 +151,6 @@ I want to describe diagram chasing that contains cohomology with compact support
 
 ### Lemma 3.36 from Hatcher
 
-$\require{AMScd}$
 $$\begin{CD}
 \cdots @>>> H_{c}^{k}(U \cap V) @>>> H_{c}^{k}(U) \oplus H_{c}^{k}(V) @>>> H_{c}^{k} (M) @>>> H_{c}^{k+1} (U \cap V) @>>> \cdots\\
 @. @VV{D_{U \cap V}}V @VV{D_U \oplus -D_V}V @VV{D_M}V @VV{D_{U \cap V}}V @.\\
@@ -163,7 +159,6 @@ $$\begin{CD}
 
 First Square: for $K \subset U$ and $L \subset V$ compact,
 
-$\require{AMScd}$
 $$\begin{CD}
 H^{k} (M | K\cap L) @>>> H^{k} (M|K) \oplus H^{k}(M|L)\\
 @VVV @VVV\\
@@ -174,16 +169,15 @@ H_{n-k} (U \cap V) @>>> H_{n-k}(U) \oplus H_{n-k}(V)
 
 for representative cochain $\varphi$
 
-$\require{AMScd}$
 $$\begin{CD}
 [\varphi] @>>> [(\varphi, -\varphi)]\\
 @VVV @VVV\\
 [\varphi|_{U\cap V}] @. [(\varphi|_{U}, -\varphi|_{V})]\\
 @VVV @VVV\\
-[\mu_{K\cap L} \frown \varphi|_{U\cap V}] @>>> 
+[\mu_{K\cap L} \frown \varphi|_{U\cap V}] @>>> *
 \end{CD}$$
 
-$$(\mu_K \frown \varphi\big|_{U}, -\mu_{L} \frown \varphi\big|_{V}) = (\mu_{K\cap L} \frown \varphi\big|_{U\cap V}, -\mu_{K\cap L} \frown \varphi\big|_{U\cap V})$$
+$$* = (\mu_K \frown \varphi\big|_{U}, -\mu_{L} \frown \varphi\big|_{V}) = (\mu_{K\cap L} \frown \varphi\big|_{U\cap V}, -\mu_{K\cap L} \frown \varphi\big|_{U\cap V})$$
 
 is what we have to show and it holds because of cap product commutes with induced map.
 
@@ -256,5 +250,5 @@ This Pontryagin product is not necessarily associative but it holds for most of 
 
 Proposition 3C.10 states the dual of hopf algebra is hopf algebra.
 
-$A$ be a Hopf algebra over $R$ and is f.g. free $R$-module. Then the product $\pi : A \otimes A \rightarrow A$ and coproduct $\Delta : A \rightarrow A \otimes A$ which is in cohomology ring, the cup product map and coproduct map, have duals $\pi^{*}$ and $\Delta^{*}$ over $A^{*}$ and this induces hopf algebra.
+$A$ be a Hopf algebra over $R$ and is f.g. free $R$-module. Then the product $\pi : A \otimes A \rightarrow A$ and coproduct $\Delta : A \rightarrow A \otimes A$ which is in cohomology ring, the cup product map and coproduct map, have duals $\pi^{\*}$ and $\Delta^{\*}$ over $A^{\*}$ and this induces hopf algebra.
 
