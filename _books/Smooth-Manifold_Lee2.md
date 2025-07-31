@@ -16,8 +16,8 @@ This post illustrates important points (in my view) of the John H.Lee's Introduc
 # Chapter 7. Submersions, Immersions, and Embeddings
 
 For the map $F : M \rightarrow N$ the map is
-- __Submersion__ if $F_{\*}$ is surjective (So, $rank F = dim N$)
-- __Immersion__ if $F_{\*}$ is injective (So, $rank F = dim M$)
+- __Submersion__ if $F_{\*}$ is surjective (So, $\mathrm{rank} F = \mathrm{dim} N$)
+- __Immersion__ if $F_{\*}$ is injective (So, $\mathrm{rank} F = \mathrm{dim} M$)
 - __Smooth Embedding__ if $F$ is immersion and is a topological embedding, i.e. $F(M)$ and $M$ are homeomorphic where $F(M)$ induce with __subspace topology__
 
 __Figure Eight__ is important example which is immersion but not smooth embedding. Figure Eight is defined by $\gamma : (-\pi /2, 3\pi /2) \rightarrow \mathbb{R}^2$, $\gamma(t) = (sin(2t), cos(t))$.
@@ -106,13 +106,13 @@ $$\Phi (A) = A^T A$$
 
 $\Phi_{\*} : T_A GL(n, \mathbb{R}) \rightarrow T_{\Phi(A)} S(n, \mathbb{R})$ can be calculated by curve $\gamma(t) = A + tB$, 
 
-$$\Phi_{\*} B = \frac{d}{dt} \bigg\vert_{t = 0} \Phi (A + tB) = B^T A + A^T B$$
+$$\Phi_{*} B = \frac{d}{dt} \bigg\vert_{t = 0} \Phi (A + tB) = B^T A + A^T B$$
 
 So $\Phi_{\*}$ is surjective, which means $\Phi : GL(n, \mathbb{R}) \rightarrow S(n, \mathbb{R})$ is submersion. Thus $O(n) = \Phi^{-1} (I_n)$ is embedded submanifold, and also subgroup thus Lie subgroup of $GL(n, \mathbb{R})$.
 
 $O(n)$ is thus, $\frac{n(n-1)}{2}$ dimensional Lie group.
 
-Moreover, $T_{I_n} O(n) = \mathrm{Ker}\Phi_{\*}$ by the characterization of tangent space of embedded submanifold, so $T_{I_n} O(n) = \{ B \in \mathfrak{gl} (n, \mathbb{R}) : B^T + B = 0 \}$.
+Moreover, $T_{I_n} O(n) = \mathrm{Ker}\Phi_{\*}$ by the characterization of tangent space of embedded submanifold, so $$T_{I_n} O(n) = \{ B \in \mathfrak{gl} (n, \mathbb{R}) : B^T + B = 0 \}$$.
 
 $$\mathfrak{o}(n) = \mathrm{Lie}(O(n)) \approx \{ B \in \mathfrak{gl} (n, \mathbb{R}) : B^T + B = 0 \}$$
 
@@ -124,7 +124,7 @@ $$d (det)_A (B) = (det A) tr(A^{-1} B)$$
 
 so $d (det)_A$ is nonzero, thus $det$ is submersion. This means $SL(n, \mathbb{R})$ is Lie subgroup of dimension $n^2 - 1$.
 
-$T_{I_n} SL(n, \mathbb{R}) = \mathrm{Ker} (det_{\*}) = \{B \in \mathfrak{gl}(n, \mathbb{R}) : tr(B) = 0 \}$ so we can find
+$$T_{I_n} SL(n, \mathbb{R}) = \mathrm{Ker} (det_{*}) = \{B \in \mathfrak{gl}(n, \mathbb{R}) : tr(B) = 0 \}$$ so we can find
 
 $$\mathfrak{sl}(n,\mathbb{R}) = \mathrm{Lie}(sl(n,\mathbb{R})) = \{B \in \mathfrak{gl}(n, \mathbb{R}) : tr(B) = 0\}$$
 
@@ -181,3 +181,88 @@ Then unit quaternions is Lie group. This is because first, $\mathbb{H}$ multipli
 In this point of view, the statement $\mathbb{S}^3$ can be parallelizable is easy to show. Since vector fields $X_1 \vert_q = q \mathbf{i}$, $X_2 \vert_q = q\mathbf{j}$, $X_3 \vert_q = q\mathbf{k}$ are non vanishing tangent vector fields, $\mathbb{S}^3$ diffeormorphic to unit quoternions is parallelizable.
 
 Same logic can be applied to __octonions__. However after __sedenions__, parallelizable argument does not applied becaus __division algebra__ condition brokes down. ($X_i \vert_q = q e_i$ nonvanishing argument depends the fact that if $pq = 0$, $p =0$ or $q = 0$, but after sedenions, this does not hold)
+
+# Chapter 9. Lie Group Actions
+
+Lie group actions make us to generate a lot of useful maifolds. __Action__ means $\theta: G \times M \rightarrow M$ with several conditions and action is continuous if $\theta$ is continuous, action is smooth if $\theta$ is smooth.
+
+For smooth acion $\theta$, each $\theta_g$ then playes diffeomorphism on $M$. 
+
+__Theorem 9.7__ (__Equivariant Rank Theorem__) $M, N$ are smooth manifolds and $G$ a Lie group. If $F:M\rightarrow N$ is smooth and __equivariant__ (which means, $F(g \cdot p) = g \cdot F(p)$ holds) w.r.t. __transitive__ smooth action on $M$ and smooth action on $N$. Then $F$ is constant rank so each level sets are closed embedded submanifolds.
+
+Equivariant Rank Theorem is convinient tool of checking the map being constant rank. One should check __equivariantness__ and __transitive__ action on the domain.
+
+__Proposition 9.8__ Lie group homomorphism $F : G\rightarrow H$ is constant rank.
+
+For the proof, define action $G$ on $H$ by $\theta_g (h) = F(g) h$.
+
+- $U(n)$
+
+Define $\Phi : GL(n, \mathbb{C}) \rightarrow \mathcal{M} (n, \mathbb{C})$ by $\Phi(A) = A^{\*} A$. Then $U(n) = \Phi^{-1} (I_n)$.
+
+If we want to prove $U(n)$ is submanifold, we had to prove $I_n$ is regular value. However, with equivariant rank theorem, we can choose alternative way.
+
+Define right action with Lie group $G = GL(n, \mathbb{C})$. This acts on $GL(n, \mathbb{C})$ by $A \cdot B = AB$ and $\mathcal{M}(n, \mathbb{C})$ by $X \cdot B = B^{\*} X B$. Then $\Phi$ is equivariant map and $G$ acts transitively on $GL(n,\mathbb{C})$. Thus $\Phi$ is equivariant map.
+
+As our routine proof, Lie algebra of $U(n)$ can be calculated by
+
+$$\Phi_{*} B = \frac{d}{dt} \bigg\vert_{t = 0} \Phi \circ \gamma (t) = \frac{d}{dt} \bigg\vert_{t = 0} (I+tB)^{*}(I+tB) =  B^* + B$$
+
+So $U(n)$ is $n^2$-dimensional Lie subgroup and
+
+$$\mathfrak{u}(n) = \{ B \in \mathcal{gl}(n, \mathbb{C}) : B^* + B = 0 \}$$
+
+- $SL(n, \mathbb{C})$
+
+$\mathrm{det} : GL(n, \mathbb{C}) \rightarrow \mathbb{C}^{\times}$ is Lie group homomorphism. Thus Proposition 9.8 states $SL(n, \mathbb{C})$ is an embedded Lie subgroup. It's dimension will be $(2n^2 - 2)$.
+
+- $SU(n)$
+
+$SU(n)$ is embedded submanifold of $U(n)$ by restricting domain of $\mathrm{det}$ to $\mathrm{det} \vert_{U(n)} : U(n) \rightarrow \mathbb{C}^{\times}$. Then this map can restrict codomain by $\mathrm{det} \vert_{U(n)} : U(n) \rightarrow \mathbb{S}^1$. Which is Lie group homomorphism and $SU(n)$ is level set.
+
+## Quotient Manifold
+
+We will look at the quotient manifolds. Before that, we need to define __proper action__. __Proper action__ has three equivalent definitions,
+
+- $G \times M \rightarrow M \times M$ by $(g,p) \mapsto (g \cdot p, p)$ is proper map
+- $\forall K \subset M$ compact, $$G_K = \{g \in G : (g \cdot K) \cap K \neq \phi \}$$ compact
+- $$\{p_i \}$$ convergent sequence in $M$ and $$\{g_i \cdot p_i \}$$ converges. Then some subsequence of $$\{g_i \}$$ converges.
+
+__Theorem 9.16__ (__Quotient Manifold Theorem__) Lie group $G$ acts __smoothly__, __freely__ ($g \neq e$ then does not fix any point), __properly__ on a smooth manifold $M$. Then $M/G$ the orbit space is a topological manifold and has a unique smooth structure that makes $\pi : M \rightarrow M/G$ be a smooth submersion.
+
+Proof of Quotient Manifold Theorem is lon but instructive. The art of the proof is showing __adapted coordinate chart__. In conclusion, $M$ have an __adapted coordinate chart__ for each point, $(U, (x^1, \cdots , x^k, y^1 \cdots , y^n))$ that
+- $\varphi(U) = U_1 \times U_2 \subset \mathbb{R}^k \times \mathbb{R}^n$
+- $(\mathrm{Orbit}) \cap U$ is either empty or of form $$\{y^1 = c^1, \cdots , y^n = c^n \}$$.
+
+__Properness__ and __freeness__ really matters in this proof so these two conditions are __Essential__ to make Quotient Manifold Theorem holds.
+
+Quotient Manifold Theorem have a lot of applications.
+
+- __Smooth covering map__
+
+For $\pi : \tilde{M} \rightarrow M$ a smooth covering map, $\mathcal{C}_{\pi} (\tilde{M})$ a covering group is discrete Lie group and its action is smooth, free, proper.
+
+In addition, if $$\mathcal{C}_{\pi} (\tilde{M})$$ is normal, then $M$ is diffeomorphic to $\tilde{M} / \mathcal{C}_{\pi}(\tilde{M})$ by following theorem.
+
+__Theorem 9.19__ $\tilde{M}$ a connected smooth manifold, $\Gamma$ is a discrete group whose action is smooth, free, proper. Then $\tilde{M} / \Gamma$ has a unique smooth structure making $\pi : \tilde{M} \rightarrow \tilde{M}/\Gamma$ to be a smooth normal covering map.
+
+- __Homogeneous Space__
+
+If Lie group action is transitive, we call $M$ a homogeneous $G$-space. Then __Homogeneous Spaces are exactly the Quotient of Lie group by closed Lie subgroup__.
+
+__Theorem 9.22__ If $G$ a Lie group and $H$ closed Lie subgroup, then $G/H$ has a unique smooth structure that makes $\pi : G \rightarrow G/H$ be smooth submersion. Moreover, $G/H$ is homogeneous $G$-space.
+
+__Theorem 9.24__ $M$ be a homogeneous $G$-space. Then for any $p\in M$, $F:G/G_p \rightarrow M$, $F(gG_p) = g\cdot p$ is an equivariant diffeomorphism.
+
+- __Making set to smooth manifold__
+
+__Proposition 9.31__ Suppose $X$ a set and transitive action of Lie group $G$ acts on $X$. Suppose that isotropy group of $p \in X$ is a closed Lie subgroup $G$. Then $X$ has a unique smooth manifold structure making the action smooth.
+
+e.g. Grassmann manifold $G_k(\mathbb{R}^n)$
+
+e.g. Flag manifold $F_K(V)$
+
+- __Connectivity of Lie group__
+
+__Proposition 9.34__ Lie group $G$ acts smoothly, freely, properly on a manifold $M$. If $G$ and $M/G$ are connected, then $M$ is connected.
+
