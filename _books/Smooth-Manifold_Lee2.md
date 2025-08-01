@@ -1,5 +1,5 @@
 ---
-title: "Book Review : Introduction to Smooth Manifold Ch 7~9"
+title: "Book Review : Introduction to Smooth Manifold Ch 7~10"
 collection: books
 date: 2025-07-27
 permalink: /books/SM2
@@ -11,7 +11,7 @@ tags:
 - Geometry
 ---
 
-This post illustrates important points (in my view) of the John H.Lee's Introduction to Smooth Manifold Chapter 7 to 8. Chapter 7 to 9 consider 'embeddings'.
+This post illustrates important points (in my view) of the John H.Lee's Introduction to Smooth Manifold Chapter 7 to 10. Chapter 7 to 9 consider 'embeddings'. Chapter 11 gives an insight to think arbitrary manifold as embedded submanifold of Euclidean space.
 
 # Chapter 7. Submersions, Immersions, and Embeddings
 
@@ -170,8 +170,11 @@ Define $\mathbb{H} = \mathbb{C} \times \mathbb{C}$ and bilinear product $(a,b)(c
 Its basis $(\mathbf{1}, \mathbf{i}, \mathbf{j}, \mathbf{k})$ are $\mathbf{1} = (1,0)$, $\mathbf{i} = (i, 0)$, $\mathbf{j} = (0,1)$, $\mathbf{k} = (0,i)$. It satisfies
 
 $$\mathbf{ij} = -\mathbf{ji} = \mathbf{k}$$
+
 $$\mathbf{jk} = -\mathbf{kj} = \mathbf{i}$$
+
 $$\mathbf{ki} = -\mathbf{ik} = \mathbf{j}$$
+
 $$\mathbf{i}^2 = \mathbf{j}^2 = \mathbf{k}^2 = -\mathbf{1}$$
 
 Quaternion multiplication is associative but not commutative, and we can define norm and inner product on quaternions. $ \langle p, q\rangle = \frac{1}{2} (p^{\*}q + q^{\*}p)$ .
@@ -216,15 +219,82 @@ $$\mathfrak{u}(n) = \{ B \in \mathcal{gl}(n, \mathbb{C}) : B^* + B = 0 \}$$
 
 $\mathrm{det} : GL(n, \mathbb{C}) \rightarrow \mathbb{C}^{\times}$ is Lie group homomorphism. Thus Proposition 9.8 states $SL(n, \mathbb{C})$ is an embedded Lie subgroup. It's dimension will be $(2n^2 - 2)$.
 
+We have saw that $det_{\*} = tr$ at the identity matrix. Thus,
+
+$$\mathfrak{sl}(n, \mathbb{C}) = \{ A \in \mathfrak{gl}(n, \mathbb{C}) : \mathrm{tr}(A) = 0 \}$$
+
 - $SU(n)$
 
 $SU(n)$ is embedded submanifold of $U(n)$ by restricting domain of $\mathrm{det}$ to $\mathrm{det} \vert_{U(n)} : U(n) \rightarrow \mathbb{C}^{\times}$. Then this map can restrict codomain by $\mathrm{det} \vert_{U(n)} : U(n) \rightarrow \mathbb{S}^1$. Which is Lie group homomorphism and $SU(n)$ is level set.
 
+As a closed submanifold of $U(n)$ and $SL(n, \mathbb{C})$
+
+$$\mathfrak{su}(n) = \mathfrak{u}(n) \cap \mathfrak{sl}(n, \mathbb{C})$$
+
+- Further relationships of $O(n)$, $SO(n)$, $U(n)$, $SU(n)$
+
+(1) $SO(2)$, $U(1)$, $\mathbb{S}^1$ are all isomorphic Lie groups
+
+This is easy when we see these manifolds on algebraic view but more topological perspective exists (from the mathstackexchange answer)
+
+$\phi : U(1) \rightarrow SO(2)$ by 
+
+$$a+bi \longmapsto 
+\begin{pmatrix}
+a & -b \\
+b & a
+\end{pmatrix}$$
+
+Then this map is injective and equivariant via $\mathbb{S}^1$ action. It is constant rank and since injective, this is immersion. $U(1)$ is compact so closedness of the map is gauranteed so is embedding. Since codimension is zero and $U(1)$, $SO(2)$ are connected, they are diffeomorphic. Under the map, group operation still holds so is Lie group isomorphism.
+
+(2) $U(1) \times SU(n)$ is diffeomorphic to $U(n)$ but not isomorphic as a Lie group.
+
+Define $U(n) \rightarrow SU(n) \times U(1)$ by
+
+$$A \longmapsto \frac{1}{\sqrt[n]{\mathrm{det}(A)}} A \times \sqrt[n]{\mathrm{det}(A)}$$
+
+Then it is smooth. First think this mapping on $GL(n, \mathbb{C}) \rightarrow GL(n, \mathbb{C}) \times \mathbb{C}^{\times}$. Then restricting to embedded submanifold solves it.
+
+However, these are not isomorphic. It's because they do not have isomorphic centers, for $U(n)$, center is isomorphic to $\mathbb{S}^1$ but $U(1) \times SU(n)$ center is isomorphic to $\mathbb{S}^1 \times \mathbb{Z}_n$.
+
+(3) $SU(2)$ is isomorphic to unit quaternions
+
+Idea is thinking representing 'basis elements'. We can find basis
+
+$$\bigg\{
+A_1 = \begin{pmatrix}
+1 & 0 \\
+0 & 1
+\end{pmatrix},
+A_2 = \begin{pmatrix}
+0 & 1 \\
+-1 & 0
+\end{pmatrix},
+A_3 = \begin{pmatrix}
+i & 0 \\
+0 & -i
+\end{pmatrix},
+A_4 = \begin{pmatrix}
+0 & i \\
+i & 0
+\end{pmatrix}
+\bigg\}$$
+
+Then one can show that with $a^2 + b^2 + c^2 + d^2 = 1$, $a,b,c,d \in \mathbb{R}$, formula $aA_1 + bA_2 + cA_3 + dA_4$ is exactly the representation of $SU(2)$.
+
+(4) $SO(3)$ is isomorphic to $$SU(2)/\{\pm e\}$$
+
+For unique quaternion $q$, $\rho(q)$ be the matrix representation of $v \mapsto qvq^{\*}$ with respect to $(\mathbf{i}, \mathbf{j}, \mathbf{k})$. Then this map preserves inner product so $\rho(q) \in SO(3)$ and this $\rho$ is surjective with kernel $$\{ \pm 1 \}$$.
+
+(5) $SL(n, \mathbb{R})$ is diffeomorphic to $SO(n) \times \mathbb{R}^{n(n+1)/2 - 1}$. and $SL(n, \mathbb{C})$ is diffeomorphic to $SU(n) \times \mathbb{R}^{n^2 - 1}$.
+
+These arguments are by the $QR$ decomposition. We can show the uniqueness of $QR$ decomposition and its process is smooth (because Gram-Schmidt process) so diffeomorphism established.
+
 ## Quotient Manifold
 
-We will look at the quotient manifolds. Before that, we need to define __proper action__. __Proper action__ has three equivalent definitions,
+We will look at the quotient manifolds. This __Quotient Manifolds are very very important object on manifolds since it has a lot of applications__. Before that, we need to define __proper action__. __Proper action__ has three equivalent definitions,
 
-- $G \times M \rightarrow M \times M$ by $(g,p) \mapsto (g \cdot p, p)$ is proper map
+- $G \times M \rightarrow M \times M$ by $(g,p) \longmapsto (g \cdot p, p)$ is proper map
 - $\forall K \subset M$ compact, $$G_K = \{g \in G : (g \cdot K) \cap K \neq \phi \}$$ compact
 - $$\{p_i \}$$ convergent sequence in $M$ and $$\{g_i \cdot p_i \}$$ converges. Then some subsequence of $$\{g_i \}$$ converges.
 
@@ -258,11 +328,82 @@ __Theorem 9.24__ $M$ be a homogeneous $G$-space. Then for any $p\in M$, $F:G/G_p
 
 __Proposition 9.31__ Suppose $X$ a set and transitive action of Lie group $G$ acts on $X$. Suppose that isotropy group of $p \in X$ is a closed Lie subgroup $G$. Then $X$ has a unique smooth manifold structure making the action smooth.
 
-e.g. Grassmann manifold $G_k(\mathbb{R}^n)$
+E.g. __Grassmann manifold__ $G_k(\mathbb{R}^n)$
+
+Initially, defining Grassmann manifold is by following method : 
+
+For $P \in G_k (\mathbb{R}^n)$, write $Q = P^{\perp}$. Define the neighborhood of $P$ by the $k$ dimensional subspaces that $$U_P = \{R \in G_k(\mathbb{R}^n) : R \cap Q = \phi \}$$. Then the map $\varphi : U_P \rightarrow L(P,Q)$ by the inverse map $\psi : L(P,Q) \rightarrow U_P$, $$\psi(A) = \{x + Ax : x \in P \}$$. Then identifying $L(P,Q)$ as $k \times (n-k)$ matrix, Grassmann manifold is smooth manifold under these atlas $$\{(U_P, \varphi_P) \}$$
+
+Another method defining smooth structure on just the 'set' of $k$ dimensional subspaces is using Proposition 9.31. Since the action $GL(n, \mathbb{R})$ acts transitively and its isotropy group is 
+
+$$H = \bigg\{
+\begin{pmatrix}
+A & B \\
+0 & D
+\end{pmatrix}
+: A \in GL(k, \mathbb{R}), D\in GL(n-k, \mathbb{R})
+\bigg\}$$
+
+We can show that two smooth structures are the same by uniqueness argument on Proposition 9.31. We can show that under the original smooth structure, group action is smooth.
+
+Let me describe this more precisely. We need to show the following map is finally smooth.
+
+$$\begin{CD}
+\psi (A) = \{x + Ax : x \in P \} \in G_k(\mathbb{R}^n) @>{B \in GL(n, \mathbb{R})}>> B \psi(A) = \{Bx + BAx : x \in P \} \in G_k (\mathbb{R}^n) \\
+@AA{\psi}A @VV{\varphi}V\\
+A \in L(P,Q) @. A' \in L(P', Q')
+\end{CD}$$
+
+Here, $$\{Bx + BAx : x \in P \} = \{ Bx + A'Bx : x \in P \}$$ for some $A'$. We need coordinate of $A'$ are smooth function of $A$. 
+
+$x' \in P$, then $Bx' + A'Bx' = Bx + BAx$ for some $x \in P$. Then $Bx + BAx - Bx' \in Q'$ so if we set $\pi_{P'} : \mathbb{R}^n \rightarrow P'$ a projection, $\pi_{P'} (Bx + BAx - Bx') = 0$ thus $(\pi_{P'} \circ (B + BA))^{-1} (x') = x$ and
+
+$$A' (Bx') = (B + BA) \circ (\pi_{P'} \circ (B+BA))^{-1} (x') - Bx'$$
+
+$$A' = (B+BA) \circ (\pi_{P'} \circ (B+BA))^{-1} \circ B^{-1} - Id$$
+
+This is smooth function of both $A$ and $B$ so smoothness of action is proven.
 
 e.g. Flag manifold $F_K(V)$
+
+Similar to Grassmann manifolds, if $V$ is real vector space and $K = (k_1 , \cdots , k_m)$ is $ 0 < k_1 < \cdots < k_m < n$ integers, then flag manifold is built from the following set :
+
+$$\{ S_1 \subset S_2 \subset \cdots \subset S_m \subset V : \mathrm{dim}(S_i) = k_i \}$$
+
+and give smoothness structure by $GL(V)$ acting transitively on this set.
 
 - __Connectivity of Lie group__
 
 __Proposition 9.34__ Lie group $G$ acts smoothly, freely, properly on a manifold $M$. If $G$ and $M/G$ are connected, then $M$ is connected.
 
+## Representation of Lie group, Lie algebra
+
+A finite dimensional __representation of Lie group__ $G$ is Lie group homomorphism $\rho : G \rightarrow GL(V)$ for finite dimensional real or complex vector space $V$.
+
+If $\rho$ is injective (__faithful__) then we can identify $G$ as Lie subgroup $\rho(G) \subset GL(V)$ or, Lie subgroup of $GL(n, \mathbb{R})$ or $GL(n, \mathbb{C})$.
+
+A finite dimensional __representation of Lie algebra__ $\mathfrak{g}$ is Lie algebra homomorphism $\varphi : \mathfrak{g} \rightarrow \mathfrak{gl}(V)$. Thus, if there exists a representation of Lie group then there exists a representation of Lie algebra of the Lie group. Lie algebra representation is more 'good' than Lie group representation.
+
+__Theorem__ (__Ado's Theorem__) Every finite-dimensional Lie algebra admits a faithful finite-dimensional representation.
+
+One instance of representation method is __Adjoint Representation__. For Lie group $G$, the adjoint representation is 
+
+$$\mathrm{Ad}(g) = (C_g)_{*} : \mathfrak{g} \rightarrow \mathfrak{g}$$
+
+where $C_g(h) = ghg^{-1}$ is conjugation. Then $\mathrm{Ad} : G \rightarrow GL(\mathfrak{g})$ is smooth. (This is shown on Lee's textbook)
+
+However, __Adjoint representation for Lie algebra__ is more subtle but interesting. For Lie algebra (finite-dimensional) $\mathfrak{g}$, define
+
+$$\mathrm{ad}(X) : \mathfrak{g} \rightarrow \mathfrak{g}$$
+
+$$\mathrm{ad}(X)Y = [X,Y]$$
+
+So $\mathrm{ad} : \mathfrak{g} \rightarrow \mathfrak{gl} (\mathfrak{g})$. However, we need to show that this representation is Lie algebra homomorphism... Interestingly, this holds because of __Jacobi Identity__. The problem is, we don't know if
+
+$$\mathrm{ad} ([X,Y]) = \mathrm{ad}(X) \circ \mathrm{ad}(Y) - \mathrm{ad}(Y) \circ \mathrm{ad}(X)$$
+
+But, this equation applied to $Z \in \mathfrak{g}$ became
+
+$$[[X,Y],Z] = [X,[Y,Z]] - [Y,[X,Z]]$$
+
+which is just a Jacobi identity!!
