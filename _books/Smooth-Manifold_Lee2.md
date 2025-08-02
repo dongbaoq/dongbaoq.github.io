@@ -407,3 +407,61 @@ But, this equation applied to $Z \in \mathfrak{g}$ became
 $$[[X,Y],Z] = [X,[Y,Z]] - [Y,[X,Z]]$$
 
 which is just a Jacobi identity!!
+
+
+
+# Chapter 10. Embedding and Approximation Theorems
+
+All of this chapter is saying __Every manifold can be thought as a embedded submanifold of Euclidean space__.
+
+This argument uses __Sard's Theorem__ which is if $F : M \rightarrow N$ is any smooth map then the set of critical values of $F$ is measure zero in $N$.
+
+__Theorem 10.9__ (__Whitney Immersion Theorem__) Every smooth $n$-manifold admits an immersion to $\mathbb{R}^{2n}$.
+
+This theorem uses argument that if we give a little __peturbation__ to a smooth map $F : M\rightarrow \mathbb{R}^m$ then we can get smooth immersion $\tilde{F} : M \rightarrow \mathbb{R}^m$ if $m \ge 2n$ (This argument itself is very interesting, it uses inductive argument, finding little perturbation on little open set). 
+
+Then again inductively constructing 'injectiveness' by finding little perturbation gives the __Whitney Embedding Theorem__.
+
+__Theorem 10.11__ (__Whitney Embedding Theorem__) Every smooth $n$-manifold admits a proper smooth embedding into $\mathbb{R}^{2n+1}$
+
+_Strong Whitney Embedding Theorem and Strong Whitney Immersion Theorem holds for more strict dimension! (Interestingly!) If I study the proof, then I will add the proof in other post._
+
+Second topic is __Any continuous function $F : M \rightarrow N$ can be approximated to smooth function $\tilde{F} : M \rightarrow N$__. This is called __Whitney Approximation Theorem__.
+
+__Theorem 10.16__ (__Whitney Approximation Theorem__) $F : M \rightarrow \mathbb{R}^k$ a continuous function. Then given positive function $\delta : M \rightarrow \mathbb{R}$, there exists smooth function $\tilde{F} : M \rightarrow \mathbb{R}^k$ that is $\delta$-close to $F$. This $\tilde{F}$ could be set relative to closed subset $A \subset M$ if $F$ is smooth on $A$.
+
+## Tubular Neighborhood
+
+What is the advantage of the perspective : $M$ an any smooth manifold can be thought as the embedded submanifold of $\mathbb{R}^k$ ?
+
+Here, the answer is existence of __Tubular Neighborhood__. We can make $M$ inflate slightly so we can imagine some __tube__ wrapping the manifold.
+
+First, we define __Normal Bundle__. 
+
+$$NM = \coprod_{x \in M} N_x M = \{ (x,v) \in T\mathbb{R}^n : x \in M, \, v \in N_x M \}$$
+
+So, Normal bundle is in set view, the subset of tangent bundle of $\mathbb{R}^n$ which is diffeomorphic to $\mathbb{R}^{2n}$. Every element has a representation $(x,v)$.
+
+There exists a smooth structure making $\pi_{NM} : NM \rightarrow M$ surjective submersion. It is __smooth vector bundle__ of rank $n-m$ over $M$, __embedded submanifold__ of $T \mathbb{R}^n$.
+
+Tubular manifold is defined by neighborhood $U$ of $M$ in $\mathbb{R}^n$ which satisfies : for $E : NM \rightarrow \mathbb{R}^n$, $E(x,v) = x+v$
+
+$$E : V \rightarrow U$$
+
+$$V = \{ (x,v) \in NM : \lvert v \rvert < \delta(x) \}$$
+
+is a diffeomorphism.
+
+Not surprisingly, __Every embedded submanifold of $\mathbb{R}^n$ has a tubular neighborhood__. This is very nice. Because tubular neighborhood looks like __tube__, __similar to original manifold__ (Smooth retraction exists). Its application as follows :
+
+__Theorem 10.21__ (__Whitney Approximation on Manifolds__) If $F : N \rightarrow M$ a continuous map, then $F$ is homotopic to smooth map $\tilde{F} : N \rightarrow M$.
+
+Proof idea : Embed $M$ to euclidean space and construct its tubular neighborhood. Then thinking as $F$ mapping to euclidean space, small perturbation makes smooth map's image be totally contained in tubular manifold. Using retraction concludes the proof.
+
+__Proposition 10.22__ If $F, G: M\rightarrow N$ homotopic relative to $A$ (closed subset) then they are smoothly homotopic relative to $A$.
+
+The same idea.
+
+__Exercise 10.5__ If $M$ is smooth, compact manifold and admits a nowhere vanishing vector field, then there is a smooth map $F: M\rightarrow M$ that is homotopic to identity and has no fixed points.
+
+Proof idea : Embed $M$ to Euclidean space. Imagine tubular manifold. Now for each point $p \in M$, move $p$ by smooth vector field in euclidean space. Now small move makes is still remain in the tubular manifold (compactness is used) and retract it.
