@@ -124,6 +124,13 @@ $$ X_3 = -x^4 \frac{\partial}{\partial x^1} + x^3 \frac{\partial}{\partial x^2} 
 Also in the above viewpoint, __Bundle Map of the same base space is mapping of smooth sections which is linear over $C^{\infty}(M)$__.
 $\pi : E \rightarrow M$, $\pi' : E' \rightarrow M$ then smooth bundle map $F : E \rightarrow E'$ over $M$ associates with $\mathcal{F} : \mathcal{E} (M) \rightarrow \mathcal{E}'(M)$ by $\mathcal{F} (\sigma) = F \circ \sigma$
 
+Final gist to point out is __Vector Bundle Construction Lemma__. It is highly technical lemma but useful to prove whether following space is vector bundle. This requires :
+
+- $E_p$ a real vector space for $p \in M$.
+- $$\{U_{\alpha} \}_{\alpha \in A}$$ an open cover
+- Local trivialization-like bijective map $\Phi_{\alpha} : \pi^{-1} (U_{\alpha}) \rightarrow U_{\alpha} \times \mathbb{R}^k$ which sends $E_p$ to $$\{p\} \times \mathbb{R}^k$$
+- A smooth transition map $\tau_{\alpha \beta} : U_{\alpha} \cap U_{\beta} \rightarrow GL(k, \mathbb{R})$ that $\Phi_{\alpha} \circ \Phi_{\beta}^{-1} (p, v) = (p, \tau_{\alpha \beta} (p) v)$.
+
 # Chapter 6 : The Cotangent Bundle
 
 __Cotangent Bundle__ is $T^* M = \coprod_{p\in M} T_p^* M$. Standard coordinate for cotangent bundle is dual of $\frac{\partial}{\partial x^i}$, $\lambda^i$ thus $(x^i, \lambda^i)$.
