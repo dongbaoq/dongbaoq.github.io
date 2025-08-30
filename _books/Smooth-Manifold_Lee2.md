@@ -462,6 +462,6 @@ __Proposition 10.22__ If $F, G: M\rightarrow N$ homotopic relative to $A$ (close
 
 The same idea.
 
-__Exercise 10.5__ If $M$ is smooth, compact manifold and admits a nowhere vanishing vector field, then there is a smooth map $F: M\rightarrow M$ that is homotopic to identity and has no fixed points.
+__Problem 10.5__ If $M$ is smooth, compact manifold and admits a nowhere vanishing vector field, then there is a smooth map $F: M\rightarrow M$ that is homotopic to identity and has no fixed points.
 
 Proof idea : Embed $M$ to Euclidean space. Imagine tubular manifold. Now for each point $p \in M$, move $p$ by smooth vector field in euclidean space. Now small move makes is still remain in the tubular manifold (compactness is used) and retract it.
