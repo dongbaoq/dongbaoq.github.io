@@ -241,9 +241,9 @@ Manifold equiped with symplectic form (smooth, closed, nondegenerate 2-form) is 
 
 - __Tautological 1-form__
 
-Tautological 1-form is __canonical__ form on cotangent bundle. $M = T^* Q$ then for the projection map $\pi : T^* Q \rightarrow Q$, $\tau \in \Lambda^1 (T^* Q)$ is defined by
+Tautological 1-form is __canonical__ form on cotangent bundle. $$M = T^{*} Q$$ then for the projection map $$\pi : T^{*} Q \rightarrow Q$$, $$\tau \in \Lambda^1 (T^{*} Q)$$ is defined by
 
-$$\tau_{(q,\varphi)} = \pi^* \varphi$$
+$$\tau_{(q,\varphi)} = \pi^{*} \varphi$$
 
 This definition does not depend on the coordinate representation so is canonical.
 
@@ -344,4 +344,5 @@ Finally $\Lambda_n$ is compact. Since $G_n(\mathbb{R}^{2n})$ is compact, we only
 By coordinate calculation, $V \mapsto V^{\perp}$ the map from $G_n(\mathbb{R}^{2n})$ to itself is continuous. Thus $f : V \mapsto (V, V^{\perp})$ is continuous, so its preimage of diagonal $\Delta$, $f^{-1}(\Delta) = \Lambda_n$ is closed, compact.
 
 # Chapter 13. Orientations
+
 
