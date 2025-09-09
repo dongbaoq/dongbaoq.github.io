@@ -7,5 +7,19 @@ redirect_from:
   - /about.html
 ---
 
-I am student of the Seoul national university major in statistics and mathematics. Currently, I am interested in Algebraic Topology and Manifold theory. 
-Manifolds have special topological aspects. Popular example is the famous Poncare duality. Also, while seeking differential objects on smooth manifolds, topological properties came out. I am interested in these connections.
+I am student of the Seoul national university major in statistics and mathematics. Here is the milestone on my interest in mathematics and statistics.
+
+At the year 2022, I had a shallow interest on mathematical optimization and deep neural networks. The next year 2023, I changed my interest to analysis. I learned basic knowledge about fourier analsys, complex analysis and real analysis by reading Stein & Shakarchi's books. My interest continued to 2024, and studied probability theory. While doing this, I found topology is quite attractive field. So since 2025, I am focused on studying topology and geometry. 
+
+## Structure of the Blog
+
+### Book Review
+
+Here, I summarized important theorems and intuition of the book. Here is the list of posts:
+
+- Allen Hatcher, Algebraic Topology (2002)
+- 이인석, 선형대수와 군 (Linear Algebra and Group) (2015)
+- James Munkres, Topology (2014)
+- John M. Lee, Introduction to smooth manifolds (2002)
+- John M. Lee, Introduction to riemannian manifolds (2018)
+- John W. Milnor, Topology from the differentiable viewpoint (1997)
