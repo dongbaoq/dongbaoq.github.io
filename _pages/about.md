@@ -9,7 +9,7 @@ redirect_from:
 
 I am student of the Seoul national university major in statistics and mathematics. Here is the milestone on my interest in mathematics and statistics.
 
-At the year 2022, I had a shallow interest on mathematical optimization and deep neural networks. The next year 2023, I changed my interest to analysis. I learned basic knowledge about fourier analsys, complex analysis and real analysis by reading Stein & Shakarchi's books. My interest continued to 2024, and studied probability theory. While doing this, I found topology is quite attractive field. So since 2025, I am focused on studying topology and geometry. 
+At the year 2022, I had a shallow interest on mathematical optimization and deep neural networks. The next year 2023, I changed my interest to analysis. I learned basic knowledge about fourier analsys, complex analysis and real analysis by reading Stein & Shakarchi's books. My interest continued to 2024, and studied probability theory. While doing this, I found topology is quite an attractive field. So since 2025, I am focusing on studying topology and geometry. 
 
 ## Structure of the Blog
 
@@ -23,3 +23,4 @@ Here, I summarized important theorems and intuition of the book. Here is the lis
 - John M. Lee, Introduction to smooth manifolds (2002)
 - John M. Lee, Introduction to riemannian manifolds (2018)
 - John W. Milnor, Topology from the differentiable viewpoint (1997)
+- Durrett, Probability (2019)
