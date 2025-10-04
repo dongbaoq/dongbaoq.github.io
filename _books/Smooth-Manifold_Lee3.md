@@ -1,5 +1,5 @@
 ---
-title: "Book Review : Introduction to Smooth Manifold Ch 11~17"
+title: "Book Review : Introduction to Smooth Manifold Ch 11~14"
 collection: books
 date: 2025-08-17
 permalink: /books/SM3
@@ -11,7 +11,7 @@ tags:
 - Geometry
 ---
 
-Chapter 11 to 17 considers a lot of applications on tensors defined on manifolds. 
+Chapter 11 to 14 considers a basics of tensors defined on manifolds. 
 
 # Chapter 11. Tensors
 
@@ -172,6 +172,12 @@ This is from the __Problem 11.22__. Existence proof of Riemannian metric argumen
 __Argument__ : For smooth vector bundle $E$ over $M$ and $V \subset E$ an open set that $V \cap E_p$ is __convex__, nonempty. Then there exists a smooth global section whose image lies in $V$.
 
 Proof : For local trivialization $(U_{\alpha}, \Phi_{\alpha})$ there exist local section of $V$, $v_{\alpha}$. Now, for partition of unity $$\{\phi_{\alpha}\}$$ subordinate to $$\{U_{\alpha}\}$$, $\sum \phi_{\alpha} v_{\alpha}$ is it. Here, convexity enables us to ensure summation be possible.
+
+## Notations
+
+$\Lambda^k M$ is vector bundle of alternating $k$ tensors.
+
+$\mathscr{A}^k (M)$ is smooth section of $\Lambda^k M$. We call them __$k$-forms__.
 
 # Chapter 12. Differential Forms
 
@@ -345,4 +351,149 @@ By coordinate calculation, $V \mapsto V^{\perp}$ the map from $G_n(\mathbb{R}^{2
 
 # Chapter 13. Orientations
 
+Orientation of manifold is originated from the orientation of vector space. Orientation of vector space is equivalence class of ordered basis. $(E_1, \cdots, E_n)$ and $(\tilde{E}_1, \cdots , \tilde{E}_n)$ are equivalent if the determinant is positive. Also lemma gives vector space $V$ orientation is determined by some nonzero element of $\Lambda^n (V)$. $\Omega \in \Lambda^n (V)$ determines orientation by $\Omega(E_1, \cdots , E_n) > 0$
+
+Orientation of Manifold must be given 'continuity'. Since locally manifold is euclidean space, so is vector space. If two chart $(U_{\alpha},\varphi_{\alpha})$, $(U_{\beta},\varphi_{\beta})$ overlapping area $U_{\alpha} \cap U_{\beta}$ the $\varphi_{\beta} \circ \varphi_{\alpha}^{-1}$ is positive Jacobian then we can say two charts are consistent. If this consistence can be globally defined, we say $M$ is oriented. Analogue of $n$-form determination holds for manifold : $M$ has orientation if and only if there exists nonvanishing $n$-form $\Omega$ on $M$.
+
+As a corollary, parallelizable manifolds are orientable. Thus every __Lie groups are orientable__.
+
+## Orientation Covering
+
+Nonzero $n$ covectors on smooth manifold $M$ is denoted by $$\Lambda_{*}^n M$$. The action $\mathbb{R}^{+}$ on $$\Lambda_{*}^n M$$ is smooth, free, proper (Lemma 13.8) so we can define quotient space $$\hat{M} = \Lambda_{*}^n M / \mathbb{R}^{+}$$.
+
+__Theorem 13.9__ $M$ is smooth connected manifold. $\hat{\pi} : \hat{M} \rightarrow M$ be orientation covering. Then following holds
+
+(2) $\hat{M}$ has a canonical orientation
+
+(4) $\hat{M}$ is connected if and only if $M$ is non-orientable.
+
+Canonical orientation is by the map $$\hat{\pi}_{*} : T_{\hat{q}} \hat{M} \rightarrow T_q M$$. By lifting the orientation of $T_q M$ to the orientation of $T_{\hat{q}} \hat{M}$, it becomes continuous.
+
+## Orientation of Hypersurfaces
+
+In ths section, we want to determine orientability of hypersurface $S \subset M$. To do this, the map $i_X : \Lambda^k (V) \rightarrow \Lambda^{k-1}(V)$ is important.
+
+$$i_X \omega(Y_1, \cdots , Y_{k-1}) = \omega(X,Y_1, \cdots , Y_{k-1})$$
+
+We notate $i_X \omega = X \lrcorner \omega$. The __interior multiplication map plays quite important role on proving crucial equalities on differential forms__
+
+__Lemma 13.11__ $V$ be a f.d.v.s. $X \in V$
+
+(1) $i_X \circ i_X = 0$
+
+(2) If $\omega$ is $k$-covector and $\eta$ is $l$-covector
+
+$$i_X(\omega \wedge \eta) = (i_X \omega) \wedge \eta + (-1)^k \omega \wedge (i_X \eta)$$
+
+To apply interior multiplication to smooth manifold, $X \in \mathscr{T} (M)$ and $\omega \in \mathscr{A}^k (M)$ then applying pointwise, $X \lrcorner \omega$ is $(k-1)$-form.
+
+__Lemma 13.11 (Manifold version)__ $M$ be smooth manifold and $X \in \mathscr{T} (M)$
+
+(1) $i_X : \mathscr{A}^k (M) \rightarrow \mathscr{A}^{k-1} (M)$ is linear over $C^{\infty}(M)$ so is bundle map $i_X : \Lambda^k M \rightarrow \Lambda^{k-1} M$
+
+(2) $i_X \circ i_X = 0$
+
+(3) If $\omega \in \mathscr{A}^k (M)$, $\eta \in \mathscr{A}^l (M)$ then
+
+$$i_X(\omega \wedge \eta) = (i_X \omega) \wedge \eta + (-1)^k \omega \wedge (i_X \eta)$$
+
+Vector space along $S$ is the map $N : S \rightarrow TM$. $N$ is traverse if $N_p$ and $T_p S$ spans $T_p M$.
+
+__Proposition 13.12__ $M$ is oriented smooth $n$-manifold and $S$ is immersed hypersurface of $M$. $N$ is traverse vector field along $S$ then $S$ has a unique orientation where $(N \lrcorner \Omega) \vert_S$ is the orientation form.
+
+## Orientation of Boundary
+
+The same logic can be applied to boundary. In the boundary, we find __traverse vector field to be smooth outward-pointing vector field__
+
+__Lemma 13.16__ $M$ is smooth manifold with boundary. Then there exists smooth outward-pointing vector field along $\partial M$.
+
+As a corollary,
+
+__Proposition 13.17__ $M$ be an oriented smooth manifold with boundary. Then $\partial M$ is orientable.
+
+## The Riemannian Volume Form
+
+In __Orientable Riemannian Manifold__ the Riemannian volume form exists. This is the smooth orientation form $\Omega \in \mathscr{A}^n (M)$ such that
+
+$$\Omega(E_1,\cdots , E_n) = 1$$
+
+for every oriented local orthonormal frame $(E_i)$ for $M$. In local coordinate,
+
+$$dV_g = \sqrt{det(g_{ij})} dx^1 \wedge \cdots \wedge dx^n$$
+
+Hypersurfaces in Riemannian manifold, the Riemannian volume form for hypersurface is determined by ($N$ is smooth unit normal vector field along $S$)
+
+$$dV_{\tilde{g}} = (N \lrcorner dV_g) \vert_S$$
+
+Boundary of Riemannian manifold still holds the same formula. For $N$ the outward unit normal vector field along $\partial M$
+
+$$dV_{\tilde{g}} = (N \lrcorner dV_g ) \vert_{\partial M}$$
+
+# Chapter 14. Integration on Manifolds
+
+I will briefly skip over the defining process of integration. By partition of unity making integration to occur on Euclidean spaces.
+
+One of the most beautiful theorem is __Stoke's Theorem__
+
+__Theorem 14.9 (Stoke's Theorem)__ $M$ be a smooth, oriented $n$-dimensional manifold with boundary, $\omega$ be a compactly supported smooth $(n-1)$-form on $M$. Then
+
+$$\int_M d\omega = \int_{\partial M} \omega$$
+
+## Integration on Riemannian Manifolds
+
+Integration was possible only on $n$ forms. We want to integrate $f : M \rightarrow \mathbb{R}$. But the problem is __there is no consistent transform of 0-form $f$ to $n$-form__. In __Riemannian Manifold we can define consistent transform__. $(M, g)$ be oriented Riemannian Manifold, then $f:M \rightarrow \mathbb{R}$ can be integrated by
+
+$$\int_M f dV_g$$
+
+## The Divergence Theorem
+
+$$* : C^{\infty} (M) \rightarrow \mathscr{A}^n (M)$$ by $$* f = f dV_g$$. Divergence operator is $\mathrm{div}:\mathscr{T}(M) \rightarrow C^{\infty}(M)$ by
+
+$$\mathrm{div}X = *^{-1} d(X \lrcorner dV_g)$$
+
+One application of Stoke's Theorem is
+
+__Theorem 14.23 (The Divergence Theorem)__ $M$ be an oriented Riemannian manifold with boundary. For any compactly supported smooth vector field $X$ on $M$,
+
+$$\int_M (div X) dV_g = \int_{\partial M} \langle X, N \rangle_g dV_{\tilde{g}}$$
+
+## Integration on Lie Groups
+
+Here is 'easy' version of Haar measure existence.
+
+__Proposition 14.25__ $G$ be a compact Lie group endowed with a left-invariant orientation. Then $G$ has a unique left-invariant orientation form $\Omega$ that 
+
+$$\int_G \Omega = 1$$
+
+As an analogue of __consistent transform of 0-form to $n$-form__ on Riemannaian manifold, since above __Haar volume is unique__ $f \rightarrow f dV$ __is consistent transform__.
+
+## Densities
+
+The density originally defined on vector space is a function
+
+$$\mu : V \times \cdots \times V \rightarrow \mathbb{R}$$
+
+satisfying $\mu(TX_1,\cdots , TX_n) = \vert \mathrm{det} T \vert \mu (X_1, \cdots, X_n)$
+
+__Density is not a tensor because nonlinear__. However the space of densities $\Omega(V)$ is 1-dimensional vector space.
+
+Adaptation to manifold is routine process.
+
+$$\Omega M = \coprod_{p \in M} \Omega (T_p M)$$
+
+Then there exists a smooth positive density on $M$.
+
+The purpose of defining density is to integrate by densities. Integration of density in vector space: $\mu = f \vert dx^1 \wedge \cdots \wedge dx^n \vert$
+
+$$\int_D \mu = \int_D f dV$$
+
+__The Riemannian Density__ $(M,g)$ be a Riemannian manifold (with/without boundary). There is a unique smooth positive density $\mu$ on $M$ that for any local orthonormal frame $(E_i)$
+
+$$\mu(E_1, \cdots , E_n) = 1$$
+
+Version of divergence theorem holds for Riemannian densities.
+
+__Theorem 14.34__ $(M,g)$ a Riemannian manifold with boundary. For any compactly supported smooth vector field $X$ on $M$, $dV_g, dV_{\tilde{g}}$ a Riemannian densities
+
+$$\int_M (\mathrm{div} X)dV_g = \int_{\partial M} \langle X, N \rangle_g dV_{\tilde{g}}$$
 
