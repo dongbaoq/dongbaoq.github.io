@@ -117,3 +117,8 @@ $$\gamma'(t) = V(t,\gamma(t))$$
 $$\gamma(s) = p$$
 
 The proof is minor modification of proof of time independent vector field.
+
+## Classification of 1-manifolds
+
+Using the flow of vector fields, we can prove the classification of 1 manifolds.
+
