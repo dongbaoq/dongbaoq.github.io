@@ -172,3 +172,153 @@ P(\max_{1\le j\le k} \vert S_{n+j} - S_n \vert \ge \epsilon) &\le P(\vert S_{n+k
 & \le P(\vert S_{n+k}-S_n \vert \ge \epsilon/3) + \max_{1\le j\le k-1} P(\vert S_{n+k} - S_{n+j} \vert \ge \frac{2}{3} \epsilon) \\
 & \le 3 \max_{0\le j\le k-1} P(\vert S_{n+j} - S_{n+k} \vert \ge \epsilon/3) \rightarrow 0
 \end{aligned}$$
+
+# Chapter 3. Central Limit Theorems
+
+We move on our interest into __converge in distributions (or Weak convergence)__. In this perspective, the __characteristic function__ is important object.
+
+## Weak Convergence
+
+Weak convergence is defined: for sequence of distribution functions $F_n$ converges weakly to a limit $F$ if $F_n(y) \rightarrow F(y)$ for all $y$ a continuity points of $F$.
+
+There are some equivalent statements of weak convergence.
+
+- $X_n \Rightarrow X_{\infty}$ iff every bounded continuous function $g$, $\mathbb{E}g(X_n) \rightarrow \mathbb{E}g(X_{\infty})$
+- $X_n \Rightarrow X_{\infty}$ iff $\forall G$ open, 
+
+$$\mathrm{liminf}_{n\rightarrow \infty} P(X_n \in G) \ge P(X_{\infty} \in G)$$
+
+- $X_n \Rightarrow X_{\infty}$ iff $\forall K$ closed, 
+
+$$\mathrm{limsup}_{n\rightarrow \infty} P(X_n \in K) \le P(X_{\infty} \in K)$$
+
+- $X_n \Rightarrow X_{\infty}$ iff $\forall A$ Borel set with $P(X_{\infty} \in \partial A) = 0$,
+
+$$\mathrm{lim}_{n\rightarrow \infty} P(X_n \in A) = P(X_{\infty} \in A)$$
+
+All these proofs use that we can construct $Y_n$ with distribution $F_n$ such that $Y_n \rightarrow Y_{\infty}$ almost surely, with $Y_{\infty}$ has distribution $F_{\infty}$.
+
+## Tightness
+
+In the series of distribution functions, __tightness__ condition is important to guarantee that the series converge into distribution again. If not, the general theorem "Helly's selection theorem" holds.
+
+__Theorem 3.2.12 (Helly's selection theorem)__ For every sequence $F_n$ of distribution functions, there exists a subsequence $F_{n(k)}$ and right continuous nondecreasing $F$ that $$\mathrm{lim}_{k \rightarrow \infty} F_{n(k)} (y) = F(y)$$ at continuity points of $F$.
+
+To guarantee that this limit is again a distribution function, 
+
+__Theorem 3.2.13__ Every subsequential limit is the distribution function if and only if $F_n$ is __tight__. There exists $M$ for each $\epsilon > 0$ such that
+
+$$\mathrm{limsup}_{n \rightarrow \infty} 1- F_n(M_{\epsilon}) + F_n (-M_{\epsilon}) \le \epsilon$$
+
+## Characteristic Functions
+
+__Characteristic Function__ is like a __key__ of distribution functions. This function __Encodes__ the distribution function and formulates problem into much easier object to handle.
+
+First of all, the definition of the characteristic function is 
+
+$$\varphi(t) = \mathbb{E} e^{itX}$$
+
+We can recover the distribution function from teh characteristic function by the inversion formula.
+
+__Theorem 3.3.11 (The Inversion Formula)__ If $a < b$ then
+
+$$\lim_{T \rightarrow \infty} \frac{1}{2\pi} \int_{-T}^T \frac{e^{-ita} - e^{-itb}}{it} \varphi(t) dt = \mu (a,b) + \frac{1}{2} \mu (\{a, b\})$$
+
+Or, if $\varphi$ is good : 
+
+__Theorem 3.3.14__ If $\int \vert \varphi(t) \vert dt < \infty$, then measure $\mu$ has bounded continuous density
+
+$$f(y) = \frac{1}{2\pi} \int e^{-ity} \varphi(t) dt$$
+
+## Weak Convergence in Characteristic function
+
+__This theorem is the heart of Chapter 3. Weak convergence can be encoded as function limit__
+
+__Theorem 3.3.17 (Continuity Theorem)__ Let $\mu_n$ probability measures with characteristic functions $\varphi_n$
+
+(1) If $\mu_n \Rightarrow \mu_{\infty}$, then $\varphi_n (t) \rightarrow \varphi_{\infty}(t)$ for all $t$.
+
+(2) If Characteristif functions $\varphi_n(t)$ converges pointwise to a limit $\varphi(t)$ (Do not know it is characteristic funciton) and $\varphi(t)$ is continuous at 0, then $\mu_n$ __is tight and converges weakly to a measure $\mu$ which has a characteristic funtion__ $\varphi$
+
+proof. Using the identity
+
+$$\int_{-u}^{u} 1-e^{itx} dt = 2u - \frac{2 sin(ux)}{x}$$
+
+$$\frac{1}{u} \int_{-u}^{u} (1-\varphi_n(t))dt = 2 \int \bigg(1-\frac{sin(ux)}{ux}\bigg) \mu_n (dx)$$
+
+Left hand side converges as $n\rightarrow \infty$ to $\frac{1}{u} \int_{-u}^{u} 1-\varphi(t) dt$. Right hand side, when integrated on $\vert x \vert \ge 2/u$ is bigger than $$\mu_n (\{x : \vert x\vert >2/u \})$$
+
+$$\frac{1}{u} \int_{-u}^u (1-\varphi_n (t)) dt \ge \mu_n \{x : \vert x \vert > 2/u \}$$
+
+Now, continuity of $\varphi$ at 0 is used to bound
+
+$$\frac{1}{u} \int_{-u}^u (1-\varphi(t))dt \rightarrow 0$$
+
+So tightness can be shown.
+
+Here in the proof, __smoothness of the characteristic function at 0 gives impact on the decay of distribution function__. This idea can be also found on Fourier analysis. For instance, $f$ is $C^k$ then $\hat{f}(n) = o(\vert n\vert^{-k})$.
+
+__Theorem 3.3.18__ If $\int \vert x \vert^n \mu(dx) < \infty$ then $\varphi$ is $C^n$ with 
+
+$$\varphi^{(n)} (t) = \int (ix)^n e^{itx} \mu(dx)$$
+
+## Polya's Criteria
+
+Special case of Ch.f. is when the Density function is 
+
+$$f(x) = \frac{1-cos(x)}{\pi x^2}$$
+
+$$\varphi(t) = (1-\vert t\vert )^+$$
+
+Using this distribution we can verify __when does the given function $\varphi(t)$ becomes Characteristic function of some distribution__.
+
+__Theorem 3.3.22. (Polya's criterion)__ If $\varphi(t)$ real nonnegative, $\varphi(0)=1$, $\varphi(-t) = \varphi(t)$ and $\varphi$ decreasing convex on $(0,\infty)$.
+
+$$\lim_{t\downarrow 0} \varphi(t) = 1$$
+
+$$\lim_{t\uparrow \infty} \varphi(t) = 0$$
+
+Then there is a probability measure on $(0,\infty)$ so that
+
+$$\varphi(t) = \int_{0}^{\infty} \bigg(1-\bigg\vert \frac{t}{s}\bigg\vert\bigg)^{+} \mu (ds)$$
+
+Thus, as a continuous sum (or integral) of Ch.f.s in above formula $\varphi$ is characteristic function.
+
+A big application of the Polya's criterion is, for the function 
+
+$$\varphi(t) = \exp(-\vert t\vert^{\alpha})$$
+
+__It is a characteristic function if $0 < \alpha \le 2$ but not a characteristic function if $\alpha > 2$__
+
+Now, we shall seek on the application of characteristic functions.
+
+
+## Momentum Problem
+
+If we have all the values of $\int x^k dF(x)$ $k = 1,2,\cdots$. Then can we find $F$?
+
+In general, the answer is no.
+
+Counterexapmle 1, suggested by Heyde (1963) was lognormal density
+
+$$f_0(x) = (2\pi)^{-1/2} x^{-1} \exp(-(\log x)^2/2)$$
+
+Then $f_a(x) = f_0(x) (1+a \sin(2\pi \log x))$ have the same moments for $-1 \le a \le 1$
+
+In this case moments are $\mathbb{E} X^n = \exp(n^2/2)$.
+
+Counterexample 2. For $\lambda \in (0,1)$ and $-1\le a\le 1$
+
+$$f_{a,\lambda} (x) = c_{\lambda} \exp(-\vert x\vert^{\lambda})\{1+a\sin(\beta \vert x\vert^{\lambda} \mathrm{sgn}(x))\}$$
+
+$\beta = \tan(\lambda \pi/2)$ and $c_{\lambda}$ normalizing constant, have the same moments. In this case, moments are approximately size of $\mathbb{E} X^n \asymp \Gamma (\frac{n-\lambda-1}{\lambda})$
+
+Here, $ln(\Gamma(z)) \sim z ln(z) -z$ so 
+
+$$\Gamma \bigg(\frac{n}{\lambda}\bigg)^{1/n} = \exp\bigg(\frac{1}{n} ln(\Gamma(\frac{n}{\lambda}))\bigg) \sim \exp\bigg(\frac{1}{\lambda}ln(n)\bigg) = n^{1/\lambda}$$
+
+$$\sum_{k=1}^{\infty} \frac{1}{\mathbb{E}(X^{2k})^{1/2k}} \sim \sum_{k=1}^{\infty} \frac{1}{(2k)^{1/\lambda}} < \infty$$
+
+The criteria is determined by this formula. Which is __Carleman's condition__.
+
+__Theorem__ If $\sum_{k=1}^{\infty} \frac{1}{\mu_{2k}^{1/2k}} = \infty$ then there is at most one distribution function $F$ with $\mu_k = \int x^k dF(x)$.
