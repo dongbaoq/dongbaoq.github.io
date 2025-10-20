@@ -15,7 +15,7 @@ This post illustrates fundamental and most important theory in mathematics : the
 
 Linear Algebra concerns about __Linear Maps on Vector Space__. As many studied the Linear Algebra, usually matrices become the central object. However, matrices and basis are supplementary tools for __understanding Linear Maps__. Matrices and basis are useful for understanding Linear Algebra by __Hands__ but the one who is only used to these __by Hands__ method will fail to understand what really the __Linear Algebra wants to talk about__. However, it is also important to being used to handle matrices.
 
-In this article $F$ stands for __Fields__. If $F = \mathbb{R}$ or $F = \mathbb{C}$ is needed, then I will clarify it.
+In this article $F$ stands for __Fields__. So $F = \mathbb{F}_q,\,\mathbb{Q}_p$ fields are also possible. If $F = \mathbb{R}$ or $F = \mathbb{C}$ is needed, then I will clarify it.
 
 The main topics concerning matrices are :
 - __Classification of Matrices by Solution space__
@@ -25,6 +25,7 @@ The main topics concerning Linear Algebras are:
 - __Classification of Finite Dimensional Vector Space__
 - __Dimension Theorem, Rank Theorem, Perp theorem__
 - __Dual Space__
+- __Bilinear form and Hermittian form, Quadratic form__
 - __Transpose of Linear Map__
 
 # Vector Space
@@ -60,7 +61,7 @@ __Theorem (Dimension Theorem)__ If $V$ is f.d.v.s over $F$ and $L: V \rightarrow
 $$\mathrm{dim} V = \mathrm{dim} \, \mathrm{ker} L + \mathrm{dim}\,\mathrm{im}L$$
 
 
-# The Classification of $\mathcal{M}_{m,n}(F) : In perspective of Solution Space$
+# The Classification of $\mathcal{M}_{m,n}(F)$ : In perspective of Solution Space$
 
 ## Rank Theorem
 
