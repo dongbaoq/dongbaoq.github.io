@@ -11,39 +11,66 @@ tags:
 
 This post illustrates fundamental and most important theory in mathematics : the linear algebra. These notes are based on 선형대수와 군 by 이인석 which is highly intuitive and instructive book for understanding linear algebra.
 
-# Existence of Basis
+# Problems of Linear Algebras
 
-__Theorem__. Every non-trivial vector space admits basis (proof needs Zorn's lemma)
+Linear Algebra concerns about __Linear Maps on Vector Space__. As many studied the Linear Algebra, usually matrices become the central object. However, matrices and basis are supplementary tools for __understanding Linear Maps__. Matrices and basis are useful for understanding Linear Algebra by __Hands__ but the one who is only used to these __by Hands__ method will fail to understand what really the __Linear Algebra wants to talk about__. However, it is also important to being used to handle matrices.
 
-However, this does not mean basis is constructable. For example, function space $C^0 (\mathbb{R})$ admits basis but we cannot formulate it.
+In this article $F$ stands for __Fields__. If $F = \mathbb{R}$ or $F = \mathbb{C}$ is needed, then I will clarify it.
 
-__Theorem__ (__Basis Extension Theorem__) If $S$ is linearly independent subset of $V$ then there exists basis of $V$ that contains $S$.
+The main topics concerning matrices are :
+- __Classification of Matrices by Solution space__
+- __Classification of Square Matrices by similar relation__
+
+The main topics concerning Linear Algebras are: 
+- __Classification of Finite Dimensional Vector Space__
+- __Dimension Theorem, Rank Theorem, Perp theorem__
+- __Dual Space__
+- __Transpose of Linear Map__
+
+# Vector Space
+
+### Existence of Basis
+
+__Theorem__. Every non-trivial vector space over $F$ admits basis (proof needs Zorn's lemma)
+
+However, this does not mean basis is constructable. For example, function space $C^0 (\mathbb{R})$ admits basis, but we cannot formulate it.
+
+__Theorem__ (__Basis Extension Theorem__) If $S$ is linearly independent subset of $V$ over $F$ then there exists basis of $V$ that contains $S$.
 
 __Theorem__ If $S$ generates $V$ which $S$ is subset of non-zero vector space $V$, then there exists basis of $V$ that is contained at $S$.
 
 # Linear Transform and Matrix
 
-## Classification of f.d.v.s
+### Classification of f.d.v.s
 
-__Theorem__. If $dim V = n$ then $V \approx F^n$
+__Theorem__. If $V$ is a vector field over $F$ and $dim V = n$, then $V \approx F^n$
 
-Thus, __invariant value__ of equivalence class of finite dimensional vector spaces with relation defined by isomorphism is __dimension__
+Thus, __invariant value__ of equivalence class of finite dimensional vector spaces with relation defined by isomorphism is __dimension__. We can also think any vector space as a representative : $F^n$
 
-## Linear Transform equals Matrix
+### Linear Transform can be represented by Matrix
 
-__Theorem__. Every linear map $L : F^n \rightarrow F^m$ is form of $L_A$. Furthermore $A$ is unique.
+__Theorem__. Every linear map $L : F^n \rightarrow F^m$ is form of $L_A$. Furthermore, $A$ is unique.
 
-# The Classification of $\mathcal{M}_{m,n}(F)$
+## Dimension Theorem
 
-## Row Rank equals Column Rank
+Dimension Theorem is one __Central Theorem__ of Linear Algebra.
 
-__Theorem__. Row rank (defined by the dimension of row vector space) and Column rank (defined by the dimension of column vector space) are equal.
+__Theorem (Dimension Theorem)__ If $V$ is f.d.v.s over $F$ and $L: V \rightarrow W$ is linear map, then
+
+$$\mathrm{dim} V = \mathrm{dim} \, \mathrm{ker} L + \mathrm{dim}\,\mathrm{im}L$$
+
+
+# The Classification of $\mathcal{M}_{m,n}(F) : In perspective of Solution Space$
+
+## Rank Theorem
+
+__Theorem (Rank Theorem)__. For $A \in \mathcal{M}_{m,n}(F)$, Row rank (defined by the dimension of row vector space) and Column rank (defined by the dimension of column vector space) are equal.
 
 Proof 1. Suppose $A$ is $m \times n$ matrix. Then if we prove $m = \mathrm{dim} (ker A) + (\mathrm{row \, rank})$ then since $\mathrm{dim} (im A) = (\mathrm{col \, rank})$, proof is over. $m = \mathrm{dim} (ker A) + (\mathrm{row \, rank})$ can be shown by row-reduced echelon form.
 
 Proof 2. If $A$ can be transformed to row-reduced echelon form $R$, then its row rank is invariant. Also, in the row-reduced echelon form $R$, row rank is clearly identical to column rank. Thus, one should prove that column space of $A$ and $R$ have the same rank. Since $EA = R$, $L_A = L_{E}^{-1}\circ L_R$ so $im (L_A) = im(L_E^{-1} \circ L_R) = L_E^{-1} (im (L_R))$. So as the vector space, isomorphism $L_A \approx L_R$ holds. They have the same rank.
 
-## Rank is invariant value of similar matrices
+### Representative of the classification
 
 __Theorem__ Define $A \asymp B$ for $$A,B \in \mathcal{M}_{m,n}(F)$$ by $B = PAQ$ for some invertible $$P \in \mathcal{M}_{m,m}(F)$$, $$Q \in \mathcal{M}_{n,n}(F)$$. Then $A \asymp B$ if and only if $rank(A) = rank(B)$. Representative form of these equivalence classes is 
 
@@ -52,24 +79,25 @@ I_r & 0 \\
 0 & 0
 \end{pmatrix}$$
 
-# The Classification of $\mathcal{M}_{n,n}(F)$
+# The Classification of $\mathcal{M}_{n,n}(F) : In Similar relation$
 
 Here, te equivalence relation is defined by $A \sim B$ if $A = UBU^{-1}$ for some matrix $U \in \mathcal{M}_{n,n}(F)$.
 
-## Triangularization Theorem
+## Triangularization Theorem of $F = \mathbb{C}$
 
 __Theorem__. If $F = \mathbb{C}$ then for linear transform $T$, there exists basis $\mathfrak{B}$ of $V$ such that $[T]_{\mathfrak{B}}^{\mathfrak{B}}$ is a upper-triangular matrix.
 
-For the classification of $\mathbf{M}_{n,n}(F)$, above triangularization theorem is enough, but for sake of completeness I will mention following improved theorem.
+More stronger result will be
 
-__Theorem__. (__Schur Decomposition Theorem__) : For $n \times n$ __complex__ matrix $A$, $A$ can be expressed as
+__Theorem__. (__Schur Decomposition Theorem__) : If $F = \mathbb{C}$, $n \times n$ __complex__ matrix $A$, $A$ can be expressed as
 $$ A = QUQ^{-1}$$
 for unitary matrix $Q$ and upper triangular matrix $U$. ($F = \mathbb{C}$ is important condition)
 
+However, we want to discuss on the general field $F$.
 
 ## Minimal Polynomial
 
-Minimal polynomial is the __minimum degree monic polynomial of annihilator ideal__. For $T$ a linear operator, annihilator ideal $\mathcal{I}_T = \{f(t) \in F[t] \| f(T) = 0 \}$. This minimal polynomial $m_T (t)$ generates annihilator ideal.
+Minimal polynomial is the __minimum degree monic polynomial of annihilator ideal__. For $T$ a linear operator, annihilator ideal $$\mathcal{I}_T = \{f(t) \in F[t] \| f(T) = 0 \}$$. This minimal polynomial $m_T (t)$ generates annihilator ideal.
 
 __Theorem__. Characteristic polynomial $\phi_T (t)$ and minimal polynomial $m_T (t)$ have the same __monic irreducible divisors__ (over field $F$)
 
@@ -175,9 +203,9 @@ This is the __Best Answer to Decompose arbitrary $$\mathcal{M}_{n,n}(F)$$ Matrix
 
 ## Jordan Canonical Form
 
-__Jordan Canonical Form is Representative Form of $\mathcal{M}_{n,n}(F)$__
+__Jordan Canonical Form is Representative Form of $\mathcal{M}_{n,n}(F)$. One assumption that cannot be dropped is that $F$ is Algebraically closed__
 
-After applying Primary Decomposition Theorem, $V = W_1 \oplus \cdots \oplus W_k$ and if we suppose $\phi_T(t)$ is multiple of linear polynomials then $\phi_{T_i} (t) = p_i(t)^{e_i}$ and $m_{T_i} (t) = p_i (t)^{f_i}$.
+After applying Primary Decomposition Theorem, $V = W_1 \oplus \cdots \oplus W_k$ and if we suppose $\phi_T(t)$ is multiple of linear polynomials(__Here the fact that $F$ being algebraically closed is used__) then $\phi_{T_i} (t) = p_i(t)^{e_i}$ and $m_{T_i} (t) = p_i (t)^{f_i}$.
 
 If we apply Cyclic Decomposition Theorem to $N = T - \lambda I$, $W = U_1 \oplus U_2 \oplus \cdots \oplus U_h$ and each $\phi_{N\vert_{U_j}}(t) = m_{N\vert_{U_j}}(t) = t^{r_j}$ so companion matrices last column is zero. 
 
@@ -208,13 +236,3 @@ $$
 
 Each block size is $r_{ij} \times r_{ij}$.
 
-# Normed Space
-
-For linear operator $T : V \rightarrow W$, there exists adjoint linear operator $T^* : W \rightarrow V$ satisfying $<T(x), y>_W = <x, T^* (y)>_V$. Assurance that $V, W$ being __finite dimensional inner product space__ is essential.
-
-- __Normal Operator__ satisfies $T T^* = T^* T$ for $T : V \rightarrow V$.
--  __Hermitian Operator__ satisfies $T = T^*$.
--  __Unitary Operator__ satisfies $T^* T = I$.
--  __Orthogonal Operator__ satisfies $T^t T = I$ for real vector field.
-
-# Spectral Theorem
