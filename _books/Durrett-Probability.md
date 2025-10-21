@@ -322,3 +322,69 @@ $$\sum_{k=1}^{\infty} \frac{1}{\mathbb{E}(X^{2k})^{1/2k}} \sim \sum_{k=1}^{\inft
 The criteria is determined by this formula. Which is __Carleman's condition__.
 
 __Theorem__ If $\sum_{k=1}^{\infty} \frac{1}{\mu_{2k}^{1/2k}} = \infty$ then there is at most one distribution function $F$ with $\mu_k = \int x^k dF(x)$.
+
+## The Central Limit Theorem
+
+Now we are ready to focus on the central limit theorem. By our previous works, central limit theorem is an easy consequence by study of characteristic functions. __Theorem 3.3.17__ is again very powerful theorem.
+
+__Theorem 3.4.1__ $X_1, X_2, \cdots$ i.i.d with $\mathbb{E} X_i = \mu$ and $var(X_i) = \sigma^2 \in (0,\infty)$. If $S_n = X_1 + \cdots +X_n$ then
+
+$$(S_n - n\mu)/\sigma n^{1/2} \Rightarrow \chi$$
+
+the standard normal distribution.
+
+proof) Assume $\mu = 0$. $\varphi_{X_i}(t) = 1 - \frac{\sigma^2 t^2}{2} + o(t^2)$ so $\varphi_{S_n/\sigma n^{1/2}}(t) = \bigg(1-\frac{t^2}{2n} +o(n^{-1})\bigg)^n \rightarrow exp(-t^2/2)$. Which is continuous at $0$ and $exp(-t^2/2)$ is characteristic function of standard normal distribution.
+
+As we did on the law of large numbers, we can __truncate__ the series of random variables to obtain general results.
+
+__Theorem 3.4.10 (The Lindeberg-Feller theorem)__ $X_{n,m}$ for $1\le m\le n$ are independent r.v.s with $\mathbb{E}X_{n,m} = 0$. Suppose
+
+(1) $\sum_{m=1}^n \mathbb{E}X_{n,m}^2 \rightarrow \sigma^2 > 0$
+
+(2) $\forall \epsilon > 0, \, \lim_{n\rightarrow \infty} \sum_{m=1}^n \mathbb{E}(\vert X_{n,m} \vert^2 ; \vert X_{n,m} \vert > \epsilon) = 0$
+
+Then $S_n = X_{n,1} + \cdots +X_{n,n} \Rightarrow \sigma \cdot \chi$
+
+Remark. $X_{n,m} = X_m / n$ deduces into C.L.T theorem
+
+proof) Again we are doing on the characteristic functions. $\varphi_{n,m}(t)$ be the characteristic function of $X_{n,m}$.
+
+By the accurate examination formula
+
+$$\bigg\vert e^{ix} - \sum_{m=0}^n \frac{(ix)^m}{m!} \bigg\vert \le \min \bigg(\frac{\vert x\vert^{n+1}}{(n+1)!}, \frac{2\vert x\vert^n}{n!}\bigg)$$
+
+$$\vert \varphi_{n,m}(t) - (1-t^2 \sigma^{2}_{n,m}/2)\vert \le \mathbb{E}(\vert tX_{n,m}\vert^3 \wedge 2\vert tX_{n,m}\vert^2 ) \le \epsilon t^3 \mathbb{E}X_{n,m}^2 + 2t^2 \mathbb{E}(\vert X_{n,m}\vert^2;\vert X_{n,m}\vert > \epsilon)$$
+
+Giving us
+
+$$\limsup_{n \rightarrow \infty}\sum_{m=1}^n \vert \varphi_{n,m}(t) - (1-t^2 \sigma^{2}_{n,m}/2)\vert \le \epsilon t^3 \sigma^2$$
+
+So 
+
+$$\prod_{m=1}^n \varphi_{n,m}(t) - exp(-t^2 \sigma^2/2) \rightarrow 0$$
+
+Using this truncation technique, we can handle infinite variance cases. See Example 3.4.13 of Durrett's Probability book.
+
+So when does the truncation technique can be used on? Gnedenko and Kolmogorov found the necessary and sufficient condition.
+
+__Theorem 3.4.14__ $X_1, X_2, \cdots$ be i.i.d. $S_n = X_1 + \cdots + X_n$. There exists $a_n, b_n > 0$ that $(S_n - a_n)/b_n \Rightarrow \chi$ if and only if as $y \rightarrow \infty$
+
+$$\frac{y^2 P(\vert X_1 \vert > y)}{\mathbb{E}(\vert X_1 \vert^2 ; \vert X_1 \vert \le y)} \rightarrow 0$$
+
+## Local Limit Theorem
+
+We can classify characteristic functions into three classes.
+
+(1) $\varphi \equiv 1$ : point mass
+
+(2) $\vert \varphi(\lambda) \vert = 1$ for some $\lambda$ but not all : Lattice distribution
+
+(3) $\vert \varphi \vert <1$
+
+In the case of lattice distribution, we can argue on the all supports ; lattices that probability distribution of $S_n$ converges to normal distribution.
+
+__Theorem 3.5.3__ If $X_1, X_2, \cdots $ i.i.d with $\mathbb{E} X_i = 0$, $\mathbb{E} X_i^2 = \sigma^2 \in (0,\infty)$ having a common lattice distribution $X_i \in b + h\mathbb{Z}$. Then for $p_n(x) = P(S_n / \sqrt{n} = x)$ the discrete probability whose support being $$\{(nb+hz)/\sqrt{n}: z\in \mathbb{Z}\}$$ converges uniformly to normal distribution probability density : $n(x) = \frac{1}{\sqrt{2\pi} \sigma} exp(-x^2 /2\sigma^2)$
+
+$$\sup_{x \in \{(nb+hz)/\sqrt{n} : z\in\mathbb{Z}\}} \bigg\vert \frac{\sqrt{n}}{h} p_n(x) - n(x) \bigg\vert \rightarrow 0$$
+
+Actually, the same holds for non-lattice case.

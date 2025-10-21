@@ -25,7 +25,7 @@ The main topics concerning Linear Algebras are:
 - __Classification of Finite Dimensional Vector Space__
 - __Dimension Theorem, Rank Theorem, Perp theorem__
 - __Dual Space__
-- __Bilinear form and Hermittian form, Quadratic form__
+- __Philosophy of Bilinear form and Hermittian form, Quadratic form__
 - __Transpose of Linear Map__
 
 # Vector Space
