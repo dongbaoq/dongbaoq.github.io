@@ -28,6 +28,8 @@ The main topics concerning Linear Algebras are:
 - __Philosophy of Bilinear form and Hermittian form, Quadratic form__
 - __Transpose of Linear Map__
 
+In my journey of studying Linear Algebra, at the __first studying__ I learned how to deal with matrices (multiplication, row reduced transform, diagonalization). __Second studying__, I understood linear map is __equivalent__ to matrices. To now the __third studying__ I understood linear map is __not equivalent__ to matrices, rather much abstract and nice concept. Matrices are just useful tool for 'calculating' linear map but linear map and vector space can be handled with much __canonical__ way and beautiful harmony exists.
+
 # Vector Space
 
 ### Existence of Basis
