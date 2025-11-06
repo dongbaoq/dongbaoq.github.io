@@ -389,5 +389,38 @@ $$\sup_{x \in \{(nb+hz)/\sqrt{n} : z\in\mathbb{Z}\}} \bigg\vert \frac{\sqrt{n}}{
 
 Actually, the same holds for non-lattice case.
 
+## Poisson Convergence and Poisson Process
+
+On the other side of the limit theorem, there is a Poisson convergence.
+
+__Theorem 3.7.1__ $X_{n,m}$, $1\le m\le n$ independent rvs with $P(X_{n,m}=1) = p_{n,m}$ and $P(X_{n,m}=0)=1-p_{n,m}-\epsilon_{n,m}$. If $\sum_{m=1}^n p_{n,m}\rightarrow \lambda$ and $\max_{1\le m\le n} p_{n,m}\rightarrow 0$, $\sum_{m=1}^n \epsilon_{n,m}\rightarrow 0$ (Sufficient for convergence) then $S_n \Rightarrow Z$ the Poisson distribution of $\lambda$.
+
+Proof is again the characteristic functions.
+
+__Poisson process__ is the process such that $N(t)$, the $0=t_0 < t_1 < \cdots < t_n$, $N(t_k)-N(t_{{k-1}})$ are independent with distribution $\mathrm{Poisson}(\lambda(t_k - t_{k-1}))$
+
+## Stable Laws
+
+Answering the following question : when does $a_n, b_n$ exist so that for $X_1, \cdots X_n$ i.i.d
+
+$$\frac{S_n - b_n}{a_n} \Rightarrow Y$$
+
+to the nondegenerate $Y$? CLT says if $var(X_1)<\infty$ then it does. Quite brief answer gives
+
+__Theorem 3.8.2__ $X_1,\cdots $ i.i.d that
+- $\lim_{x\rightarrow \infty}P(X_1 > x)/P(\vert X_1 \vert > x) = \theta \in [0,1]$
+- $P(\vert X_1 \vert > x) = x^{-\alpha} L(x)$, $\alpha < 2$
+- $\lim_{x\rightarrow \infty} L(tx)/L(x) = 1,\;\forall t>0$
+Then such $a_n, b_n$ exists.
+
+Moreover, stunning fact is that such distributions are written in
+
+$$\exp(itc - b\vert t\vert^{\alpha}(1+i\kappa \mathrm{sgn}(t)w_{\alpha(t)}))$$
+
+$0<\alpha \le 2$, $-1\le \kappa \le 1$ with $w_{\alpha}(t) = \tan(\pi\alpha/2)$ if $\alpha \neq 1$ and $(2/\pi)\log\vert t\vert$ if $\alpha=1$.
+
+and moreover, these distributions are only one who can be written as the limit $(S_n - a_n)/b_n$.
+
 # Chapter 4. Martingales
 
+Martingales and Conditional expectation are powerful tools for analyzing process. In the Martingale's language, the __Stopping Time__ becomes key to unlock some nontrivial theorems.
