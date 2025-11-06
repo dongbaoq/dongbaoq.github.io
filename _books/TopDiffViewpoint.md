@@ -3,6 +3,7 @@ title: "Book Review : Topology from the Differentiable Viewpoint"
 collection: books
 date: 2025-03-13
 permalink: /books/TopfromDiffVeiwpoint
+use_math: true
 tags:
 - John W. Milnor
 - Book Review

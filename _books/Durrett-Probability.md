@@ -388,3 +388,6 @@ __Theorem 3.5.3__ If $X_1, X_2, \cdots $ i.i.d with $\mathbb{E} X_i = 0$, $\math
 $$\sup_{x \in \{(nb+hz)/\sqrt{n} : z\in\mathbb{Z}\}} \bigg\vert \frac{\sqrt{n}}{h} p_n(x) - n(x) \bigg\vert \rightarrow 0$$
 
 Actually, the same holds for non-lattice case.
+
+# Chapter 4. Martingales
+
