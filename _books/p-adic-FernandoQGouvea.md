@@ -193,3 +193,11 @@ In this book, considers restricted case (but quite a large class of equation) :
 
 $$aX^2 + bY^2 + cZ^2 = 0$$
 
+We can find the solution in $\mathbb{Q}_p$ if
+
+- $p = \infty$ : $a,b,c$ do not have the same sign
+- $p$ odd prime : $p \nmid abc$ then solution exists and if $p \mid a$ : $b + r^2 c \equiv 0 (\mathrm{mod} \, p)$ for some $r \in \mathbb{Z}$
+- $p = 2$ : $a,b,c$ all odd then two sum must be divisible by 4, and if $a$ even $b+c$ or $a+b+c$ divisible by 8
+  
+By Hasse-Minkowski, if above condition guarantees solution in $\mathbb{Q}$.
+

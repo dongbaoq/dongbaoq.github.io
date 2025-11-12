@@ -1,5 +1,5 @@
 ---
-title: "Book Review : Introduction to Smooth Manifold Ch 11~14"
+title: "Introduction to Smooth Manifold Ch 11~14"
 collection: books
 date: 2025-08-17
 permalink: /books/SM3

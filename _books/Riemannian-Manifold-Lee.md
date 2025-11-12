@@ -1,5 +1,5 @@
 ---
-title: "Book Review : Riemannian Manifold"
+title: "Riemannian Manifold"
 collection: books
 date: 2025-09-06
 permalink: /books/RM

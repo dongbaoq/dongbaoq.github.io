@@ -13,9 +13,9 @@ At the year 2022, I had a shallow interest on mathematical optimization and deep
 
 ## Structure of the Blog
 
-### Book Review
+### Book Review & Study
 
-Here, I summarized important theorems and intuition of the book. Here is the list of posts:
+Here, I summarized important theorems and intuitions while studying. Here is the list of posts:
 
 - Allen Hatcher, Algebraic Topology (2002)
 - 이인석, 선형대수와 군 (Linear Algebra and Group) (2015)
@@ -24,3 +24,5 @@ Here, I summarized important theorems and intuition of the book. Here is the lis
 - John M. Lee, Introduction to riemannian manifolds (2018)
 - John W. Milnor, Topology from the differentiable viewpoint (1997)
 - Durrett, Probability (2019)
+- Fernando Q.Gouvea, p-adic Numbers, An Introduction (Third Edition) (2010)
+- Lie Group, SNU 2025 Fall Course
