@@ -20,8 +20,8 @@ main:
   - title : "Paper Reviews"
     url: /papers/
         
-  - title: "Projects"
-    url: /projects/
+  #- title: "Projects"
+  #  url: /projects/
 
   - title: "Book Reviews"
     url: /books/

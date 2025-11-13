@@ -61,7 +61,8 @@ __Theorem__ For $G, H$ matrix Lie group, $\mathrm{Lie}G = \mathfrak{g}$, $\mathr
 
 This theorem is important that we know the converse direction very well : For $\Phi : G \rightarrow H$, we can define $\phi : \mathfrak{g} \rightarrow \mathfrak{h}$ that
 
-$$\begin{CD}
+$$\require{amscd}
+\begin{CD}
 G @>{\Phi}>> H\\
 @A{\exp}AA @AA{\exp}A\\
 \mathfrak{g} @>>{\phi}> \mathfrak{h} 
@@ -142,7 +143,9 @@ We first do the __Root space decomposition__. Which is the special case of repre
 
 $$\mathfrak{g} = \mathfrak{h} \oplus \bigg(\bigoplus_{\alpha} \mathfrak{g}_{\alpha}\bigg)$$
 
-Is eigenspace decomposition of $\mathfrak{h}$ action, where now eigenvalue is not mattering since $\mathfrak{h}$ is two dimensional, but $\alpha \in \mathfrak{h}^{*}$. Adjoint action of $\mathfrak{h}$ acts $\mathfrak{g}_{\alpha}$ to itself, and $\mathfrak{g}_{\alpha}$ acting on $\mathfrak{g}$ is similar to $X, Y$ in $\mathfrak{sl}_2 \mathbb{C}$ which translates $\mathrm{ad}(\mathfrak{g}_{\alpha}): \mathfrak{g}_{\beta} \rightarrow \mathfrak{g}_{\alpha + \beta}$. We call $\alpha$'s __root__
+Is eigenspace decomposition of $\mathfrak{h}$ action, where now eigenvalue is not mattering since $\mathfrak{h}$ is two dimensional, but $\alpha \in \mathfrak{h}^{*}$. 
+Adjoint action of $\mathfrak{h}$ acts $\mathfrak{g}_{\alpha}$ to itself, and $\mathfrak{g}_{\alpha}$ acting on $\mathfrak{g}$ is similar to $X, Y$ in $\mathfrak{sl}_2 \mathbb{C}$ which translates $\mathrm{ad}(\mathfrak{g}_{\alpha}): \mathfrak{g}_{\beta} \rightarrow \mathfrak{g}_{\alpha + \beta}$. 
+We call $\alpha$'s __root__
 
 Now back to the irreducible representation $\pi : \mathfrak{g} \curvearrowright V$, eigenspace decomposition of $\mathfrak{h}$ is still valid. $V = \bigoplus_{\alpha} V_{\alpha}$. Also $\pi (\mathfrak{g}_{\alpha}) : V_{\beta} \rightarrow V_{\alpha + \beta}$. Here $\alpha$ is __root__ but $\beta$ is __weight__.
 
@@ -196,7 +199,7 @@ __(Knapp) Theorem 1.54__ Lie algebra $\mathfrak{g}$ is semisimple if and only if
 
 To go more from semisimple Lie algebras, we look at reductive Lie algebra: The Lie algebra is reductive if $\forall \mathfrak{a} \subseteq \mathfrak{g}$ an ideal then $\exists \mathfrak{b} \subseteq \mathfrak{g}$ that $\mathfrak{g} = \mathfrak{a} \oplus \mathfrak{b}$. Reductive Lie algebra decomposes into
 
-$$\mathfrak{g} = [\mathfrak{g},\mathfrak{g}] + Z_{\mathfrak{g}}$$
+$$\mathfrak{g} = [\mathfrak{g},\mathfrak{g}] \oplus Z_{\mathfrak{g}}$$
 
 $[\mathfrak{g},\mathfrak{g}]$ semisimple part, $Z_{\mathfrak{g}}$ abelian.
 
@@ -225,6 +228,7 @@ __(Knapp) Proposition 2.5__ If $\mathfrak{g}$ is any finite-dimensional Lie alge
 $$\mathfrak{g}_{\alpha} = \{X \in \mathfrak{g} \mid (\mathrm{ad} H - \alpha(H) 1)^n X = 0 \; \forall H \in \mathfrak{h}\}$$
 
 - $\mathfrak{h} \subseteq \mathfrak{g}_0$
+  
 - $[\mathfrak{g}_{\alpha}, \mathfrak{g}_{\beta}] \subseteq \mathfrak{g}_{\alpha + \beta}$
   
 We call if $\mathfrak{h} = N_{\mathfrak{g}} (\mathfrak{h}) = \mathfrak{g}_0$ then $\mathfrak{h}$ is __Cartan Subalgebra__. For complex Lie algebra, there exists Cartan subalgebra (Knapp, Theorem 2.9) and is unique upto $\mathrm{Int}\mathfrak{g}$. ($\mathrm{Int}$ is analytic subgroup of $\mathrm{Aut}\mathfrak{g}$ whose Lie subalgebra is $\mathrm{ad}\mathfrak{g}$, Knapp Theorem 2.15)
@@ -237,9 +241,11 @@ We call $\Delta$ roots. Note that if Cartan subalgebra $\mathfrak{h}$ changes, r
 
 By Cartan's semismplicity criteria, we can analyze further with the Killing form $B$.
 
-We can know that $B\mid_{\mathfrak{h} \times \mathfrak{h}}$ is nondegenerate and $B\mid_{\mathfrak{g}_{\alpha} \times \mathfrak{g}_{-\alpha}}$ must be nondegenerate for $\alpha \in \Delta$. Thus we can guarantee $\alpha \in \Delta$ then $-\alpha \in \Delta$, moreover $\Delta$ spans $\mathfrak{h}^{*}$.
+We can know that $B\mid_{\mathfrak{h} \times \mathfrak{h}}$ is nondegenerate and 
+$B \vert_{\mathfrak{g}_{\alpha} \times \mathfrak{g}_{-\alpha}}$
+ must be nondegenerate for $\alpha \in \Delta$. Thus we can guarantee $\alpha \in \Delta$ then $-\alpha \in \Delta$, moreover $\Delta$ spans $\mathfrak{h}^{*}$.
 
-Moreover, for $\alpha \in \Delta$ we can let $H_{\alpha}$ that $\alpha(H) = B(H, H_{\alpha})$ hold for all $H \in \mathfrak{h}$ (By non-degeneracy of $B\mid_{\mathfrak{h}\times\mathfrak{h}}$) and $E_{\alpha} \in \mathfrak{g}_{\alpha}$ that $[H, E_{\alpha}] = \alpha(H) E_{\alhpa}$ (By Lie's theorem). Then $$\{H_{\alpha}, E_{\alpha}, E_{-\alpha}\}$$ looks like (after some normalization) $\mathfrak{sl}_2 \mathbb{C}$.
+Moreover, for $\alpha \in \Delta$ we can let $H_{\alpha}$ that $\alpha(H) = B(H, H_{\alpha})$ hold for all $H \in \mathfrak{h}$ (By non-degeneracy of $B\mid_{\mathfrak{h}\times\mathfrak{h}}$) and $E_{\alpha} \in \mathfrak{g}_{\alpha}$ that $[H, E_{\alpha}] = \alpha(H) E_{\alhpa}$ (By Lie's theorem). Then $$\{H_{\alpha}, E_{\alpha}, E_{-\alpha }\}$$ looks like (after some normalization) $\mathfrak{sl}_2 \mathbb{C}$.
 
 This introduces the terminology 'root string' and 'root reflection'
 
