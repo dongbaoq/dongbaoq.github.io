@@ -149,4 +149,156 @@ Now back to the irreducible representation $\pi : \mathfrak{g} \curvearrowright 
 Choose the highest weight vector of $V$ : kernel of $E_{1,2}, E_{1,3}, E_{2,3}$. Then we can identify all irreducible representation of $\mathfrak{sl}_3 \mathbb{C}$. See the figure below.
 
 
-# Structure Theory
+# Structure Theory : Introduction
+
+Here is now a new Chapter of Lie group, Lie algebra theory. First some definitions
+
+## Simple, Semisimple, Nilpotent
+
+$\mathfrak{g}$ is solvable if $\mathfrak{g}^j = 0$ for some $j$.
+
+$$\mathfrak{g}^j = [\mathfrak{g}^{j-1}, \mathfrak{g}^{j-1}]$$
+
+$\mathfrak{g}$ is nilpotent if $\mathfrak{g}_j = 0$ for some $j$.
+
+$$\mathfrak{g}_j = [\mathfrak{g}_{j-1}, \mathfrak{g}]$$
+
+$\mathfrak{g}$ is simple if $\mathfrak{g}$ is non abelian and has no nontrivial ideal.
+
+$\mathfrak{g}$ is semisimple if it is non abelian and has no nontrivial solvable ideal.
+
+## Three Big Theorems
+
+__(Knapp) Theorem 1.25 (Lie's Theorem)__ $\mathfrak{g}$ be solvable. For finite dimensional representation $\pi : \mathfrak{g} \rightarrow End_{\mathbb{K}} V$, if $\mathbb{K}$ is algebraically closed or more generally, eigenvalues of $\pi(X),\, X \in \mathfrak{g}$ lie in $\mathbb{K}$ then there is a simultaneous eigenvector $v \neq 0$ for all members $\pi(\mathfrak{g})$
+
+So inductively applying Lie's Theorem, representation $\pi : \mathfrak{g} \rightarrow End_{\mathbb{K}}V$ can be seen as flag.
+
+$$ V = V_0 \supset V_1 \supset \cdots \supset V_m = 0$$
+
+Such that each $V_i$ are stable under $\pi(\mathfrak{g})$.
+
+__(Knapp) Theorem 1.35 (Engel's Theorem)__ $V$ a finite dimensional vector space over $\mathbb{k}$. $\mathfrak{g}$ is a Lie algebra of nilpotent endomorphisms of $V$. Then
+- $\mathfrak{g}$ is a nilpotent Lie algebra
+- There exists $v \in V$ that $X(v) = 0$ for all $X \in \mathfrak{g}$
+- With suitable basis of $V$, $\pi(\mathfrak{g})$ is expressed as strictly upper triangular matrix.
+
+As a corollary, the Lie algebra whose $\mathrm{ad} X$ is nilpotent, then Lie algebra itself is nilpotent.
+
+__(Knapp) Theorem 1.45 (Cartan's Criterion for semisimplicity)__ Lie algebra $\mathfrak{g}$ is semisimple if and only if Killing form $B$ is nondegenerate.
+
+These three theorem will give us the starting point of analyzing the structure of Lie group and Lie algebras.
+
+Proof technique is also important, techniques handling Killing form and Bracket operation.
+
+For instance, by these three fundamental theorems we can see:
+
+__(Knapp) Theorem 1.54__ Lie algebra $\mathfrak{g}$ is semisimple if and only if $\mathfrak{g} = \mathfrak{g}_1 \oplus \cdots \oplus \mathfrak{g}_m$ each $\mathfrak{g}_j$ are simple Lie algebra and an ideal.
+
+To go more from semisimple Lie algebras, we look at reductive Lie algebra: The Lie algebra is reductive if $\forall \mathfrak{a} \subseteq \mathfrak{g}$ an ideal then $\exists \mathfrak{b} \subseteq \mathfrak{g}$ that $\mathfrak{g} = \mathfrak{a} \oplus \mathfrak{b}$. Reductive Lie algebra decomposes into
+
+$$\mathfrak{g} = [\mathfrak{g},\mathfrak{g}] + Z_{\mathfrak{g}}$$
+
+$[\mathfrak{g},\mathfrak{g}]$ semisimple part, $Z_{\mathfrak{g}}$ abelian.
+
+## Analytic Subgroup
+
+Analytic group means connected Lie group. One deep result is that for $H$ an analytic subgroup of $G$ and its Lie algebra $\mathfrak{h}$, the correspondence of analytic subgroup and Lie subalgebra is one-to-one onto.
+
+(Analytic Subgroup) <> (Lie subalgebra)
+
+This fact will appear quite often when we analyze Lie algebra precisely, and then lift to the Lie group.
+
+## Root Space Decomposition
+
+We focus on complex semisimple Lie algebras. At the end, we will find out the beautiful classification of complex simple Lie algebras.
+
+__Theorem__ Complex simple Lie algebra is isomorphic to one of the followings:
+
+$$\mathfrak{sl}_n \mathbb{C},\, \mathfrak{so}_{n} \mathbb{C},\, \mathfrak{sp}_{2n} \mathbb{C},\, G_2, F_4, E_6, E_7, E_8$$
+
+
+Motivation of root space decomposition comes from $\mathfrak{sl}_3 \mathbb{C}$ or more generally, $\mathfrak{sl}_n \mathbb{C}$. We found on $\mathfrak{sl}_3 \mathbb{C}$, adjoint representation gives decomposition of $\mathfrak{sl}_3 \mathbb{R}$ by the eigenspace of 'roots' which lie in $\mathfrak{h}^{*}$. This is indeed true for general semisimple Lie algebra.
+
+__(Knapp) Proposition 2.5__ If $\mathfrak{g}$ is any finite-dimensional Lie algebra over $\mathbb{C}$ and $\mathfrak{h}$ a nilpotent Lie subalgebra then
+- $\mathfrak{g} = \bigoplus_{\alpha} \mathfrak{g}_{\alpha}$ the generalized weight space
+
+$$\mathfrak{g}_{\alpha} = \{X \in \mathfrak{g} \mid (\mathrm{ad} H - \alpha(H) 1)^n X = 0 \; \forall H \in \mathfrak{h}\}$$
+
+- $\mathfrak{h} \subseteq \mathfrak{g}_0$
+- $[\mathfrak{g}_{\alpha}, \mathfrak{g}_{\beta}] \subseteq \mathfrak{g}_{\alpha + \beta}$
+  
+We call if $\mathfrak{h} = N_{\mathfrak{g}} (\mathfrak{h}) = \mathfrak{g}_0$ then $\mathfrak{h}$ is __Cartan Subalgebra__. For complex Lie algebra, there exists Cartan subalgebra (Knapp, Theorem 2.9) and is unique upto $\mathrm{Int}\mathfrak{g}$. ($\mathrm{Int}$ is analytic subgroup of $\mathrm{Aut}\mathfrak{g}$ whose Lie subalgebra is $\mathrm{ad}\mathfrak{g}$, Knapp Theorem 2.15)
+
+In semisimple Lie algebra, using the Cartan's semisimplicity criteria, the Cartan subalgebra is abelian (Knapp, Proposition 2.10). So $\mathfrak{g}$ semisimple can be written as
+
+$$\mathfrak{g} = \mathfrak{h} \oplus \bigoplus_{\alpha \in \Delta} \mathfrak{g}_{\alpha}$$
+
+We call $\Delta$ roots. Note that if Cartan subalgebra $\mathfrak{h}$ changes, roots will change. However, Cartan subalgebra is unique upto $\mathrm{Int}\mathfrak{g}$ so change of roots will be restricted also.
+
+By Cartan's semismplicity criteria, we can analyze further with the Killing form $B$.
+
+We can know that $B\mid_{\mathfrak{h} \times \mathfrak{h}}$ is nondegenerate and $B\mid_{\mathfrak{g}_{\alpha} \times \mathfrak{g}_{-\alpha}}$ must be nondegenerate for $\alpha \in \Delta$. Thus we can guarantee $\alpha \in \Delta$ then $-\alpha \in \Delta$, moreover $\Delta$ spans $\mathfrak{h}^{*}$.
+
+Moreover, for $\alpha \in \Delta$ we can let $H_{\alpha}$ that $\alpha(H) = B(H, H_{\alpha})$ hold for all $H \in \mathfrak{h}$ (By non-degeneracy of $B\mid_{\mathfrak{h}\times\mathfrak{h}}$) and $E_{\alpha} \in \mathfrak{g}_{\alpha}$ that $[H, E_{\alpha}] = \alpha(H) E_{\alhpa}$ (By Lie's theorem). Then $$\{H_{\alpha}, E_{\alpha}, E_{-\alpha}\}$$ looks like (after some normalization) $\mathfrak{sl}_2 \mathbb{C}$.
+
+This introduces the terminology 'root string' and 'root reflection'
+
+## Abstract Root System
+
+From the motivation of studying root system of complex semisimple Lie algebra, we define an abstract root system for general finite dimensional real inner product space $V$,
+
+- $\Delta$ spans $V$.
+- $s_{\alpha} (\varphi) = \varphi - \frac{2\langle \varphi, \alpha \rangle}{\mid \alpha \mid^2} \alpha$ sends $\Delta$ to itself
+- $\frac{2\langle \beta, \alpha \rangle}{\mid \alpha \mid^2}$ is an integer
+
+Connection of abstract root system to Lie algebra is that: $\mathfrak{g}$ a complex semisimple Lie algebra has abstract reduced root system if and only if $\mathfrak{g}$ is simple. So finding all simple Lie algebras (complex) is now become the problem finding all abstract reduced root system.
+
+This problem is combinatoric. First define 'positivity' of roots and define atomic positive element : 'simple root'. Now abstract root system correspond to 'Cartan Matrix' and expressing as graph, the 'Dynkin diagram'. Thus, classification of complex simple Lie algebra is now established.
+
+## Weyl Group
+
+On going from abstract reduced root system to abstract Cartan matrix, we need an ordering of roots (or positivity). The uniqueness matter of ordering is expressed as the Weyl group, defined $W(\Delta)$ a group generated by reflections of roots $s_{\alpha}$.
+
+# Compact Lie Group, Compact Lie Algebra
+
+To go on the deep structure theories, we need 'Compact Lie Algebras'. The fact that analytic subgroup is one to one onto correspondence of Lie subalgebra; when does the analytic subgroup become compact?
+
+$\mathfrak{g}$ is compact __real__ Lie algebra if $\mathrm{Int}\mathfrak{g}$ is compact. (Recall $\mathrm{Int}\mathfrak{g}$ is analytic subgroup of $Aut_{\mathbb{R}} \mathfrak{g}$ whose Lie algebra is $\mathrm{ad}\mathfrak{g}$)
+
+__(Knapp) Corollary 4.25__ $G$ a compact Lie group then its Lie algebra is reductive
+
+__(Knapp) Proposition 4.27__ If the Killing form of a real Lie algebra $\mathfrak{g}$ is negative definite then $\mathfrak{g}$ is compact Lie algebra.
+
+By the analysis of compact Lie algebras, we can find the structure of Compact Lie group.
+
+__(Knapp) Theorem 4.29__ $G$ a compact, connected Lie group. Center be $Z_G$ and $G_{ss}$ an analytic subgroup of Lie algebra $[\mathfrak{g},\mathfrak{g}]$ then $G_{ss}$ has finite center and
+
+$$G = (Z_G)_{0} G_{ss}$$
+
+as a commuting product of closed subgroups $(Z_G)_0$ and $G_{ss}$.
+
+We define Maximal tori of compact connected Lie group by maximal torus subgroup. This definition correspond to: analytic subgroup correspond to maximal abelian subalgebra of $\mathrm{Lie} G = \mathfrak{g}_0$. (Knapp, Proposition 4.30). Complexification of $\mathfrak{t}_0, \mathfrak{g}_0$, since $T$ is torus group, $\mathfrak{t} = \mathfrak{t}_0^{\mathbb{C}}$ gives analogy of root space decomposition.
+
+(Technically, we only know well about root space decomposition for complex semisimple Lie algebras. So we decompose $\mathfrak{t}$ into terms on centralizer $Z_{\mathfrak{g}}$ and semisimple part $[\mathfrak{g},\mathfrak{g}]$ and combine result)
+
+$$\mathfrak{g} = \mathfrak{t} \oplus \bigoplus_{\alpha \in \Delta(\mathfrak{g}, \mathfrak{t})} \mathfrak{g}_{\alpha}$$
+
+From the root space decomposition,
+
+__(Knapp) Theorem 4.34__ For compact connected Lie group $G$, two maximal abelian subalgebras of $\mathfrak{g}_0 = \mathrm{Lie}G$ are conjugate via $\mathrm{Ad}(G)$.
+
+Moreover, every element belong to maximal torus;
+
+__(Knapp) Theorem 4.36__ For compact connected Lie group $G$, maximal torus $T$, each element of $G$ is conjugate to element of $T$.
+
+This simple looking theorem is hard to proof : the hardest part is while lifting the Lie algebra analysis to Lie group level.
+
+## Weyl group
+
+We defined Weyl group in terms of Lie algebra : $W(\Delta(\mathfrak{g},\mathfrak{h}))$ was the group generated by root reflections.
+
+For compact connected Lie group $G$ and maximal torus $T$, define analytic Weyl group:
+
+$$W(G,T) = N_G (T) / Z_G (T)$$
+
+
