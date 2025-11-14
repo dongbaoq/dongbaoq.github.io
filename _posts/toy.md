@@ -1,8 +1,8 @@
 ---
 title: "Toy"
-collection: papers
+collection: posts
 date: 2025-03-14
-permalink: /papers/Toy
+permalink: /posts/Toy
 tags:
 - Allen Hatcher
 - Book Review

@@ -307,4 +307,6 @@ For compact connected Lie group $G$ and maximal torus $T$, define analytic Weyl 
 
 $$W(G,T) = N_G (T) / Z_G (T)$$
 
+This version of Weyl group can also act on Lie algebra $\mathfrak{t}_{\mathbb{R}}^{*}$ by $\mathrm{Ad}$ action. The thing is that
 
+__(Knapp) Theorem 4.54__ For a compact connected Lie group $G$ with maximal torus $T$, the analytically defined Weyl Group $W(G,T)$ acting on $\mathfrak{t}_{\mathbb{R}}^{*}$ coincides with Weyl Group $W(\Delta(\mathfrak{g}, \mathfrak{t}))$
