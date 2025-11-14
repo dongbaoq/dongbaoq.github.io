@@ -224,6 +224,9 @@ collections:
     permalink: /:collection/:path/
   posts:
     output: true
+    permalink: /:categories/:year/:month/:day/:title/
+  papers:
+    output: true
     permalink: /:collection/:path/
   talks:
     output: true
@@ -245,8 +248,10 @@ defaults:
     values:
       layout: single
       author_profile: true
+      read_time: true
       comments: true
       share: true
+      related: true
   # _pages
   - scope:
       path: ""
