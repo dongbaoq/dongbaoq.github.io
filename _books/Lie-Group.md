@@ -143,9 +143,9 @@ We first do the __Root space decomposition__. Which is the special case of repre
 
 $$\mathfrak{g} = \mathfrak{h} \oplus \bigg(\bigoplus_{\alpha} \mathfrak{g}_{\alpha}\bigg)$$
 
-Is eigenspace decomposition of $\mathfrak{h}$ action, where now eigenvalue is not mattering since $\mathfrak{h}$ is two dimensional, but $\alpha \in \mathfrak{h}^{*}$. 
+Is eigenspace decomposition of $\mathfrak{h}$ action, where now eigenvalue is not mattering since $\mathfrak{h}$ is two dimensional, but $$\alpha \in \mathfrak{h}^{*}$$. 
 Adjoint action of $\mathfrak{h}$ acts $\mathfrak{g}_{\alpha}$ to itself, and $\mathfrak{g}_{\alpha}$ acting on $\mathfrak{g}$ is similar to $X, Y$ in $\mathfrak{sl}_2 \mathbb{C}$ which translates $\mathrm{ad}(\mathfrak{g}_{\alpha}): \mathfrak{g}_{\beta} \rightarrow \mathfrak{g}_{\alpha + \beta}$. 
-We call $\alpha$'s __root__
+We call $\alpha$'s __root__.
 
 Now back to the irreducible representation $\pi : \mathfrak{g} \curvearrowright V$, eigenspace decomposition of $\mathfrak{h}$ is still valid. $V = \bigoplus_{\alpha} V_{\alpha}$. Also $\pi (\mathfrak{g}_{\alpha}) : V_{\beta} \rightarrow V_{\alpha + \beta}$. Here $\alpha$ is __root__ but $\beta$ is __weight__.
 
