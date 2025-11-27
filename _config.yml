@@ -231,7 +231,7 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
-  books:
+  study:
     output: true
     permalink: /:collection/:path/
   projects:
@@ -294,10 +294,10 @@ defaults:
       layout: talk
       author_profile: true
       share: true
-  # _books
+  # _study
   - scope:
       path: ""
-      type: books
+      type: study
     values:
       layout: single
       author_profile: true

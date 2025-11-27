@@ -1,8 +1,8 @@
 ---
 title: "Algebraic Topology Ch 2"
-collection: books
+collection: study
 date: 2025-03-14
-permalink: /books/AT2
+permalink: /study/AT2
 use_math : true
 tags:
 - Allen Hatcher

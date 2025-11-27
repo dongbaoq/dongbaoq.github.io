@@ -1,11 +1,12 @@
 ---
 title: "Partial Differential Equations"
-collection: books
+collection: study
 date: 2025-11-27
-permalink: /books/PDE
+permalink: /study/PDE
 use_math: true
 tags:
 - PDE
+- Analysis
 ---
 
 This is my note written in 2023, reference is the SNU course 2023 spring, Partial Differential Equations (Graduate Course).

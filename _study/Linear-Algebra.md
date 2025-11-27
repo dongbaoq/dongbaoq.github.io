@@ -1,8 +1,8 @@
 ---
 title: "Linear Algebra"
-collection: books
+collection: study
 date: 2025-07-27
-permalink: /books/LA
+permalink: /study/LA
 use_math: true
 tags:
 - Linear Algebra

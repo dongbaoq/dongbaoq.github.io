@@ -1,8 +1,8 @@
 ---
 title: "Riemannian Manifold"
-collection: books
+collection: study
 date: 2025-09-06
-permalink: /books/RM
+permalink: /study/RM
 use_math: true
 tags:
 - Riemannian Manifold

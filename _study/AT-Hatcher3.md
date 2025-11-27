@@ -1,8 +1,8 @@
 ---
 title: "Algebraic Topology Ch 3"
-collection: books
+collection: study
 date: 2025-03-14
-permalink: /books/AT3
+permalink: /study/AT3
 use_math: true
 tags:
 - Allen Hatcher

@@ -1,8 +1,8 @@
 ---
 title: "Real Analysis"
-collection: books
+collection: study
 date: 2025-11-27
-permalink: /books/RCA
+permalink: /study/RCA
 use_math: true
 tags:
 - Analysis

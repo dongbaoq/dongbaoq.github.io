@@ -1,8 +1,8 @@
 ---
 title: "Probability"
-collection: books
+collection: study
 date: 2025-10-02
-permalink: /books/Probability
+permalink: /study/Probability
 use_math: true
 tags:
 - Probability

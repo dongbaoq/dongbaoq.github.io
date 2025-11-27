@@ -23,8 +23,8 @@ main:
   #- title: "Projects"
   #  url: /projects/
 
-  - title: "Book Reviews"
-    url: /books/
+  - title: "Study"
+    url: /study/
     
   - title: "CV"
     url: /files/cv.pdf

@@ -1,8 +1,8 @@
 ---
 title: "Topology from the Differentiable Viewpoint"
-collection: books
+collection: study
 date: 2025-03-13
-permalink: /books/TopfromDiffVeiwpoint
+permalink: /study/TopfromDiffVeiwpoint
 use_math: true
 tags:
 - John W. Milnor

@@ -1,8 +1,8 @@
 ---
 title: "Lie Group"
-collection: books
+collection: study
 date: 2025-11-12
-permalink: /books/LieGroup
+permalink: /study/LieGroup
 use_math: true
 tags:
 - Lie Group

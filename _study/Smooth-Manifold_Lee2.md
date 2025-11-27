@@ -1,8 +1,8 @@
 ---
 title: "Introduction to Smooth Manifold Ch 7~10"
-collection: books
+collection: study
 date: 2025-07-27
-permalink: /books/SM2
+permalink: /study/SM2
 use_math: true
 tags:
 - Smooth Manifold

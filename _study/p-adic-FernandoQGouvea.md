@@ -1,8 +1,8 @@
 ---
 title: "p-Adic Numbers"
-collection: books
+collection: study
 date: 2025-10-30
-permalink: /books/pAdic
+permalink: /study/pAdic
 use_math: true
 tags:
 - Abstract Algebra

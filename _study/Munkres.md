@@ -1,8 +1,8 @@
 ---
 title: "Book Review : Topology by Munkres"
-collection: books
+collection: study
 date: 2025-03-14
-permalink: /books/PS
+permalink: /study/PS
 use_math : true
 tags:
 - Munkres
