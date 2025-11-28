@@ -7,11 +7,17 @@ redirect_from:
   - /about.html
 ---
 
-I am student of the Seoul national university major in statistics and mathematics. Here is the milestone on my interest in mathematics and statistics.
-
-At the year 2022, I had a shallow interest on mathematical optimization and deep neural networks. The next year 2023, I changed my interest to analysis. I learned basic knowledge about fourier analsys, complex analysis and real analysis by reading Stein & Shakarchi's books. My interest continued to 2024, and studied probability theory. While doing this, I found topology is quite an attractive field. So since 2025, I am focusing on studying topology and geometry. 
+I am student of the Seoul national university major in statistics and mathematics. 
 
 ## Structure of the Blog
+
+### Publications
+
+You can find my publications here.
+
+### Posts
+
+In posts, I uploaded some short idea pieces.
 
 ### Book Review & Study
 
@@ -26,3 +32,12 @@ Here, I summarized important theorems and intuitions while studying. Here is the
 - Durrett, Probability (2019)
 - Fernando Q.Gouvea, p-adic Numbers, An Introduction (Third Edition) (2010)
 - Lie Group, SNU 2025 Fall Course
+- Rudin Walter, Real and Complex Analysis (2012) Chapter 1~5
+- Optimization, SNU 2022 Fall Course
+- Partial Differential Equations, SNU 2023 Spring Course
+
+## Milestone on my interest in mathematics and statistics.
+
+- At the year 2022, I had a shallow interest on mathematical optimization and deep neural networks. The next year 2023, I changed my interest to analysis. I learned basic knowledge about fourier analsys, complex analysis and real analysis by reading Stein & Shakarchi's books. My interest continued to 2024, and studied probability theory. While doing this, I found topology is quite an attractive area. So since 2025, I am focusing on studying topology and geometry.
+
+- (November, 2025) I found myself focusing on the study of algebras and number theory. The SNU course Lie group influenced me a lot, I am curious about the Langland's program, algebraic number theory.
