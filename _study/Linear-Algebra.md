@@ -86,18 +86,6 @@ I_r & 0 \\
 
 Here, te equivalence relation is defined by $A \sim B$ if $A = UBU^{-1}$ for some matrix $U \in \mathcal{M}_{n,n}(F)$.
 
-## Triangularization Theorem of $F = \mathbb{C}$
-
-__Theorem__. If $F = \mathbb{C}$ then for linear transform $T$, there exists basis $\mathfrak{B}$ of $V$ such that $[T]_{\mathfrak{B}}^{\mathfrak{B}}$ is a upper-triangular matrix.
-
-More stronger result will be
-
-__Theorem__. (__Schur Decomposition Theorem__) : If $F = \mathbb{C}$, $n \times n$ __complex__ matrix $A$, $A$ can be expressed as
-$$ A = QUQ^{-1}$$
-for unitary matrix $Q$ and upper triangular matrix $U$. ($F = \mathbb{C}$ is important condition)
-
-However, we want to discuss on the general field $F$.
-
 ## Minimal Polynomial
 
 Minimal polynomial is the __minimum degree monic polynomial of annihilator ideal__. For $T$ a linear operator, annihilator ideal $$\mathcal{I}_T = \{f(t) \in F[t] \| f(T) = 0 \}$$. This minimal polynomial $m_T (t)$ generates annihilator ideal.
@@ -239,3 +227,143 @@ $$
 
 Each block size is $r_{ij} \times r_{ij}$.
 
+# Duality, Nondegenerate Bilinear Form, Hermitian Form
+
+The matrix is useful tool for visualizing abstract object 'Linear map'. In this chapter we want to give up this view. We again look at abstract view on Linear maps.
+
+## Nondegenerate Bilinear Form
+
+We give vector space a bilinear form $B$. The condition __Nondegeneracy__ able us to find a duality of $V$ and $V^*$
+
+First, we do not give nondegeneracy. Bilinear form has one-to-one correspondence with quadratic form. They are related by $Q(v) = \frac{1}{2}B(v,v)$, $B(v,w) = Q(v+w) - Q(v)-Q(w)$. With this bilinear form (or quadratic form), much rich structure can be given __Orthogonal group__ and __Symplectic group__. They are defined by
+
+$$O(V,B) = \{L \in GL(V) \vert B(Lv,Lw) = B(v,w)\}$$
+
+for $B$ symmetric bilinear form.
+
+$$Sp(V,B) = \{L \in GL(V) \vert B(Lv,LW) = B(v,w)\}$$
+
+for $B$ alternating bilinear form.
+
+Now we define orthogonality by using bilinear form $B$. $v,w$ are orthogonal if $B(v,w) = 0$. Non-trivial theorem is that $(V,B)$ has an orthogonal basis. However, we cannot extend arbitrary given orthogonal elements into orthogonal basis. This is because the Gram-Schmidt orthogonalization does not work. There is no reason that $B$ to satisfy $B(v,v) \neq 0$.
+
+Without nondegerate condition, $W \le V$ the $W^{\perp}$ is strange. Indeed, since $B(v,v) = 0$ is possible, $W \cap W^{\perp} \neq 0$ and moreover, what we expect : $\dim W^{\perp} + \dim W = \dim V$ do not hold.
+
+Thus we give __Nondegenerate__ condition on $B$. Now, the following theorem holds.
+
+__Theorem__ Let $V$ be a f.d.v.s and $B$ be a nondegenerate bilinear form. For $W \le V$
+
+$$\dim W + \dim W^{\perp} = \dim V$$
+
+## Duality
+
+With the nondegenerate bilinear form, we can argue __duality__.
+
+Let us first give a brief definition of the dual space. $$V^*$$ is defined as a $F$-linear functionals over $V$. This is again a vector space structure.
+
+Our first motivation starts from the __natural isomorphism__ of $V$ and $V^{**}$. They are the same!! Again, we gave up the language basis and matrix but this __natural isomorphism__ does hold so we could think they are __the same__.
+
+However, when thinking about $V$ and $$V^*$$, we know by the classification of vector spaces that they can given an isomorphism if we declare basis. But we gave up the language of basis... Luckily, there also exists a __natural isomorphism with somethihng__ that makes us to identify $V$ and $$V^*$$. This is the __nondegenerate bilinear form__.
+
+The duality is given by
+
+$$v \longleftrightarrow B(\cdot, v)$$
+
+Thus the bridge between $V$ and $$V^*$$ was a nondegenerate bilinear form!
+
+## Transpose operator
+
+Now we introduce what the __transpose__ mean in Linear map. (Not a matrix!) We can easily define a dual map. $L : V \rightarrow W$ then $$L^* : W^* \rightarrow V^*$$ by $$L^*(g) = g \circ L$$.
+
+With the __nondegenerate symmetric bilinear form__ $(V,B)$ and $(W,C)$ we can identify $$V^*$$ to $V$ and $$W^*$$ to $W$. This gives __transpose__ operator $L^t : W \rightarrow V$. Transpose operator is the only operator satisfying
+
+$$C(Lv, w) = B(v,L^t w)$$
+
+$$C(w, Lv) = B(L^t w, v)$$
+
+Here, in the definition of transpose, __symmetric__ is not used for defining the transpose map. However, if we admit symmetric properties, then $(L^t)^t = L$ holds.
+
+With the transpose, we know can write the orthogonal group into decent definition.
+
+$$O(V,B) = \{L \in GL(V) \vert L^t \circ L = I \}$$
+
+## Hermitian Form
+
+Hermitian form is complex version of bilinear form. Note that in the definition of bilinear form, we did not have any restriction on the field $F$.
+
+In Hermitian form, we let $F = \mathbb{C}$ (or the same holds for the field with nontrivial involution)
+
+The difference to symmetric bilinear form is $H(v,cw) = \bar{c}H(v,w)$ and $H(v,w) = \bar{H(w,v)}$.
+
+The unitary group is defined on Hermitian space $(V,H)$
+
+$$U(V,H) = \{ L \in GL(V) \vert H(Lv,Lw) = H(v,w)\}$$
+
+Within the nondegeneracy of $H$,
+
+__Theorem__ If $W \le V$ and $(V,H)$ nondegenerate Hermitian form
+
+$$\dim W + \dim W^{\perp} = \dim V$$
+
+Moreover, the identification of $V$ and $$V^*$$ by
+
+$$v \longleftrightarrow H(\cdot, v)$$
+
+This identification is __conjugate linear__ and gives __natural bijection__ on $V$ and $$V^*$$. And we define the __adjoint map__ $L^{\star}$. Under the identification above, $(V,H)$ with $(W,K)$ nondegenerate Hermitian form the $L^{\star}$ is an dual map $$L^*$$. It is a unique linear map satisfying
+
+$$K(Lv,w) = H(v,L^{\star} w)$$
+
+$$K(w,Lv) = H(L^{\star}w, v)$$
+
+# Triangularization
+
+## Triangularization Theorem of algebraically closed $F$
+
+__Theorem__. If $F$ an algebraically closed field then for linear transform $T$, there exists basis $\mathfrak{B}$ of $V$ such that $[T]_{\mathfrak{B}}^{\mathfrak{B}}$ is a upper-triangular matrix.
+
+Actually to prove this, we need the quotient vector space to adapt an induction. The point is finding an eigenvector and eigenvalue so that with quotient the subspace generated by eigenvector, induction can hold.
+
+# Spectral Theorem
+
+We shall use the spectral theorem to analyze the __structure of unitary group, orthogonal group__.
+
+First, we are interested in __Complex vector space with positive definite Hermitian Form__
+
+__Theorem__ If $(V,H)$ is complex vector space with positive definite Hermitian form, then FSAE for linear operator $T$.
+
+- $T$ is normal. i.e. $$TT^* = T^* T$$
+
+- There exists an orthonormal basis which are all eigenvectors of $T$.
+
+The proof depends heavily on __Positive definite__ property. By using the Gram-Schmidt orthogonalization, we can do the induction.
+
+So, we can reveal the structure of unitary group.
+
+__Theorem (Spectral Theorem for $U(n)$)__ Let $\mathbb{T}_{U(n)}$ be the diagonal elements of $U(n)$ which is subgroup (and which is __the maximal torus__). Then every element in $U(n)$ is conjugate to maximal torus.
+
+__Theorem (Spectral Theorem for $SU(n)$)__ Let $\mathbb{T}_{SU(n)}$ be the diagonal elements of $SU(n)$ which is subgroup (and which is __the maximal torus__). Then every element in $SU(n)$ is conjugate to maximal torus.
+
+Now, we look on the real vector spaces. The analogous statement of $T$ having orthonormal basis consist of eigenvectors; is following.
+
+__Theorem__ If $(V,B)$ is real vector space with positive symmetric bilinear form, then FSAE for linear operator $T$
+
+- $T$ is symmetric
+- There exists an orthonormal basis which are all eigenvectors of $T$.
+
+However, it is insufficient to analyze the orthogonal group $O(n)$. We need a spectral theorem for real orthogonal operator. In this case, we might not have an eigenvalue because $\mathbb{R}$ is not algebraically closed. Instead,
+
+__Theorem__ $(V,B)$ be a real vector space with positive symmetric bilinear form. If $T$ is an orthogonal operator, there exists $W_1, \cdots, W_s \le V$ such that
+
+- $V = W_1 \oplus \cdots \oplus W_s$
+- $W_1, \cdots , W_s$ are $T$-invariant and mutually orthogonal
+- $\dim W_i = 1 \; \mathrm{or} \; 2$
+
+In this sense, we can reveal the structure of $O(n)$. For notational convenience we state $SO(n)$ case. The __maximal torus__ is slightly modified.
+
+$$\mathbb{T}_{SO(2n)} = \{ \mathrm{diag}(A_1,\cdots, A_n)\vert A_1,\cdots , A_n \in SO(2)\}$$
+
+$$\mathbb{T}_{SO(2n+1)} = \{ \mathrm{diag}(1,A_1,\cdots, A_n)\vert A_1,\cdots , A_n \in SO(2)\}$$
+
+__Theorem (Spectral Theorem for $SO(n)$)__ Every element in $SO(n)$ is conjugate to the element on maximal torus.
+
+This topic will be extended when analyzing the __compact Lie groups__
