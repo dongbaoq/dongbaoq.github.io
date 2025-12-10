@@ -11,6 +11,12 @@ tags:
 
 This post illustrates fundamental and most important theory in mathematics : the linear algebra. These notes are based on 선형대수와 군 by 이인석 which is highly intuitive and instructive book for understanding linear algebra.
 
+<p>
+    <a href="/files/Linear_Algebra/Linear_Algebra.pdf" target="_blank">📄 Click here to open PDF directly</a>
+</p>
+
+<embed src="/files/Linear_Algebra/Linear_Algebra.pdf" type="application/pdf" width="100%" height="600px" />
+
 # Problems of Linear Algebras
 
 Linear Algebra concerns about __Linear Maps on Vector Space__. As many studied the Linear Algebra, usually matrices become the central object. However, matrices and basis are supplementary tools for __understanding Linear Maps__. Matrices and basis are useful for understanding Linear Algebra by __Hands__ but the one who is only used to these __by Hands__ method will fail to understand what really the __Linear Algebra wants to talk about__. However, it is also important to being used to handle matrices.
@@ -366,4 +372,4 @@ $$\mathbb{T}_{SO(2n+1)} = \{ \mathrm{diag}(1,A_1,\cdots, A_n)\vert A_1,\cdots , 
 
 __Theorem (Spectral Theorem for $SO(n)$)__ Every element in $SO(n)$ is conjugate to the element on maximal torus.
 
-This topic will be extended when analyzing the __compact Lie groups__
+This topic will be extended when analyzing the __compact Lie groups__.
