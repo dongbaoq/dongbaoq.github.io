@@ -17,7 +17,7 @@ You can find my publications here.
 
 ### Posts
 
-In posts, I uploaded some short idea pieces.
+In posts, I uploaded some short idea pieces, events...
 
 ### Book Review & Study
 

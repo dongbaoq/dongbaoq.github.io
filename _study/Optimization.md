@@ -10,5 +10,10 @@ tags:
 
 This is my note written in 2023, reference is the SNU course 2022 fall, Mathematical theory of Optimization.
 
-<embed src = "../files/Optimization.pdf" type = "application/pdf" width = "100%" height = "600px" />
+
+<p>
+    <a href="/files/Optimization.pdf" target="_blank">📄 Click here to open PDF directly</a>
+</p>
+
+<embed src="/files/Optimization.pdf" type="application/pdf" width="100%" height="600px" />
 

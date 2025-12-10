@@ -2,7 +2,7 @@
 title: "Subsampling Confidence Bound for Persistent Diagram via Time-delay Embedding"
 collection: publications
 category: manuscripts
-permalink: /publication/subsampling_Confidence_Bound_for_Persistent_Diagram_via_Time_delay_Embedding
+permalink: /publication/subsampling_CB_for_PD_via_Time_delay_Embedding
 excerpt: 
 date: 2025-12-06
 venue: 'arxiv preprint'
