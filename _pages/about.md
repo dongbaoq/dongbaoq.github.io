@@ -28,13 +28,14 @@ Here, I summarized important theorems and intuitions while studying. Here is the
 - James Munkres, Topology (2014)
 - John M. Lee, Introduction to smooth manifolds (2002)
 - John M. Lee, Introduction to riemannian manifolds (2018)
-- John W. Milnor, Topology from the differentiable viewpoint (1997)
+- John W. Milnor, Topology from the differentiable viewpoint (1997) ! updated to Exploration to Modern Geometry, which includes Seifert Manifold
 - Durrett, Probability (2019)
 - Fernando Q.Gouvea, p-adic Numbers, An Introduction (Third Edition) (2010)
 - Lie Group, SNU 2025 Fall Course
 - Rudin Walter, Real and Complex Analysis (2012) Chapter 1~5
 - Optimization, SNU 2022 Fall Course
 - Partial Differential Equations, SNU 2023 Spring Course
+- Mathematical Statistics, SNU 2022 Spring & Fall Course
 
 ## Milestone on my interest in mathematics and statistics.
 
