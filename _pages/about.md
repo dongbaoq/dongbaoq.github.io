@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am student of the Seoul national university major in statistics and mathematics. 
+I am student of the Seoul national university major in statistics and mathematics. My interest lie in Information Geometry, Statistics, and Probability theory.
 
 ## Structure of the Blog
 
@@ -17,7 +17,7 @@ You can find my publications here.
 
 ### Posts
 
-In posts, I uploaded some short idea pieces, events...
+In posts, I uploaded some short idea pieces and events.
 
 ### Book Review & Study
 
@@ -36,9 +36,16 @@ Here, I summarized important theorems and intuitions while studying. Here is the
 - Optimization, SNU 2022 Fall Course
 - Partial Differential Equations, SNU 2023 Spring Course
 - Mathematical Statistics, SNU 2022 Spring & Fall Course
+- Morse Theory, SNU 2026 Spring Course
+- Nonparametric Function estimation, SNU 2026 Spring Course
+- Stein and Shakarchi, Fourier Analysis
+- Stein and Shakarchi, Real Analysis
+- Stein and Shakarchi, Functional Analysis
 
 ## Milestone on my interest in mathematics and statistics.
 
 - At the year 2022, I had a shallow interest on mathematical optimization and deep neural networks. The next year 2023, I changed my interest to analysis. I learned basic knowledge about fourier analsys, complex analysis and real analysis by reading Stein & Shakarchi's books. My interest continued to 2024, and studied probability theory. While doing this, I found topology is quite an attractive area. So since 2025, I am focusing on studying topology and geometry.
 
 - (November, 2025) I found myself focusing on the study of algebras and number theory. The SNU course Lie group influenced me a lot, I am curious about the Langland's program, algebraic number theory.
+
+- (Spring, 2026) I am now focusing on the Information Geometry, with E-value theory. The geometrical aspects of statistics have many unfounded part, and I am working on it.
