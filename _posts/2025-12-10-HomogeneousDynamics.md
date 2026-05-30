@@ -1,5 +1,5 @@
 ---
-title: "Talk on the Homogeneous Dynamics"
+title: "Presentation on the Homogeneous Dynamics"
 collection: posts
 date: 2025-12-10
 category: Post
@@ -8,7 +8,7 @@ use_math: true
 tags:
 ---
 
-I gave a talk in SNU 2025 fall course "Lie group". The topic was 'Howe and Moore theorem and Moore's ergodicity theorem'. Here are my reports and slides.
+I made a presentation in SNU 2025 fall course "Lie group". The topic was 'Howe and Moore theorem and Moore's ergodicity theorem'. Here are my reports and slides.
 
 
 <p>

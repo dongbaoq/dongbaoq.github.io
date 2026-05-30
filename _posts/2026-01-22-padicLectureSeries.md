@@ -58,3 +58,9 @@ The Lecture notes are organized as follows:
 <p>
     <a href="/files/padic_Lecture/p_adic_LectureNote_08.pdf" target="_blank">📄 Lecture Note 08</a>
 </p>
+
+Here is a certificate.
+
+<p>
+    <a href="/files/padic_Lecture/certificate_peer_tutor.pdf" target="_blank">📄 Certificate</a>
+</p>
