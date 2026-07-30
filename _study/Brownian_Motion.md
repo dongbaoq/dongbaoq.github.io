@@ -15,4 +15,4 @@ This post is my note on the lecture "Mearsure theory and Probability" SNU 2026 S
     <a href="/files/Study/Brownian_Motion-2.pdf" target="_blank">📄 Click here to open PDF directly</a>
 </p>
 
-<embed src="/files/Study/Morse-3.pdf" type="application/pdf" width="100%" height="600px" />
+<embed src="/files/Study/Brownian_Motion-2.pdf" type="application/pdf" width="100%" height="600px" />
