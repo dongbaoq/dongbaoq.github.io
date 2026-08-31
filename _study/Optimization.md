@@ -17,3 +17,10 @@ This is my note written in 2023, reference is the SNU course 2022 fall, Mathemat
 
 <embed src="/files/Study/Optimization.pdf" type="application/pdf" width="100%" height="600px" />
 
+I moreover editted my handwritten note on understanding strong duality and KKT conditions.
+
+<p>
+    <a href="/files/Study/ConvexOpt.pdf" target="_blank">📄 Click here to open PDF directly</a>
+</p>
+
+<embed src="/files/Study/ConvexOpt.pdf" type="application/pdf" width="100%" height="600px" />
