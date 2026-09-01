@@ -11,7 +11,7 @@ tags:
 I post research note on identifying Growth Rate Optimal E-variable for parametric testing; Normal case.
 
 <p>
-    <a href="/files/Research_Note.pdf" target="_blank">📄 Click here to open PDF directly</a>
+    <a href="/files/Research_Note_2.pdf" target="_blank">📄 Click here to open PDF directly</a>
 </p>
 
-<embed src="/files/Research_Note.pdf" width="100%" height="600px" />
+<embed src="/files/Research_Note_2.pdf" width="100%" height="600px" />
