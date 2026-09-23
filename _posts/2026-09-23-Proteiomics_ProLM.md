@@ -15,5 +15,3 @@ In the slide, I provided results of the external experiments with the pan-cancer
 <p>
     <a href="/files/TalkProLM/_Lab_Presentation__ProLM-3.pdf" target="_blank">📄 Click here to open PDF directly</a>
 </p>
-
-<embed src="/files/TalkProLM/_Lab_Presentation__ProLM-3.pdf" width="100%" height="600px" />
