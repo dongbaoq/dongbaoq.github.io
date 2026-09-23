@@ -13,5 +13,5 @@ I post my slide for review the paper "ProLM: a plasma proteomics pretrained mode
 In the slide, I provided results of the external experiments with the pan-cancer cohort plasma proteome dataset from the U-CAN biobank. To summarize, fine-tuning the ProLM with this task performed well on predicting cancer subtype, and 3-dimensional tSNE embedding of CLS token was well separated.
 
 <p>
-    <a href="/files/TalkProLM/_Lab_Presentation__ProLM-3.pdf" target="_blank">📄 Click here to open PDF directly</a>
+    <a href="/files/TalkProLM/_Lab_Presentation__ProLM.pdf" target="_blank">📄 Click here to open PDF directly</a>
 </p>
