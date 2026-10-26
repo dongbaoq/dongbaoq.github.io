@@ -1,51 +1,70 @@
 ---
 permalink: /
-title: "Hello! Welcome to my homepage"
+title: "Donghyun Park"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-I am student of the Seoul national university major in statistics and mathematics. My interest lie in Information Geometry, Statistics, and Probability theory.
+I am a student at Seoul National University studying statistics and mathematics. My interest is sequential inference, with the broad interest in martingale theory.
 
-## Structure of the Blog
+<nav class="home-links" aria-label="Explore the site">
+  <ul>
+    <li><a href="/publications/">Publications</a></li>
+    <li><a href="/posts/">Posts</a></li>
+    <li><a href="/study/">Study notes</a></li>
+    <li><a href="/papers/">Paper reviews</a></li>
+  </ul>
+</nav>
 
-### Publications
+## Reading & Study
 
-You can find my publications here.
+I collect notes on important theorems and intuitions while studying. These are the books and courses I have been working through.
 
-### Posts
+### Books
 
-In posts, I uploaded some short idea pieces and events.
+- Allen Hatcher, *Algebraic Topology* (2002)
+- 이인석, *선형대수와 군 (Linear Algebra and Group)* (2015)
+- James Munkres, *Topology* (2014)
+- John M. Lee, *Introduction to Smooth Manifolds* (2002)
+- John M. Lee, *Introduction to Riemannian Manifolds* (2018)
+- John W. Milnor, *Topology from the Differentiable Viewpoint* (1997); updated to *Exploration to Modern Geometry*, which includes Seifert manifolds
+- Durrett, *Probability* (2019)
+- Fernando Q. Gouvêa, *p-adic Numbers: An Introduction* (Third Edition, 2010)
+- Walter Rudin, *Real and Complex Analysis* (2012), Chapters 1–5
+- Stein and Shakarchi, Fourier Analysis
+- Stein and Shakarchi, Real Analysis
+- Stein and Shakarchi, Functional Analysis
+- Amari, *Information Geometry*
 
-### Book Review & Study
+### Courses & Topics
 
-Here, I summarized important theorems and intuitions while studying. Here is the list of posts:
-
-- Allen Hatcher, Algebraic Topology (2002)
-- 이인석, 선형대수와 군 (Linear Algebra and Group) (2015)
-- James Munkres, Topology (2014)
-- John M. Lee, Introduction to smooth manifolds (2002)
-- John M. Lee, Introduction to riemannian manifolds (2018)
-- John W. Milnor, Topology from the differentiable viewpoint (1997) ! updated to Exploration to Modern Geometry, which includes Seifert Manifold
-- Durrett, Probability (2019)
-- Fernando Q.Gouvea, p-adic Numbers, An Introduction (Third Edition) (2010)
 - Lie Group, SNU 2025 Fall Course
-- Rudin Walter, Real and Complex Analysis (2012) Chapter 1~5
 - Optimization, SNU 2022 Fall Course
 - Partial Differential Equations, SNU 2023 Spring Course
 - Mathematical Statistics, SNU 2022 Spring & Fall Course
 - Morse Theory, SNU 2026 Spring Course
-- Nonparametric Function estimation, SNU 2026 Spring Course
-- Stein and Shakarchi, Fourier Analysis
-- Stein and Shakarchi, Real Analysis
-- Stein and Shakarchi, Functional Analysis
+- Nonparametric Function Estimation, SNU 2026 Spring Course
+- Brownian Motion and Markov Property, SNU 2026 Spring Course
 
-## Milestone on my interest in mathematics and statistics.
+## Research Interests
 
-- At the year 2022, I had a shallow interest on mathematical optimization and deep neural networks. The next year 2023, I changed my interest to analysis. I learned basic knowledge about fourier analsys, complex analysis and real analysis by reading Stein & Shakarchi's books. My interest continued to 2024, and studied probability theory. While doing this, I found topology is quite an attractive area. So since 2025, I am focusing on studying topology and geometry.
-
-- (November, 2025) I found myself focusing on the study of algebras and number theory. The SNU course Lie group influenced me a lot, I am curious about the Langland's program, algebraic number theory.
-
-- (Spring, 2026) I am now focusing on the Information Geometry, with E-value theory. The geometrical aspects of statistics have many unfounded part, and I am working on it.
+<ol class="home-timeline">
+  <li>
+    <p><strong>2022–2024</strong><br>
+    I began with mathematical optimization and deep neural networks, then moved toward analysis, studying Fourier, complex, and real analysis. Through probability, I discovered topology and began focusing on topology and geometry in 2025.</p>
+  </li>
+  <li>
+    <p><strong>November 2025</strong><br>
+    A course on Lie groups drew me toward algebra and number theory, including the Langlands program and algebraic number theory.</p>
+  </li>
+  <li>
+    <p><strong>Spring 2026</strong><br>
+    I began exploring information geometry and its connections with E-values, especially questions about the geometric foundations of statistics.</p>
+  </li>
+  <li>
+    <p><strong>Fall 2026</strong><br>
+    I am interested in sequential inference with e-processes, the law of the iterated logarithm, and martingale analysis.</p>
+  </li>
+</ol>

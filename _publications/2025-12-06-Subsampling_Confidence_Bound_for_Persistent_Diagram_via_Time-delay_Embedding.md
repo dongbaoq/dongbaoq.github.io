@@ -1,14 +1,14 @@
 ---
-title: "Subsampling Confidence Bound for Persistent Diagram via Time-delay Embedding"
+title: "Topological Periodicity Test (TopPT) via Confidence Bound of Time-Delay Embeddings"
 collection: publications
-category: manuscripts
-permalink: /publication/subsampling_CB_for_PD_via_Time_delay_Embedding
+category: conferences
+permalink: /publication/TopPT
 excerpt: 
 date: 2025-12-06
-venue: 'arxiv preprint'
+venue: 'NeurIPS 2026'
 slidesurl: 
-paperurl: '/files/Subsampling_2025/Subsampling_2025.pdf'
+paperurl: 'https://arxiv.org/abs/2512.06324'
 citation: 'Park, Donghyun, An, Junhyun, Kim, Taehyoung, & Kim, Jisu. (2025). "Subsampling Confidence Bound for Persistent Diagram via Time-delay Embedding." <i>arXiv preprint arXiv:2512.06324</i>.'
 ---
 
-Time-delay embedding is a fundamental technique in Topological Data Analysis (TDA) for reconstructing the phase space dynamics of time-series data. While persistent homology effectively identifies topological features, such as cycles associated with periodicity, a rigorous statistical framework for quantifying the uncertainty of these features has been lacking in this context. In this paper, we propose a subsampling based method to construct confidence sets for persistence diagrams derived from time-delay embeddings. We establish finite sample guarantees for the validity of these confidence bounds under regularity conditions specifically for $C^{1,1}$ functions with positive reach and prove their asymptotic convergence as the embedding dimension tends to infinity. This framework provides a principled statistical test for periodicity, enabling the distinction between true periodic signals and non-periodic approximations. Simulation studies demonstrate that our method achieves detection performance comparable to the Generalized Lomb-Scargle periodogram on periodic data while exhibiting superior robustness in distinguishing non-periodic signals with time-varying frequencies, such as chirp signals.
+Time-delay embedding is a fundamental technique in Topological Data Analysis (TDA) for reconstructing phase-space dynamics of time-series data, where persistent homology can reveal loops associated with periodicity. However, rigorous statistical uncertainty quantification for these features remains underdeveloped. First, we analyze the topology of time-delay embeddings, showing that the embedded trajectory is homotopy equivalent to a circle (S1) for periodic signals and contractible for non-periodic ones. We also prove a positive lower bound on the embedding reach, ensuring stable topological features. Second, we develop a subsampling approach to construct confidence bounds for persistence diagrams. Under standard manifold regularity conditions, we derive data-dependent bounds with asymptotic guarantees. Finally, we propose Topological Periodicity Test (TopPT), a hypothesis testing framework for periodicity with asymptotically controlled type I and type II error rates. Experiments on bounded-error synthetic data show that raw TDA detects periodic alternatives while avoiding false rejections on structured non-periodic signals, and that the robust rule is conservative after interpolation-error correction. On PhysioNet Fantasia and BIDMC respiratory waveforms, TDA detects most records but only a subset of local windows, unlike scalar periodogram baselines.

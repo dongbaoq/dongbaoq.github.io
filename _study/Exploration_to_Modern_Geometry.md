@@ -1,5 +1,5 @@
 ---
-title: "Exploration_to_Modern_Geometry"
+title: "Exploration to Modern Geometry"
 collection: study
 date: 2026-02-16
 permalink: /study/TopfromDiff

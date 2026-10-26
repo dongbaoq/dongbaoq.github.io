@@ -23,9 +23,9 @@ repository               : "dongbaoq/dongbaoq.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Donghyun"
+  name             : "Donghyun Park"
   pronouns         : "he/him" # example: "she/her"  
-  bio              : "I am student who is interested in Mathematics and Statistics"
+  bio              : "I am an undergraduate student in Statistics"
   location         : "Korea, Republic of"
   employer         : "Seoul University"
   uri              : # URL

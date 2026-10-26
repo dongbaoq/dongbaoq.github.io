@@ -1,5 +1,5 @@
 ---
-title: "Book Review : Topology by Munkres"
+title: "Point Set Topology"
 collection: study
 date: 2025-03-14
 permalink: /study/PS
