@@ -1,11 +1,11 @@
 ---
 title: "A General Framework for E-process Stopping Rules in Best-Arm Identification"
 collection: publications
-category: manuscripts
+category: preprints
 permalink: /publication/EprocessStoppingRule
 excerpt: 
 date: 2026-11-24
-venue: 
+venue: 'arXiv'
 slidesurl: 
 paperurl: 'https://arxiv.org/abs/2611.31898'
 citation: 'Park, Donghyun, Hwang, Seohwa, & Park, Junyong. (2026). "A General Framework for E-process Stopping Rules in Best-Arm Identification." <i>arXiv preprint arXiv:2611.31898</i>.'
