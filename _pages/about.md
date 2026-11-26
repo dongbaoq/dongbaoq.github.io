@@ -34,6 +34,7 @@ I collect notes on important theorems and intuitions while studying. These are t
 - Fernando Q. Gouvêa, *p-adic Numbers: An Introduction* (Third Edition, 2010)
 - Walter Rudin, *Real and Complex Analysis* (2012), Chapters 1–5
 - Stein and Shakarchi, Fourier Analysis
+- Stein and Shakarchi, Complex Analysis
 - Stein and Shakarchi, Real Analysis
 - Stein and Shakarchi, Functional Analysis
 - Amari, *Information Geometry*
